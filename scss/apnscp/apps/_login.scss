@@ -14,10 +14,14 @@ $rocket-body: #ebebeb;
 
   .ui-app-container {
     margin: 0 auto;
-    a {
+    .footer a {
       color: #fff;
-      text-decoration: underline;
+      text-decoration: none;
     }
+	.content-container a {
+	  color: $body-color;
+	  text-decoration: underline;
+	}
   }
 
   .content {
@@ -27,8 +31,6 @@ $rocket-body: #ebebeb;
 
   .content h3 {
     text-align: center;
-    font-size: 1.5em;
-    color: #000;
   }
 
   form .form-group {
@@ -94,9 +96,12 @@ $rocket-body: #ebebeb;
     z-index: 1;
   }
 
-  .panel form {
-    padding: 1em;
+  .panel form, .content-container:not(:first-child) > :first-child {
+    padding: $spacer-y;
   }
+
+
+
   input:focus {
     box-shadow: 0 0 0 transparent;
   }
@@ -233,22 +238,28 @@ $rocket-body: #ebebeb;
     font-size: 0.9em;
   }
 
-  #whatsNew, .problem-container, .login-container {
-    /*border-left: 1px solid #ccc;*/
+  .content-container, .problem-container {
     background: $rocket-body;
   }
 
-  #whatsNew {
-    @include border-right-radius($border-radius);
+  .content-container:only-child {
+	@include border-radius($border-radius);
   }
 
-  #login, .login-container, .login-container .content {
-    @include border-left-radius($border-radius);
+  .content-container:first-child {
+	@include border-left-radius($border-radius);
+  }
+  .content-container:last-child {
+	@include border-right-radius($border-radius);
   }
 
+  .content-container {
+	overflow: hidden;
+  }
   .login-container:after {
 
   }
+
   #whatsNew:before {
     background-color: rgba(212,212,212,0);
     background-image: linear-gradient(to top,rgba(212,212,212,0) 0,#d4d4d4 30%,#d4d4d4 70%,rgba(212,212,212,0) 100%);
