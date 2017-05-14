@@ -23,8 +23,6 @@ module.exports = function (grunt) {
     var path = require('path')
     var isTravis = require('is-travis')
 
-    grunt.loadNpmTasks('grunt-browserify');
-
     // Project configuration.
     grunt.initConfig({
         // Metadata.
@@ -39,27 +37,9 @@ module.exports = function (grunt) {
         clean: {
             dist: 'dist',
         },
-        webpack: {
-            options: webpackConfig,
-            build: {}
-        },
 
         // CSS build configuration
         copy: {
-            webpack: {
-                expand: true,
-                cwd: 'js/src/',
-                src: ['master.js', 'jquery.js', 'apnscp_init.js', 'apnscp.js', 'jquery_ui.js', 'clipboard.js'],
-                dest: 'dist/js/'
-            },
-            js: {
-                expand: true,
-                cwd: 'dist/js/',
-                src: [
-                    '*'
-                ],
-                dest: APNSCP_PATH + '/public/js'
-            },
             css: {
                 expand: true,
                 cwd: 'dist/css/',
