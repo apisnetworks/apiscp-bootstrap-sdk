@@ -131,7 +131,6 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt)
 
     //grunt.registerTask('dist-js', ['babel:dev', 'concat', 'copy:webpack', 'babel:dist', 'browserify', 'copy:js', /*'exec:uglify'*/])
-	grunt.registerTask('clean', ['exec:scss-clean']);
     grunt.registerTask('test-scss', ['exec:scss-lint'])
 	grunt.registerTask('js-compile', ['babel:dev', 'concat', 'copy:webpack', 'copy:js']);
     grunt.registerTask('sass-compile', ['exec:sass', 'copy:css'])
