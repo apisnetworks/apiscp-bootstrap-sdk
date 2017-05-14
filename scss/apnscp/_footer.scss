@@ -1,0 +1,25 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  background: $footer-bg;
+  /* #000 url(/images/footer.jpg) bottom left repeat-x;
+  background-size: 70% 70%;*/
+  padding-bottom: 60px;
+  font-size: small;
+  /*&:before {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $spectrum-height;
+    content: '';
+    display: block;
+    left: 0;
+    background: linear-gradient(to right, #f200ff 0%,#5c00fc 5%,#0072ff 10%,#2aff00 20%,#ff8800 30%,#ff0000 40%, rgba(255,0,0,0) 50%, rgba(0, 0, 0, 0) 100%);//darken($gray-dark, 15%) 50% //darken($gray-dark, 15%) 100%);;
+  }*/
+}

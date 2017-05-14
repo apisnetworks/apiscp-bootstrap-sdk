@@ -1,0 +1,161 @@
+UL.file-manager {
+  li {
+    list-style: none;
+    padding: 0px;
+    padding-left: 20px;
+    margin: 0px;
+    white-space: nowrap;
+  }
+  a {
+    color: $text-color;
+    text-decoration: none;
+    width:100%;
+    background-color: #fff;
+    font-weight: 400;
+    &:hover {
+      background: $text-highlight-bg;
+      color: $text-highlight;
+    }
+  }
+}
+
+
+UL.file-manager A:hover {
+  background: #BDF !important;
+}
+
+.browser_window {
+  background:#FFFFFF none repeat scroll 0 0;
+  border-color:#CCCCCC #CCCCCC #BBBBBB #BBBBBB;
+  border-style:solid;
+  border-width:1px;
+  width:100%;
+  z-index:10;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  padding:5px;
+  text-align:left !important;
+}
+
+#selected_dir {
+  font-weight:normal;
+  display: block;
+}
+#file_browser {
+  min-height:200px !important;
+  height: 350px;
+  li {
+    padding-left: 0;
+  }
+  ul {
+    padding-left: 0;
+    ul {
+      // second level and beyond
+      margin-left: 20px;
+    }
+  }
+}
+
+#file_header {
+  margin:0 -5px 5px;
+  padding:0 5px;
+  position:relative;
+  top:-5px;
+}
+#file_container {
+  display:none;
+  overflow:hidden;
+  text-align:left;
+  background:#fff;
+  padding:5px;
+
+}
+
+#modalContainer {
+  text-align:left;
+}
+.file-manager .selected li a { background:#fff;}
+.file-manager .selected a  {
+  background-color:#ffffc0;
+}
+
+.file-manager li:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  background-image: url(/images/apps/filemanager/filesprite.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+/* Core Styles */
+.file-manager > LI.directory:before { background-position: -96px 0; }
+.file-manager > LI.expanded:before { background-position: -120px 0; }
+.file-manager > LI.file:before { background-position: -168px 0; }
+.file-manager > LI.wait:before { background: url(/images/filetree/spinner.gif) left top no-repeat; }
+/* File Extensions*/
+.file-manager> LI.ext-3gp:before { background-position: -192px 0; }
+.file-manager> LI.ext-afp:before { background-position: -24px 0; }
+.file-manager> LI.ext-afpa:before { background-position: -24px 0; }
+.file-manager> LI.ext-asp:before { background-position: -24px 0; }
+.file-manager> LI.ext-aspx:before { background-position: -24px 0; }
+.file-manager> LI.ext-avi:before { background-position: -192px 0; }
+.file-manager> LI.ext-bat:before { background-position: 0 0; }
+.file-manager> LI.ext-bmp:before { background-position: -384px 0; }
+.file-manager> LI.ext-c:before { background-position: -24px 0; }
+.file-manager> LI.ext-cfm:before { background-position: -24px 0; }
+.file-manager> LI.ext-cgi:before { background-position: -24px 0; }
+.file-manager> LI.ext-com:before { background-position: 0 0; }
+.file-manager> LI.ext-cpp:before { background-position: -24px 0; }
+.file-manager> LI.ext-css:before { background-position: -24px 0; }
+.file-manager> LI.ext-doc:before { background-position: -144px 0; }
+.file-manager> LI.ext-exe:before { background-position: 0 0; }
+.file-manager> LI.ext-gif:before { background-position: -384px 0; }
+.file-manager> LI.ext-fla:before { background-position: -216px 0; }
+.file-manager> LI.ext-h:before { background-position: -24px 0; }
+.file-manager> LI.ext-htm:before { background-position: -240px 0; }
+.file-manager> LI.ext-html:before { background-position: -240px 0; }
+.file-manager> LI.ext-jar:before { background-position: -264px 0; }
+.file-manager> LI.ext-jpg:before { background-position: -384px 0; }
+.file-manager> LI.ext-jpeg:before { background-position: -384px 0; }
+.file-manager> LI.ext-js:before { background-position: -24px 0; }
+.file-manager> LI.ext-lasso:before { background-position: -24px 0; }
+.file-manager> LI.ext-log:before { background-position: -504px 0; }
+.file-manager> LI.ext-m4p:before { background-position: -312px 0; }
+.file-manager> LI.ext-mov:before { background-position: -192px 0; }
+.file-manager> LI.ext-mp3:before { background-position: -312px 0; }
+.file-manager> LI.ext-mp4:before { background-position: -192px 0; }
+.file-manager> LI.ext-mpg:before { background-position: -192px 0; }
+.file-manager> LI.ext-mpeg:before { background-position: -192px 0; }
+.file-manager> LI.ext-ogg:before { background-position: -312px 0; }
+.file-manager> LI.ext-pcx:before { background-position: -384px 0; }
+.file-manager> LI.ext-pdf:before { background-position: -336px 0; }
+.file-manager> LI.ext-php:before { background-position: -360px 0; }
+.file-manager> LI.ext-png:before { background-position: -384px 0; }
+.file-manager> LI.ext-ppt:before { background-position: -408px 0; }
+.file-manager> LI.ext-psd:before { background-position: -432px 0; }
+.file-manager> LI.ext-pl:before { background-position: -24px 0; }
+.file-manager> LI.ext-py:before { background-position: -24px 0; }
+.file-manager> LI.ext-rb:before { background-position: -456px 0; }
+.file-manager> LI.ext-rbx:before { background-position: -456px 0; }
+.file-manager> LI.ext-rhtml:before { background-position: -456px 0; }
+.file-manager> LI.ext-rpm:before { background-position: -288px 0; }
+.file-manager> LI.ext-ruby:before { background-position: -456px 0; }
+.file-manager> LI.ext-sql:before { background-position: -72px 0; }
+.file-manager> LI.ext-swf:before { background-position: -216px 0; }
+.file-manager> LI.ext-tif:before { background-position: -384px 0; }
+.file-manager> LI.ext-tiff:before { background-position: -384px 0; }
+.file-manager> LI.ext-txt:before { background-position: -504px 0; }
+.file-manager> LI.ext-vb:before { background-position: -24px 0; }
+.file-manager> LI.ext-wav:before { background-position: -312px 0; }
+.file-manager> LI.ext-wmv:before { background-position: -192px 0; }
+.file-manager> LI.ext-xls:before { background-position: -528px 0; }
+.file-manager> LI.ext-xml:before { background-position: -24px 0; }
+.file-manager> LI.ext-zip:before { background-position: -552px 0; }
+.file-manager> LI.ext-tar:before { background-position: -552px 0; }
+.file-manager> LI.ext-tgz:before { background-position: -552px 0; }
+.file-manager> LI.ext-gz:before { background-position: -552px 0; }
+.file-manager> LI.ext-bz2:before { background-position: -552px 0; }
+.file-manager> LI.ext-bz:before { background-position: -552px 0; }

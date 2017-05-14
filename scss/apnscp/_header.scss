@@ -1,0 +1,165 @@
+a#ui-fa-dashboard {
+  background-position: -32px -48px;
+  /** sprite-ref: mysprite; */
+}
+
+a#ui-fa-feedback {
+  background-position: -32px -96px;
+  /** sprite-ref: mysprite; */
+}
+
+a#ui-fa-logout {
+  background-position: -32px -144px;
+}
+
+a#ui-fa-chuser {
+  background-position: -32px 0;
+}
+
+a#ui-fa-testimonial {
+  background-position: -32px -192px;
+}
+
+a#ui-fa-support {
+  background-position: -32px -240px;
+}
+
+a#ui-fa-kb {
+  background-position: -32px -514px;
+}
+
+#ui-heading {
+  background: $header-bg;
+  color: $header-links;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.ui-swap-buttons {
+  #ui-header > div, #ui-heading + .nav-app {
+    @extend .flex-row-reverse;
+  }
+  @include media-breakpoint-down(sm) {
+    // ensure hamburger sits flush right
+
+    #ui-menu-button {
+      margin-right: 0 !important;
+      margin-left: auto;
+    }
+
+    #ui-nav-container {
+      display: block;
+      width: 100%;
+    }
+  }
+  #ui-account-ctrl {
+    margin-right: 0;
+    .dropdown-menu {
+      left: 0;
+      right: initial;
+    }
+  }
+  #ui-menu > .dropdown .ui-menu-category-apps {
+    margin-left: -#{$grid-gutter-width-base/2};
+    margin-right: -#{$grid-gutter-width-base/2};
+  }
+  .ui-menu-category + .ui-menu-category-apps {
+    a {
+      padding-left: 2.75rem;
+    }
+    .active:after {
+      transform:rotate(-90deg);
+      left: -0.25em;
+    }
+  }
+}
+#ui-header {
+  a {
+    &:hover {
+      color: $header-links-hover;
+    }
+    text-decoration: none;
+  }
+  margin-left: 0;
+  margin-right: 0;
+
+  #ui-account-gauges {
+    margin-top: -#{$spacer-y/2};
+    position: relative;
+  }
+  .ui-gauge-cluster {
+    margin: 0 $spacer-y 0 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  #logo {
+    color: #fff;
+    font-size: $font-size-h1*0.80;
+  }
+
+  .ui-gauge {
+    background: $header-bg-light;
+    border-color: darken($header-bg-light, 10%);
+    @include border-radius($border-radius);
+    overflow: hidden;
+    .ui-gauge-free {
+      background: lighten($header-bg, 5%);
+    }
+  }
+
+  .ui-gauge-cluster {
+    .ui-gauge-label {
+      color: $header-links;
+    }
+  }
+}
+
+.ui-refresh, .ui-ajax-loading, .ui-ajax-success, .ui-ajax-error, .has-loading:after {
+  @extend .fa;
+}
+
+#ui-gauge-refresh {
+  display: none;
+  position: absolute;
+  top: #{$spacer-y/2};
+  right: 0;
+}
+
+#ui-account-ctrl {
+  padding: $spacer/2;
+  padding-right: $spacer;
+  margin-right: -$grid-gutter-width-base/2;
+  margin-top: -#{map-deep-get($spacers, 1, y)};
+  margin-bottom: -#{map-deep-get($spacers, 1, y)};
+  .avatar {
+    //max-height: 64px;
+    //margin: -#{$grid-gutter-width-base/2} #{$grid-gutter-width-base/2} -#{$grid-gutter-width-base/2} -#{$grid-gutter-width-base/2};
+    max-height: 36px;
+    margin: 0 #{$grid-gutter-width-base/2} 0 0;
+  }
+  a {
+    color: $header-links;
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  .dropdown-menu {
+    right: 0;
+    left: initial;
+    border-radius: 0;
+    a {
+      color: $dropdown-link-color;
+      position: relative;
+      &:active {
+        color: $dropdown-link-active-color;
+      }
+      .fa {
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+      }
+    }
+
+  }
+}

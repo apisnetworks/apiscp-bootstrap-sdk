@@ -1,0 +1,86 @@
+.ui-dialog {
+  box-shadow: 0 0 2px 5px rgba(230, 230, 230, 0.36);
+  border: 1px solid #6a6a6a;
+  padding: 0 !important;
+  font-size: 0.95rem;
+}
+
+.ui-widget-overlay {
+  border:1px solid #6a6a6a;
+  background: #5a5a5a;
+  filter:alpha(opacity=40);
+  -moz-opacity: 0.4;
+  opacity: 0.4;
+}
+
+.ui-dialog-titlebar .ui-dialog-titlebar-close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  border: 0 none;
+  background: 0 none;
+  right: 0;
+  margin: 0;
+}
+
+/** fix drop shadow on button */
+.ui-dialog .ui-dialog-titlebar button {
+  box-shadow: 0 0 transparent;
+  position: relative;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 1em;
+  width: 1em;
+  float: right;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+
+.ui-dialog-titlebar-close, .ui-icon-closethick {
+  display:block;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  background: url(/images/modal/modal-close.png) center center no-repeat !important;
+  text-indent:-9999em;
+  left: -0.5em !important;
+  margin: 0 !important;
+  top: 0.5em !important;
+  position: relative !important;
+}
+.ui-button>.ui-icon-closethick+.ui-button-text {
+  display: none;
+}
+
+.ui-dialog .ui-dialog-title {
+  margin: 0 !important;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  background: $brand-primary;
+  line-height: 1.5em;
+  font-size: 1.25em;
+  color: #fff;
+  font-weight: normal;
+  text-align: left;
+  text-transform: none;
+  border: 1px solid #607e24;
+  border-color:darken($brand-primary, 3%);
+  margin-bottom: 0;
+}
+
+.ui-dialog h2 {
+  /*background:#f1f1f1;*/
+  font-weight: bold;
+  color: #616035;
+  text-transform: none;
+  
+}
+
+.ui-dialog h3 {
+  text-align: left;
+  color: #999;
+}

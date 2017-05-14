@@ -1,0 +1,58 @@
+#app-changeinfo {
+
+  div.rules {
+    display: none;
+  }
+
+  ol.rules {
+    @extend %notes
+  }
+
+  tr td:first-child {
+    vertical-align: top;
+  }
+
+  .input h3 {
+    margin-bottom: 0;
+    margin-top: 0.25em;
+  }
+
+  .processing > div {
+    width: 350px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2em;
+  }
+
+  .processing .ui-ajax-indicator {
+    margin-right: 10px;
+  }
+
+  .verify-password {
+    display: none;
+  }
+
+  .important i {
+    color: $brand-danger;
+  }
+  .important {
+    display: block;
+  }
+
+  #origin-note {
+    margin-top: 1rem;
+  }
+
+  #menu .nav-item {
+    float: none;
+  }
+
+  #menu .nav-item a {
+    text-align: right;
+  }
+
+  #site input[readonly] {
+    background: #fff !important;
+    cursor: text;
+  }
+}

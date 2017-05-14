@@ -1,0 +1,83 @@
+$debug-bg: #efefef !default;
+$debug-bg-border: #cccccc !default;
+$debug-text: #454545 !default;
+
+@function amplify($color, $percent: 5%) {
+  @return saturate(lighten($color, $percent), 15%);
+}
+
+@mixin status-pulse-background($name, $colorstart, $colorend) {
+  $name: pulse-#{$name};
+  @keyframes #{$name}  {
+    0% {
+      background: $colorstart;
+    }
+    75% {
+      background: $colorend;
+    }
+    100% {
+      background: $colorstart;
+    }
+  }
+}
+
+@mixin status-pulse($name, $colorstart, $colorend, $times: 3) {
+  animation: pulse-#{$name} 1s #{$times};
+  animation-delay: 500ms;
+  animation-timing: ease-out;
+  animation-timing: cubic-bezier(.28,.79,.8,.1);
+  @include status-pulse-background($name, $colorstart, $colorend);
+}
+
+.ui-pb-msg-success-parent {
+  @extend .alert-success;
+  @include status-pulse('success', #fff, amplify($alert-success-bg), 1);
+  border-left-color: $brand-success;
+  background: #fff;
+}
+
+.ui-pb-msg-debug-parent {
+  @include alert-variant($debug-bg, $debug-bg-border, $debug-text);
+  @include status-pulse('debug', $debug-bg, amplify($debug-bg), 2);
+}
+
+.ui-postback-msg-debug {
+  color: $debug-text;
+}
+
+.ui-pb-msg-info-parent {
+  @extend .alert-info;
+  @include status-pulse('info', $alert-info-bg, amplify($alert-info-bg), 1);
+}
+
+.ui-postback-msg-info {
+  color: $alert-info-text;
+}
+
+.ui-pb-msg-warning-parent {
+  @extend .alert-warning;
+  @include status-pulse('warning', $alert-warning-bg, amplify($alert-warning-bg), 2);
+}
+
+.ui-postback-msg-warning {
+  color: $alert-warning-text;
+}
+
+.ui-pb-msg-failed-parent {
+  @extend .alert-danger;
+  @include status-pulse('failed', $alert-danger-bg, amplify($alert-danger-bg), 4);
+}
+
+.ui-postback-msg-failed {
+  color: $alert-danger-text;
+}
+
+#ui-postback-response {
+  .ui-pb-msg-success-parent & .ui-status-icon {
+    @extend .fa-check;
+  }
+  .ui-pb-msg-failed-parent & .ui-status-icon {
+    @extend .fa;
+    @extend .fa-exclamation;
+  }
+}

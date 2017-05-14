@@ -1,0 +1,175 @@
+@mixin alert-variant($background, $border, $body-color) {
+  background-color: $background;
+  border-color: $border;
+  border-left-color: $body-color !important;
+  color: $body-color;
+
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+  .alert-link {
+    color: darken($body-color, 10%);
+  }
+}
+
+
+.alert {
+  border-left-width: 5px;
+}
+
+.input-group-btn .btn, .input-group .btn {
+  border-bottom-width: 1px;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.block {
+  display: block !important;
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    .pull-#{$breakpoint}-right .dropdown-menu {
+      @include float-right();
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+.form-control {
+  &.form-control-static {
+    background: $input-bg;
+    .input-group-addon + & {
+      border-left: $input-btn-border-width solid $input-border-color;
+      box-shadow: none;
+    }
+    background-color: transparent;
+
+    &:disabled,
+    &[readonly] {
+      background-color: transparent;
+      // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+      opacity: 1; 
+
+    }
+  }
+}
+
+.input-group-addon + .btn-secondary-outline {
+  border-color: $input-group-addon-border-color;
+  &.active {
+    border-color: darken($btn-secondary-border, 33%);
+  }
+}
+
+.input-group-addon +.btn-secondary-outline {
+}
+
+.form-control-loading {
+
+}
+
+.btn-border-thin {
+  border-width:1px !important;
+}
+
+.dropdown-menu {
+  .dropdown-item {
+    &.btn {
+      margin-left: 0;
+    }
+    &.btn.warn {
+      background: none;
+    }
+
+  }
+}
+
+
+.modal {
+  z-index: 1050;
+}
+
+.text-uc {
+  text-transform: uppercase;
+}
+
+.text-lc {
+  text-transform: lowercase;
+}
+
+@function enumerate-colors($colors) {
+  $ret: ();
+  @each $name, $color in $colors {
+    $ret: append($ret, unquote(to-json($name, $color)), comma)
+  }
+  @return $ret
+}
+
+@function to-json($name, $color) {
+  @return '"#{$name}"' + ": " + '"#{$color}"'
+}
+
+body::before {
+  content: ('{' + (call(enumerate-colors, ($js-colors))) + '}');
+  display: none;
+}
+
+
+.container-fluid {
+  width: 100%;
+}
+
+.btn + .btn.dropdown-toggle::after, .btn.dropdown-toggle:first-child:after {
+  margin-left: 0; 
+}
+
+.modal.no-close .close {
+  display: none;
+}
+
+form label, .b {
+  font-weight: 600;
+}
+
+.input-group-addon .fa {
+  bottom: 0;
+}
+
+%notes {
+  padding: $spacer;
+  @include border-radius($border-radius);
+  list-style-position: inside;
+  background: #fff;
+  border-left: 3px solid $brand-info;
+}
+
+.input-group {
+  .input-group-addon ~ .btn {
+    margin-left: -1px;
+    &, .btn + input-group-addon {
+      @include border-left-radius(0)
+    }
+  }
+  .btn-group + input-group-addon {
+    margin-left: -1px;
+  }
+}
+
+.note.text-muted {
+  background: transparent;
+  border: 0 none;
+  padding: 0;
+  margin: $spacer/4;
+  margin-left: 0;
+}
+
+a {
+  font-weight: 600;
+}
+
+input, button, .dropdown-item {
+  font: inherit;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "apnscp/bootstrap-sdk",
+  "description": "apnscp Bootstrap SDK, make your own apnscp themes!",
+  "keywords": [
+    "css",
+    "js",
+    "sass",
+    "apnscp",
+    "framework",
+    "bootstrap"
+  ],
+  "homepage": "https://apnscp.com",
+  "authors": [
+    {
+      "name": "Matt Saladna",
+      "email": "matt@apisnetworks.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/apisnetworks/apnscp-bootstrap-sdk/issues"
+  },
+  "license": "MIT",
+  "replace": {
+    "apisnetworks/apnscp-bootstrap-sdk": "self.version"
+  }
+}

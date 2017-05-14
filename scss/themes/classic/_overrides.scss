@@ -1,0 +1,50 @@
+#app-dashboard {
+  background: #fff;
+}
+
+.btn {
+  border-bottom-width: 3px;
+  &.btn-primary, &.btn-primary-outline {
+    border-bottom-color: darken($btn-primary-border, 5%);
+  }
+  &.btn-secondary,&.btn-outline-secondary {
+    border-bottom-color: darken($btn-secondary-border, 5%);
+  }
+}
+
+h2.title {
+  color: $gray-dark;
+}
+
+.btn.warn:hover, button.warn:hover, input.warn:hover {
+  border-color: $brand-danger;
+}
+
+.ui-menu-category + .ui-menu-category-apps .active {
+  font-weight: 600;
+}
+
+.alert-info, .ui-pb-msg-info-parent {
+  background-color: #fff;
+}
+
+#app-ssl {
+  select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 4px);
+  }
+  select {
+    flex-direction: row !important;
+  }
+}
+
+#app-login {
+  background: linear-gradient(to bottom,#6f864a,#926942);
+}
+
+#app-error {
+  height: auto;
+  background: linear-gradient(#2A3F54, #000);
+  & #ui-app, & #ui-app-container {
+    margin-bottom: 0;
+  }
+}

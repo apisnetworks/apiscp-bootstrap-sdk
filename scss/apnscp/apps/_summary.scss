@@ -1,0 +1,30 @@
+#app-summary {
+  #ui-app h3 {
+    background: #fff;
+    text-align: center;
+  }
+
+  .ui-app h4 {
+    font-size: 1.05em;
+    font-weight: 600;
+  }
+
+  .hide_frag {
+    cursor: pointer;
+    &:after {
+    }
+    &.expanded {
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+
+  .ui-app .col-md-3 {
+    margin: 0.5em 0;
+  }
+
+
+
+}

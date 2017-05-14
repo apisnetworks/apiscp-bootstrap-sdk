@@ -1,0 +1,72 @@
+{
+  "name": "apnscp-bootstrap-sdk",
+  "description": "SDK for apnscp built off Bootstrap v4",
+  "version": "4.0.0-alpha.6",
+  "keywords": [
+    "css",
+    "sass",
+    "apnscp",
+    "web"
+  ],
+  "homepage": "http://apnscp.com",
+  "author": "Matt Saladna <matt@apisnetworks.com>",
+  "contributors": [
+    "Apis Networks, Inc."
+  ],
+  "scripts": {
+    "postcss": "postcss --config grunt/postcss.js --replace dist/css/*.css",
+    "scss-lint": "bundle exec scss-lint --config scss/.scss-lint.yml --exclude scss/_normalize.scss scss/*.scss scss/*/*.scss",
+    "scss-lint-docs": "bundle exec scss-lint --config scss/.scss-lint.yml --exclude docs/assets/scss/docs.scss docs/assets/scss/*.scss",
+    "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json"
+  },
+  "style": "dist/css/bootstrap.css",
+  "sass": "scss/bootstrap.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apisnetworks/apnscp-bootstrap-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apisnetworks/apnscp-bootstrap-sdk/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "bootstrap": "4.0.0-alpha.6",
+	"clean-css": "^3.4.23",
+    "eslint": "^3.12.2",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-browserify": "^5.0.0",
+    "grunt-build-control": "^0.7.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compress": "^1.3.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1",
+    "grunt-stamp": "^0.3.0",
+    "grunt-webpack": "^1.0.18",
+    "htmlhint": "^0.9.13",
+    "is-travis": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "node-sass": "^4.1.1",
+    "postcss-cli": "^2.6.0",
+    "postcss-flexbugs-fixes": "^2.1.0",
+    "shelljs": "^0.7.5",
+    "shx": "^0.2.1",
+    "time-grunt": "^1.4.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "dist",
+    "grunt",
+    "scss/**/*.scss",
+    "Gruntfile.js",
+    "LICENSE"
+  ]
+}

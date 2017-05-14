@@ -1,0 +1,717 @@
+html {
+  min-height: 100%;
+  position: relative;
+  &, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+  }
+}
+
+@include media-breakpoint-only(xl) {
+  .container-fluid-bound {
+    max-width: map-get($grid-breakpoints, "lg");
+  }
+}
+
+.ui-gauge,.ui-gauge-heading {
+  width: 140px;
+}
+
+
+.ui-gauge {
+  margin: 0 auto;
+  position: relative;
+  bottom: 0;
+  text-indent: -9999em;
+  overflow: visible;
+  border: 1px solid $rocket-gray;
+  float: left;
+  @include border-radius($border-radius);
+  overflow: hidden;
+  & + .ui-label-cluster {
+    float: right;
+  }
+}
+
+.ui-label-cluster .ui-gauge-label,.ui-gauge-cluster .ui-gauge-label {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.75em;
+  display: block;
+  line-height: 1em;
+  z-index: 2;
+}
+
+.ui-gauge-cluster {
+  .ui-gauge-heading {
+    font-size: 0.75em;
+    text-transform: uppercase;
+  }
+  .ui-gauge-label {
+    text-align: right;
+    margin-left: 5px;
+    position: relative;
+  }
+}
+
+@media screen
+and (max-width: 675px) {
+  #ui-account-gauges {
+    display: none !important;
+  }
+}
+
+.ui-label-cluster .ui-label-percentage {
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.ui-gauge .ui-gauge-slice {
+  height: 24px;
+  float: left;
+  position: absolute;
+}
+
+.ui-gauge .ui-gauge-used {
+  /*float: left;*/
+  top: 0;
+  background: #fbfbf1;
+  background: linear-gradient(to bottom,  #fbfbf1 0%,#f5f9f0 100%);
+  border-right: 1px solid #cbcbcb;
+  z-index: 2;
+}
+
+
+.ui-gauge {
+  .ui-gauge-free {
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    float: right;
+    background: rgb(244, 243, 239);
+    background: linear-gradient(to bottom, rgba(244, 243, 239, 1) 0%, rgba(255, 255, 255, 1) 53%);
+  }
+
+  .ui-gauge-cluster .ui-label-cluster {
+    float: left;
+    display: block;
+  }
+}
+
+.ui-gauge-warn .ui-gauge-used {
+  background: rgb(242, 235, 53);
+  background: linear-gradient(to bottom, lighten($brand-warning, 10%) 0%, $brand-warning 100%);
+  border-right-color: darken($brand-warning, 25%) !important;
+}
+
+.ui-gauge-crit {
+  .ui-gauge {
+    border-color: darken($brand-danger, 50%) !important;
+  }
+  .ui-gauge-heading {
+    color: $brand-danger;
+    font-weight: bold;
+  }
+
+  .ui-gauge-used {
+    background: $brand-danger;
+    background: linear-gradient(to bottom, lighten($brand-danger, 10%) 0%, $brand-danger 100%);
+    border-right: 1px solid darken($brand-danger, 20%);
+  }
+
+  .ui-gauge-free {
+    background: lighten($brand-danger, 25%) !important;
+  }
+}
+
+.ui-list-expander {
+  cursor: pointer;
+}
+
+.ui-list-expander:before {
+  content: '+';
+  display: inline-block;
+  font-size: 1.5em;
+  position: relative;
+  vertical-align: text-top;
+  margin-right: 3px;
+  transition-duration: 0.3s;
+}
+
+.ui-list-expander.ui-list-expanded:before {
+  transform:rotate(45deg);
+}
+
+
+.ui-refresh {
+  @extend .fa-refresh;
+  color: $gray-light;
+}
+
+.ui-overview-link {
+  text-indent: 9999em;
+  color: $header-bg;
+  font-size: 0.85em;
+}
+
+.ui-wiki-link:hover,.ui-overview-link:hover {
+  text-indent: 0;
+}
+
+.ui-help {
+  overflow: hidden;
+}
+
+
+/** Action Succeeded */
+.note {
+  background: #fff;
+  @include border-radius($border-radius);
+  border: 1px solid $rocket-gray;
+  border-left-color: $gray-light;
+  padding: $spacer-y $spacer-x $spacer-y $spacer-x;
+  border-left-width: 5px;
+  display: inline-block;
+}
+
+.note  {
+  border-left-color: $brand-info;
+}
+
+#ui-postback-response {
+  &.ui-pb-msg-info  .ui-status-icon {
+    margin-right: 0;
+  }
+  .ui-status-icon {
+    margin-right: $spacer-y/4;
+  }
+  overflow: hidden;
+  margin-bottom: 0;
+  font-weight: 600;
+  .ui-postback-response, .ui-toggle-details p {
+    font-weight: bold;
+  }
+
+  .ui-postback-toggle-details {
+    right: 0;
+    border: 0 none;
+    font-size: 0.85em;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: right;
+  }
+
+}
+
+.ui-pb-msg-success-parent #ui-postback-response {
+  border-left-color: $brand-success;
+}
+
+.ui-pb-msg-failed-parent #ui-postback-response {
+  border-left-color: $brand-danger;
+}
+
+
+.ui-postback-msg {
+  font-size: 0.95em;
+}
+
+.ui-postback-msg li {
+  white-space: pre-wrap;
+  max-height: 75px;
+  overflow-y: auto;
+  &:before {
+    margin-right: $spacer-y/4;
+  }
+}
+
+.ui-postback-msg li:before {
+  @extend .fa;
+  @extend .fa-flag;
+}
+
+.ui-postback-msg .ui-postback-nonstatus:before {
+  content: '';
+}
+
+
+.nav-app {
+  margin: auto 0;
+  width: 100%;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    height: auto;
+    min-height: 100%;
+  }
+}
+
+#ui-app {
+  margin-bottom: $spacer-y;
+}
+
+#ui-app-container {
+  width: 100%;
+  margin: 0;
+  flex-grow:2;
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
+
+#ui-help-container {
+  margin-top: -#{$spacer-y};
+}
+
+.ui-help-blurb-more {
+  cursor: pointer;
+}
+
+#ui-overview-link {
+  right: 0;
+  position: absolute;
+  text-indent: 0;
+  top:-2em;
+  &:before {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.3em;
+    vertical-align: middle;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+  }
+}
+
+#ui-help-blurb {
+  position: relative;
+  &:hover .ui-expandable {
+    color: $accent;
+  }
+}
+
+#ui-help-blurb:hover #ui-overview-link {
+  text-indent: 0;
+}
+
+
+.ui-help {
+  font-size: 0.90em;
+}
+
+table:not(.table) td {
+  padding: 3px;
+}
+
+table:not(.table) tr td:first-child {
+  padding-left: 0;
+}
+
+table:not(.table) tr td:last-child {
+  padding-right: 0;
+}
+
+.table {
+  thead th, .head1, tfoot .head1 {
+    background: $header-bg-light;
+    color: $header-links;
+  }
+
+  .head1 {
+    @extend th;
+    font-weight: bold;
+  }
+}
+
+
+#nav-container {
+  position: relative;
+  font-size: 0.9em;
+
+}
+
+.ui-filter {
+  @extend .fa-filter;
+}
+
+#container-nav img {
+  vertical-align: middle;
+}
+
+.prg-output {
+  white-space: pre;
+}
+
+.ui-tail-container {
+  overflow: auto;
+}
+
+.backtrace {
+  white-space: pre;
+  font-size: 0.9rem !important;
+  line-height: 0.9rem !important;
+  background: #f1f1f1;
+  display: block;
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+  color: #000;
+}
+
+table.multirow tr.entry td {
+  border-bottom: 1px solid #efefef;
+}
+
+#app-bar {
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #EFEFEF;
+  border-color: #EFEFEF #CACACA #CACACA #EFEFEF;
+}
+
+#app-bar.app-vertical {
+  float: right;
+  display: block;
+  margin-left: 1em;
+}
+
+#app-bar.app-right {
+  float: right;
+}
+
+#app-bar.app-vertical h3 {
+  display: block;
+}
+
+#app-bar.app-vertical div {
+  float: left;
+  clear: both;
+  text-align: left;
+}
+
+.opera #app-bar {
+  display: inline-block;
+}
+
+/* fix padding for CSS3 rounding */
+#app-bar h3 {
+  color: #999;
+  padding: 4px 0 4px 22px;
+  margin-bottom: 3px;
+  display: inline;
+  font-size: 1.1em;
+}
+
+.tablesorter thead tr th.nosort:before {
+  content: '';
+}
+
+.listodd,.odd {
+  background-color: #f1f1f1;
+  font-weight: normal;
+  padding: 3px;
+}
+
+.listeven,.even {
+  background-color: #ffffff;
+  font-weight: normal;
+  padding: 3px;
+}
+
+.ui-inline-msg {
+  display: inline-block;
+  min-height: 24px;
+  text-indent: 30px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: url(/images/template/message/general.png);
+}
+
+.ui-inline-msg.ui-msg-notice {
+  background-image: url(/images/template/infobox-notice.png);
+}
+
+/* quick hacks for IE */
+.tablesorter thead tr .headerSortUp:before, .tablesorter thead tr th:before {
+  content: '\25BC';
+}
+
+.tablesorter thead tr th:before {
+  content: '\25BD';
+}
+
+.tablesorter thead tr .headerSortUp:before, .tablesorter thead tr th:before,
+.tablesorter thead tr .headerSortDown:before  {
+  font-size: xx-small;
+  margin-right: 3px;
+
+}
+.tablesorter thead tr .headerSortUp,.tablesorter thead tr th {
+  cursor: pointer;
+}
+
+.tablesorter thead tr .headerSortDown {
+  cursor: pointer;
+}
+
+.tablesorter thead tr .headerSortDown:before {
+  content: '\25B2';
+}
+
+h2.title, h2.title:before {
+  font-weight: 400;
+  color: $header-bg;
+  text-transform: lowercase;
+}
+
+h2.e404 {
+  height: 45px;
+}
+
+
+.preload {
+  display: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.ui-highlight {
+  background: #faffaf !important;
+  color: #000 !important;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.left {
+  text-align: left !important;
+}
+
+.right {
+  text-align: right !important;
+}
+
+.top {
+  vertical-align: top !important;
+}
+
+.bottom {
+  vertical-align: bottom !important;
+}
+
+/** page template styles */
+.togglebox {
+  background: #fff;
+  color: #666;
+  display: none;
+}
+
+
+/* shrink the font and line-height to match all buttons */
+.ui-btn-inline {
+  font-size: 0.9rem !important;
+  line-height: 1rem !important;
+  padding: 0.25rem 0.5rem !important;
+  margin: 0 5px !important;
+}
+
+/** jQuery Dialog override */
+.ui-dialog-buttonset span.ui-button-text {
+  padding: 0.5em 1em;
+
+}
+
+.ui-dialog-buttonset button.ui-button {
+  margin-right:1em;
+}
+
+.ui-dialog-buttonset button.ui-button:last-child {
+  margin-right: 0;
+}
+
+/**
+ * error container styles
+ */
+.hide {
+  display: none !important;
+}
+
+th.nosort {
+  cursor: default !important;
+  padding-left: 5px !important;
+
+}
+
+label.hinted {
+  display: none;
+}
+
+textarea.hinted, input.hinted {
+  color: #aaa;
+}
+
+.note:before {
+  @extend .fa;
+  @extend .fa-sticky-note-o;
+  margin-right: 0.25em;
+}
+
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/**
+ * Expandable divs
+ */
+a.ui-expandable, span.ui-expandable {
+  display: inline-block;
+  font-family: $font-family-base;
+}
+
+a.ui-expandable {
+  text-decoration: none;
+  text-align: right;
+  &.ui-expanded:before {
+    transform:rotate(90deg);
+  }
+}
+
+.ui-expandable:before {
+  font-family: "apnscp";
+  @extend .fa;
+}
+
+.nojs .ui-expandable-container {
+  display: block;
+}
+
+.nojs a.ui-expandable {
+  display: none;
+}
+
+.js .ui-expandable-hidden {
+  display: none;
+}
+
+td.actions {
+  text-align: center;
+}
+
+
+
+.ui-state-default,.ui-widget-content .ui-state-default {
+  border: 1px solid #CCCCCC;
+  outline-color: -moz-use-text-color;
+  outline-style: none;
+  outline-width: medium;
+}
+
+.task-switcher {
+  margin: 1em auto;
+  font-weight: normal;
+}
+
+
+.primary, input.main, button.main {
+  @extend .btn-primary;
+}
+
+.btn.warn, button.warn, input.warn {
+  //transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1);
+  position: relative;
+  transition: all 150ms ease-out;
+  will-change: background-color, color;
+  &.ui-action-delete .fa-times {
+    display: none;
+  }
+  &.ui-action-delete:hover:before {
+    @extend .fa-bomb;
+  }
+  &:before {
+
+  }
+  /*&:hover:before {
+    opacity: 1;
+  }*/
+  &:hover {
+    color: #fff;
+    //transition: all 400ms ease-in-out;
+    background-color: $brand-danger !important;
+  }
+}
+
+/*button.warn:hover, input.warn:hover, #ui-app .btn.warn:hover, .warn-invariant {
+  @extend .btn-danger;
+}*/
+// links in alert boxes sometimes blend
+.alert a {
+  text-decoration: underline;
+}
+
+.input-group .shrink, .shrink {
+  width: 10%;
+  min-width: 2em;
+  transition: width 0.3s ease-in-out;
+}
+
+@include media-breakpoint-up(sm) {
+  .input-group .shrink, .shrink {
+    min-width: 4em;
+  }
+}
+
+.input-group .shrink:focus, .shrink:focus {
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+
+.row-eq-height {
+  display: flex;
+}
+
+.input-group.mask-readonly input.form-control[readonly] {
+  border-right: 0 none;
+  border-top: 0 none;
+  border-bottom: 0 none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+
+.ui-app .nav {
+  z-index: 1;
+}
+
+.ui-multi-role-show {
+  display: none;
+}
+
+@each $role in ("site","user","admin") {
+  body.role-#{$role} .ui-multi-role-show.role-#{$role} {
+    display: block;
+  }
+}
+
+
+.ui-action-switch-app {
+  font-weight: 600;
+}
+
+.text-disabled {
+  color: #999;
+  text-decoration: line-through;
+}

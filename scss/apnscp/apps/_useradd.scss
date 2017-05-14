@@ -1,0 +1,30 @@
+#app-useradd {
+  .suboptions {
+    display:none;
+  }
+  fieldset.form-group {
+    margin-bottom: $spacer-y;
+  }
+  #disk_slider { margin:5px 0 10px 5px;  display: none; }
+
+  #selected_dir {
+    display: block;
+  }
+
+  #change-warning ol {
+    list-style-position: inside;
+  }
+
+  tr td:first-child {
+    vertical-align: top;
+  }
+  /* This file skins sliders */
+
+  #change-warning, #change-form {
+    display: none;
+  }
+
+  .password-confirm-container {
+    display: none;
+  }
+}

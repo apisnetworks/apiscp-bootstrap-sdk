@@ -1,0 +1,20 @@
+#app-majordomo {
+
+  td.directive {
+    width:200px;
+    padding: 0 0 10px 5px;
+  }
+
+  .config-row {
+    margin: #{$spacer-y/2} -#{$spacer-y};
+    label {
+      display: block;
+    }
+    &:nth-child(2n) {
+      background: #fff;//$gray-lightest;
+
+    }
+  }
+  .config-row:nth-child(2n) {
+  }
+}

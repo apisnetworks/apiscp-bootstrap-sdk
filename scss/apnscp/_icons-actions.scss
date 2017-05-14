@@ -1,0 +1,230 @@
+.ui-action {
+  text-indent: -9999em;
+}
+
+.ui-action:before {
+  @extend .fa;
+  text-indent: 0;
+  display: inline-block;
+  //vertical-align: middle;
+}
+
+.ui-action:before {
+  text-decoration: none;
+}
+
+.ui-action-delete {
+  @extend .fa-times;
+}
+
+.ui-action-advanced {
+  @extend .fa-cog;
+}
+
+.ui-action-run {
+  @extend .fa-cogs;
+}
+
+.ui-action-add {
+  @extend .fa-plus;
+}
+
+.ui-action-properties {
+  @extend .fa-wrench;
+}
+
+.ui-action-edit {
+  @extend .fa-pencil;
+}
+
+.ui-action-edit-group {
+  @extend .fa-users;
+}
+
+.ui-action-open-archive {
+  @extend .fa-archive;
+}
+
+.ui-action-open-archive:after {
+  @extend .fa-expand;
+}
+
+.ui-action-disable {
+  @extend .fa-ban;
+}
+
+.ui-action-enable {
+  @extend .fa-lightbulb-o;
+}
+
+.ui-action-visit-site {
+  @extend .fa-external-link;
+}
+
+.ui-action-label {
+  font-family: $font-family-base;
+}
+
+.ui-action-label:before {
+  text-decoration: none;
+}
+
+.ui-action-compress {
+  @extend .fa-compress;
+}
+
+.ui-action-view-picture {
+  @extend .fa-picture-o;
+}
+
+.ui-action-switch-app {
+  @extend .fa-exchange;
+}
+
+.ui-action-print {
+  @extend .fa-print;
+}
+
+.ui-action-details {
+  @extend .fa-search-plus;
+}
+
+.ui-action-download {
+  @extend .fa-download;
+}
+
+.ui-action-upload {
+  @extend .fa-upload;
+}
+
+.ui-action-restore {
+  @extend .fa-undo;
+}
+
+.ui-action-manage-files {
+  @extend .fa-hdd-o;
+}
+
+.ui-action-is-enabled:before {
+  @extend .fa-check;
+  color: $green;
+}
+
+.ui-action-is-disabled {
+  @extend .fa-ban;
+  color: $brand-danger;
+}
+
+.ui-action-app-index {
+  @extend .fa-sitemap;
+}
+
+.ui-action-tooltip {
+  @extend .fa-question;
+}
+
+.ui-action-email {
+  @extend .fa-envelope-o;
+}
+
+.ui-action-email-local {
+  @extend .fa-inbox;
+}
+
+.ui-action-email-forward {
+  @extend .fa-share;
+}
+
+.ui-action-email-special {
+  @extend .fa-cube;
+}
+
+.ui-action-clipboard {
+  @extend .fa-clipboard;
+}
+
+.ui-action-folder-new {
+  @extend .fa-folder;
+}
+
+.ui-action-file-new {
+  @extend .fa-file;
+}
+
+.ui-action-folder-browse {
+  @extend .fa-folder-open;
+}
+
+.ui-action-download-remote {
+  @extend .fa-cloud-download;
+}
+
+.ui-action-symlink {
+  @extend .fa-link;
+}
+
+.ui-action-toolbox {
+  @extend .fa-briefcase;
+}
+
+.ui-action-load {
+  @extend .fa-bell;
+}
+
+.ui-action-activate {
+  @extend .fa-plug;
+}
+
+.ui-action-rename {
+  @extend .fa-i-cursor;
+}
+
+.ui-action-kb {
+  @extend .fa-book;
+}
+
+.ui-action-snapshot {
+  @extend .fa-camera;
+}
+
+.ui-action-ticket {
+  @extend .fa-life-ring;
+}
+
+.ui-action-copy {
+  @extend .fa-clipboard;
+}
+
+.ui-action-select {
+  //@extend .fa-dot-circle-o;
+  //@extend .fa-magic;
+  @extend .fa-cube;
+} 
+
+/** show label inside action link */
+.ui-app-container .ui-action-label, .ui-ajax-indicator.ui-action-label {
+  text-indent: 0;
+  width: auto;
+  vertical-align: baseline;
+
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+/** failure to align label in middle will offset components of group */
+.input-group .ui-action-label {
+  vertical-align: middle;
+  /*@if $enable-flex {
+    // do nothing
+  } @else {
+    display: table-cell;
+  }
+  width: 1%;*/
+}
+
+.input-group {
+  .ui-action-label {
+    vertical-align: middle;
+  }
+}

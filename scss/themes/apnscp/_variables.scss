@@ -1,0 +1,154 @@
+/*!
+ * Copyright (C) Apis Networks, Inc - All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium, is
+ * strictly prohibited without consent. Any dissemination of
+ * material herein is prohibited.
+ *
+ * For licensing inquiries email <licensing@apisnetworks.com>
+ *
+ * Written by Matt Saladna <matt@apisnetworks.com>, May 2017
+ */
+
+
+// Body
+$body-bg: white;
+
+// Colors
+$navy: #001f3f;
+$blue: #0074d9;
+$aqua: #7fdbff;
+$teal: #39cccc;
+$olive: #3d9970;
+$green: #1ABB9C;
+$lime: #01ff70;
+$yellow: #ffdc00;
+$orange: #ff851b;
+$red: #ff4136;
+$maroon: #85144b;
+$fuchsia: #f012be;
+$purple: #b10dc9;
+$black: #111111;
+$gray: #aaaaaa;
+$silver: #dddddd;
+
+// Create grayscale
+$gray-dark:                 #292b2c !default;
+$gray:                      #464a4c !default;
+$gray-light:                #636c72 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+
+$enable-flex:               true !default;
+$enable-rounded:            true !default;
+$enable-shadows:            true !default;
+$enable-gradients:          true !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
+$spacer: 1rem;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+
+/**
+ * Heading styles
+ */
+$header-bg: #2A3F54; //#4D545D;
+$header-bg-light: lighten($header-bg, 15%);
+$header-links: #E7E7E7; //invert($header-bg);
+$header-links-hover: #fff;//darken($header-links, 10%);
+$header-icons: $header-bg-light;
+$header-icons-hover: $header-links-hover;
+
+$input-color: $gray-dark;
+
+$sidemenu-max-width: 230px;
+$sidemenu-icon: $header-bg-light;
+$sidemenu-icon-hover: #fff;
+$sidemenu-icon-active: #fff;
+$sidemenu-active-app-bg: none;
+$sidemenu-app-hover-bg: lighten($header-bg, 5%);;
+$sidemenu-app-hover-color: $header-links;
+
+$menu-border: 1px solid $header-bg;
+$menu-hover-bg: lighten($header-bg, 5%);
+$menu-hover-border: 1px solid darken($header-bg, 5%);
+$menu-breadcrumb-bg: $header-bg;
+$menu-breadcrumb-border: 1px solid darken($header-bg, 20%);
+$menu-breadcrumb-color: $header-links;
+$menu-breadcrumb-color-hover: $header-links-hover;
+$alert-info-bg: #fff;
+
+$footer-bg: $header-bg;
+$speed: 200ms;
+$easing: cubic-bezier(0.7, 0, 0, 0.7);
+
+$rocket-gray: #ebebeb;
+$accent: #cf5349;
+
+$spectrum-height: 2px;
+$navbar-dark-color: #bfbfbf;
+
+// Borders
+$hostineer-border-color: darken($body-bg, 10%);
+$list-group-border: $hostineer-border-color;
+$navbar-default-border: $hostineer-border-color;
+$panel-default-border: $hostineer-border-color;
+$panel-inner-border: $hostineer-border-color;
+
+// Brands
+$brand-primary: #993950;//#324d5b;//#3097D1;
+$brand-secondary: $orange;
+$brand-info: #8eb4cb;
+$brand-success: $green;
+$brand-warning: #d69400; //$yellow;
+$brand-danger:  $red;
+$brand-info: #3aa3e3;
+$text-highlight-bg: $yellow;
+$text-highlight: #000;
+$js-colors: (
+        primary: $brand-primary,
+        secondary: darken($brand-primary, 15%),
+        tertiary: $olive,
+        inactive: $rocket-gray,
+        background: #fff
+);
+
+// Typography
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-root: 14px !default;
+
+$font-size-base: 1rem !default;
+$line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+$btn-secondary-border: $gray;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
+
+// Dropdown
+$dropdown-link-hover-color: $brand-primary;
+
+// Footer
+$footer-margin: 6rem;
+$dashboard-bg: #ebebeb;
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}

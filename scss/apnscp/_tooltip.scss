@@ -1,0 +1,116 @@
+.tooltip {
+	text-decoration: none;
+	border-bottom:1px dotted #b15151;
+	cursor: help;
+}
+
+
+#tooltip {
+	position:absolute;
+	z-index:10000;
+	line-height:1.5em;
+	font-size:0.85em;
+	margin-left:-5px;
+}
+
+#tooltip_title {
+	margin:3px 0; 
+	font-size:1rem;
+	color: #fff;
+	font-weight:bold;
+}
+
+#tooltip_title, #tooltip_tip { display:block; }
+
+#tooltip_underlay {
+	/*background:#000;*/
+	left:-6px;
+	top:-6px;
+	bottom:-6px;
+	right:-6px;
+	position:absolute;
+	filter:alpha(opacity=50);
+	opacity:.5;
+	z-index:-1;
+}
+
+#tooltip_underlay {
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+    border-radius: 5px;
+}
+
+#tooltip_inside {
+	position:relative;
+	padding: 3px 5px 5px;
+	background: #000;
+	color:#fff;
+	width:auto;
+	background:#000;
+	-moz-border-radius:5px;
+    border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+#tooltip_frame {
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+    border-radius:5px;
+	opacity:0.85;
+	filter:alpha(opacity=85);
+}
+
+#tooltip_pointer {
+	display: block;
+	position: absolute;
+	height:10px;
+	width:5px;
+	background-repeat: no-repeat;
+	opacity:0.95;
+	filter:alpha(opacity=95);
+}
+/***
+ *** Too much dropshadow porn?
+
+.tooltip-west #tooltip_inside {
+	-moz-box-shadow: 2px 2px 3px #cfcfcf;
+	-webkit-box-shadow: 2px 2px 3px #cfcfcf;
+	box-shadow: 2px 2px 3px #cfcfcf;
+}
+
+.tooltip-east #tooltip_inside {
+	-moz-box-shadow: 2px -2px 3px #cfcfcf;
+	-webkit-box-shadow: 2px -2px 3px #cfcfcf;
+	box-shadow: 2px -2px 3px #cfcfcf;
+}
+
+.tooltip-north #tooltip_inside {
+	-moz-box-shadow: 2px -2px 3px #cfcfcf;
+	-webkit-box-shadow: 2px -2px 3px #cfcfcf;
+	box-shadow: 2px -2px 3px #cfcfcf;
+}
+
+.tooltip-south #tooltip_inside {
+	-moz-box-shadow: -2px -2px 3px #cfcfcf;
+	-webkit-box-shadow: -2px -2px 3px #cfcfcf;
+	box-shadow: -2px -2px 3px #cfcfcf;
+}*/
+.tooltip-west #tooltip_pointer  {
+	background-image:url(/images/tooltip/west.gif);
+	left:-5px;
+}
+.tooltip-east #tooltip_pointer  {
+	background-image:url(/images/tooltip/east.gif);
+	right: -5px;
+}
+
+.tooltip-north #tooltip_pointer  {
+	background-image:url(/images/tooltip/north.gif);
+	top:-5px;
+}
+.tooltip-south #tooltip_pointer {
+	background-image:url(/images/tooltip/south.gif);
+	bottom:-5px;
+}
+
+

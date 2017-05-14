@@ -1,0 +1,113 @@
+#remote-pb-container {
+  max-width: 300px;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  font-size: 0.9rem;
+  z-index: 10000;
+
+  .template {
+    display: none;
+  }
+
+  .alert {
+    z-index: 10001;
+    top: 10px;
+    position: relative;
+    transition: all 0.25s ease-in-out 0s;
+    background: #fff;
+    &:hover .close {
+      color: #000;
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+
+    }
+  }
+}
+
+.ui-ajax-loading, .has-loading:after {
+  @extend .fa-spinner;
+  @extend .fa-spin;
+  display: inline-block !important;
+  color: $brand-success;
+  content: '';
+}
+
+.ui-ajax-success {
+  @extend .fa-check;
+  color: $brand-success;
+}
+
+body .ui-ajax-error {
+  @extend .fa-exclamation;
+  color: $brand-danger !important;
+}
+
+.ui-ajax-loading:before {
+  bottom: 0 !important;
+}
+
+.has-loading:after {
+  font-size: 1.5em !important;
+  top: 0.25em;
+  right: 0.25em;
+  content: '';
+  height: 1em;
+  width: 1em;
+  position: absolute;
+  z-index: 999;
+}
+
+.ui-ajax-error-msg, .ui-ajax-success-msg {
+  font-size: 0.95em;
+}
+
+.ui-ajax-error-msg {
+  color: $brand-danger;
+  list-style-position: inside;
+}
+
+.ui-ajax-error-msg-inline {
+  display: inline;
+}
+
+.ui-ajax-error-msg-block {
+  display: block;
+}
+
+.ui-ajax-success-msg {
+  margin: 0 auto;
+  display: block;
+  color: $brand-success;
+}
+
+.ui-ajax-indicator {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: visible;
+  color: $brand-success;
+  vertical-align: middle;
+  position: relative;
+  margin: 0 $spacer-x/2;
+  @extend .fa;
+  .ui-ajax-status {
+    display: block;
+    margin-left: 26px;
+    text-indent: 0;
+    position: relative;
+  }
+}
+
+.ui-ajax-loading-large {
+  @extend .fa-4x;
+}
+
+.ui-ajax-loading-md {
+  @extend .fa-2x;
+}

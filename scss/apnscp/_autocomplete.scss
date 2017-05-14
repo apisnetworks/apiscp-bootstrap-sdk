@@ -1,0 +1,54 @@
+
+.ac_results {
+  padding: 0px;
+  border: 1px solid WindowFrame;
+  background-color: Window;
+  overflow: hidden;
+}
+
+.ac_results ul {
+  width: 100%;
+  list-style-position: outside;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ac_results iframe {
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+  filter:mask();
+  width:3000px;
+  height:3000px;
+}
+.ie5 .ac_results iframe {
+  display: none;
+}
+.ac_results li {
+  margin: 0px;
+  padding: 2px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ac_input {
+  /*background-image: url(/images/spinner-small-waiting.gif);*/
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.ac_loading {
+  background-image : url(/images/spinner-small.gif);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.ac_over {
+  background-color: Highlight;
+  color: HighlightText;
+}

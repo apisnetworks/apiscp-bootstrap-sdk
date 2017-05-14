@@ -1,0 +1,287 @@
+$rocket-body: #ebebeb;
+#app-login {
+  //@include gradient-y($brand-inverse, $footer-bg);
+  background-color: #000;
+  background: linear-gradient($header-bg, #000);
+
+  .logo {
+    text-indent: -9999em;
+    background:url(/images/apps/login/logo-lg.png) center center no-repeat;
+    height: 160px;
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  .ui-app-container {
+    margin: 0 auto;
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  .content {
+    background: rgba(255, 255, 255, 1);
+    padding: 0;
+  }
+
+  .content h3 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #000;
+  }
+
+  form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  form input[type="text"], form input[type="email"], form input[type="password"], form input[type="number"] {
+    height: 44px;
+    padding-left: 50px;
+  }
+
+  form .form-group label {
+    text-align: left;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+
+  form .input-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    left: 12px;
+    width: 20px;
+    height: 18px;
+    text-align: center;
+    color: $brand-primary;
+  }
+
+  form .input-icon::after {
+    content: '';
+    position: absolute;
+    right: -11px;
+    top: -10px;
+    bottom: -10px;
+    width: 1px;
+    opacity: .5;
+    background-color: rgba(212,212,212,0);
+    background-image: linear-gradient(to top,rgba(212,212,212,0) 0,#d4d4d4 30%,#d4d4d4 70%,rgba(212,212,212,0) 100%);
+  }
+
+  .content a {
+    color: #000;
+  }
+
+  .gradient-primary {
+    z-index: 2;
+    position: relative;
+  }
+
+  .footer {
+    background: transparent;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .panel form {
+    padding: 1em;
+  }
+  input:focus {
+    box-shadow: 0 0 0 transparent;
+  }
+
+  .ui-dialog {
+    text-align: center;
+  }
+
+  span#loading {
+    position:relative;
+    font-size:1.5em;
+    font-weight:bold;
+    color: #80AA2D;
+    display:inline-block;
+    margin: 0 auto;
+
+  }
+
+  #loading > span:first-child {
+    margin-right: 4px;
+  }
+
+  #reset-header {
+    content: 'Reset Password';
+  }
+
+
+  input.login-field {
+
+    height: 32px;
+    text-indent: 45px;
+    width: 100%;
+  }
+
+  span.input-field {
+    position: relative;
+    border: 1px solid #d1d1d1;
+    display: block;
+    overflow: hidden;
+  }
+  span.input-field input {
+    border: 0 none;
+  }
+
+  span.input-field:before {
+    content: ' ';
+    background: #fff url(/images/apps/login/login-sprite.png) 0 0 no-repeat;
+    display: block;
+    height: 32px;
+    width: 32px;
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+
+
+
+  span.login-input:before {
+    background-position: 0 0;
+  }
+
+  span.domain-input:before {
+    background-position: 0 -75px;
+  }
+
+  span.password-input:before {
+    background-position: 0 -38px;
+  }
+
+  .options {
+    font-size: 0.85em;
+    text-align: center;
+  }
+
+  #login, #forgot {
+    display: block;
+    overflow: hidden;
+  }
+
+  .messages {
+    display:block;
+    font-size:1em;
+    margin: 0 auto 1em 0;
+    overflow:hidden;
+    position:relative;
+    top:0;
+  }
+  .messages .welcome { font-size:2em; margin:50px auto; display: block; text-align: center; width:200px;}
+
+
+  /** New User + Forgot your password */
+  .problem-container {
+    padding: 1em;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    a {
+      color: #324d5b; //rgb(36,54,72);
+    }
+  }
+
+  .footer div {
+    text-align: center;
+  }
+  .footer a {
+    text-decoration: none ;
+    border: 0 none;
+    font-size: 0.9em;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .made-in {
+    span {
+      content: '';
+      display: block;
+      height: 66px;
+      width: 66px;
+      background:url(/images/apps/login/ga-peach.png) center center no-repeat;
+      opacity: 0.5;
+      margin: 0 auto;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+    }
+  }
+
+  .status-indicator a {
+    text-decoration: none;
+  }
+
+  .status-indicator {
+    font-size: 0.9em;
+  }
+
+  #whatsNew, .problem-container, .login-container {
+    /*border-left: 1px solid #ccc;*/
+    background: $rocket-body;
+  }
+
+  #whatsNew {
+    @include border-right-radius($border-radius);
+  }
+
+  #login, .login-container, .login-container .content {
+    @include border-left-radius($border-radius);
+  }
+
+  .login-container:after {
+
+  }
+  #whatsNew:before {
+    background-color: rgba(212,212,212,0);
+    background-image: linear-gradient(to top,rgba(212,212,212,0) 0,#d4d4d4 30%,#d4d4d4 70%,rgba(212,212,212,0) 100%);
+    content: '';
+    width: 1px;
+    left: 0;
+    height: 100%;
+    position: absolute;
+  }
+
+  .new-password {
+    font-size: 2em;
+  }
+
+  .ui-app-container button a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .container-fluid {
+    position: inherit;
+  }
+  @include media-breakpoint-down(sm) {
+    .login-container, .login-container .content {
+      @include border-radius($border-radius-lg);
+    }
+    .problem-container, #login {
+      @include border-bottom-radius($border-radius-lg);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .p-r-0 {
+      padding-right: $spacer-x !important;
+    }
+  }
+}
