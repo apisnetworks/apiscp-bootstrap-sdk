@@ -5,11 +5,10 @@
  * CopyrLicensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-var APNSCP_PATH = "/usr/local/apnscp",
-	THEME_PATH = APNSCP_PATH + "/public/css/themes",
+var APNSCP_PATH = process.env['APNSCP_PATH'] || "/usr/local/apnscp",
+	THEME_PATH = process.env['APNSCP_THEME_PATH'] || (APNSCP_PATH + "/public/css/themes"),
 	THEME = process.env['THEME'] || "apnscp",
 	BUILD_JS = process.env['JS'] || false;
-var es2015 = require('babel-preset-es2015');
 
 module.exports = function (grunt) {
     'use strict'
@@ -25,8 +24,6 @@ module.exports = function (grunt) {
     var isTravis = require('is-travis')
 
     grunt.loadNpmTasks('grunt-browserify');
-    var webpack = require("webpack");
-    var webpackConfig = require("./webpack.config.js");
 
     // Project configuration.
     grunt.initConfig({
@@ -74,10 +71,6 @@ module.exports = function (grunt) {
         },
 
         watch: {
-            src: {
-                files: 'js/src/*.js',
-                tasks: ['concat', 'copy:webpack', 'browserify', 'copy:js']
-            },
             sass: {
                 files: 'scss/**/*.scss',
                 tasks: ['sass-compile', 'copy:css']
@@ -130,9 +123,7 @@ module.exports = function (grunt) {
     require('jit-grunt')(grunt)
     require('time-grunt')(grunt)
 
-    //grunt.registerTask('dist-js', ['babel:dev', 'concat', 'copy:webpack', 'babel:dist', 'browserify', 'copy:js', /*'exec:uglify'*/])
     grunt.registerTask('test-scss', ['exec:scss-lint'])
-	grunt.registerTask('js-compile', ['babel:dev', 'concat', 'copy:webpack', 'copy:js']);
     grunt.registerTask('sass-compile', ['exec:sass', 'copy:css'])
     grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'exec:clean-css', 'copy:css'])
 
