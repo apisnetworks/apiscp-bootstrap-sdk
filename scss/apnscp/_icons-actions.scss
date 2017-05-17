@@ -201,6 +201,15 @@
   @extend .fa-cube;
 } 
 
+.ui-action-is-enabled {
+  @extend .fa-check;
+  color: $brand-success;
+}
+
+.ui-action-is-disabled {
+  @extend .fa-times;
+  color: $brand-danger;
+}
 /** show label inside action link */
 .ui-app-container .ui-action-label, .ui-ajax-indicator.ui-action-label {
   text-indent: 0;
