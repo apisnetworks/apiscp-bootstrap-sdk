@@ -12,7 +12,7 @@
 
 
 // Body
-$body-bg: white;
+$body-bg: #fff;
 
 // Colors
 $navy: #001f3f;
@@ -55,7 +55,7 @@ $spacer-y: $spacer !default;
 /**
  * Heading styles
  */
-$header-bg: #2A3F54; //#4D545D;
+$header-bg: #588C7E; //#4D545D;
 $header-bg-light: lighten($header-bg, 15%);
 $header-links: #E7E7E7; //invert($header-bg);
 $header-links-hover: #fff;//darken($header-links, 10%);
@@ -99,12 +99,12 @@ $panel-default-border: $hostineer-border-color;
 $panel-inner-border: $hostineer-border-color;
 
 // Brands
-$brand-primary: #993950;//#324d5b;//#3097D1;
-$brand-secondary: $orange;
+$brand-primary: #588C7E;//#324d5b;//#3097D1;
+$brand-secondary: #F2E394;
 $brand-info: #8eb4cb;
 $brand-success: $green;
-$brand-warning: #d69400; //$yellow;
-$brand-danger:  $red;
+$brand-warning: #F2AE72;
+$brand-danger: #8C4646;;
 $brand-info: #3aa3e3;
 $text-highlight-bg: $yellow;
 $text-highlight: #000;
