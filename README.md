@@ -44,6 +44,7 @@ apnscp must be configured with **[style]** => **allow_custom** set to true on co
 
 Once enabled, visit **Account** > **Settings** > **Theme**. Select Custom from **Active Theme** to enter the custom theme dialog. Once installed, click **Save Changes**. Note the theme may only be overwritten and no more than 1 theme per user may exist at this time.
 
-
+## Todo
+- [ ] lint, much much much linting
 
 ***Happy theming!***
