@@ -204,6 +204,7 @@ nav {
         @include media-breakpoint-down(sm) {
           left: 0.5em;
           transform: rotate(-90deg);
+		  top: 1rem;
         }
       }
     }
@@ -211,6 +212,11 @@ nav {
       text-decoration: none;
       color: $header-links;
       padding-left: 3.75rem;
+	  // mobile touch
+	  @include media-breakpoint-down(sm) {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	  }
       &:hover, &:focus {
         background: $sidemenu-app-hover-bg;
         color: $sidemenu-app-hover-color;

@@ -18,10 +18,6 @@ $rocket-body: #ebebeb;
       color: #fff;
       text-decoration: none;
     }
-	.content-container a {
-	  color: $body-color;
-	  text-decoration: underline;
-	}
   }
 
   .content {
@@ -230,10 +226,6 @@ $rocket-body: #ebebeb;
     }
   }
 
-  .status-indicator a {
-    text-decoration: none;
-  }
-
   .status-indicator {
     font-size: 0.9em;
   }
@@ -260,16 +252,6 @@ $rocket-body: #ebebeb;
 
   }
 
-  #whatsNew:before {
-    background-color: rgba(212,212,212,0);
-    background-image: linear-gradient(to top,rgba(212,212,212,0) 0,#d4d4d4 30%,#d4d4d4 70%,rgba(212,212,212,0) 100%);
-    content: '';
-    width: 1px;
-    left: 0;
-    height: 100%;
-    position: absolute;
-  }
-
   .new-password {
     font-size: 2em;
   }
@@ -294,5 +276,22 @@ $rocket-body: #ebebeb;
     .p-r-0 {
       padding-right: $spacer-x !important;
     }
+  }
+}
+
+.content-container:not(:first-child) {
+  a {
+	color: $body-color;
+	text-decoration: underline;
+
+  }
+  &:before {
+	background-color: rgb(212, 212, 212);
+	background-image: linear-gradient(to top, rgba(212, 212, 212, 0) 0, #d4d4d4 30%, #d4d4d4 70%, rgba(212, 212, 212, 0) 100%);
+	content: '';
+	width: 1px;
+	left: 0;
+	height: 100%;
+	position: absolute;
   }
 }

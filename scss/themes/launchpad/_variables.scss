@@ -81,13 +81,6 @@ $accent: #cf5349;
 $spectrum-height: 2px;
 $navbar-dark-color: #bfbfbf;
 
-// Borders
-$hostineer-border-color: darken($body-bg, 10%);
-$list-group-border: $hostineer-border-color;
-$navbar-default-border: $hostineer-border-color;
-$panel-default-border: $hostineer-border-color;
-$panel-inner-border: $hostineer-border-color;
-
 // Brands
 $brand-primary: #993950;//#324d5b;//#3097D1;
 $brand-secondary: $orange;
@@ -113,6 +106,20 @@ $font-size-root: 14px !default;
 $font-size-base: 1rem !default;
 $line-height-base: 1.6;
 $text-color: #636b6f;
+
+
+// Borders
+$hostineer-border-color: darken($body-bg, 10%);
+$navbar-default-border: $hostineer-border-color;
+$panel-default-border: $hostineer-border-color;
+$panel-inner-border: $hostineer-border-color;
+
+// List Groups
+$list-group-border: $hostineer-border-color;
+$list-group-active-color: $brand-primary;
+$list-group-active-bg: #fff;
+$list-group-active-border: $brand-primary;
+$list-group-active-text-color: $text-color;
 
 // Navbar
 $navbar-default-bg: #fff;
