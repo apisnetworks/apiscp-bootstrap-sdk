@@ -173,3 +173,20 @@ a {
 input, button, .dropdown-item {
   font: inherit;
 }
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $keys: map-keys($grid-breakpoints);
+
+
+  @include media-breakpoint-down($breakpoint) {
+	.dropdown-menu > .btn-block.hidden-#{$breakpoint}-down + .btn-block {
+	  margin-top: 0;
+	}
+  }
+  @include media-breakpoint-up($breakpoint) {
+	.dropdown-menu > .btn-block.hidden-#{$breakpoint}-up + .btn-block {
+	  margin-top: 0;
+	}
+  }
+}
+

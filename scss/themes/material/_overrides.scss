@@ -1,0 +1,170 @@
+#ui-header {
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.25);
+  z-index: 2;
+  position: relative;
+  #ui-account-gauges {
+	margin-top: -0.25rem;
+  }
+}
+// note, need to update references in classic/launchpad themes
+#ui-nav-container {
+  padding: 0;
+  margin-top: 1rem;
+  z-index: 1;
+  background: $body-bg;
+  .ui-menu-category + .ui-menu-category-apps {
+	background: $body-bg;
+  }
+}
+
+#ui-help-container {
+  margin-top: 0;
+}
+
+.ui-menu-category {
+  &:focus {
+	color: $brand-primary;
+  }
+  color: $sidemenu-link-color;
+  padding: $spacer-y/2 0;
+  display: block;
+  padding-left: $spacer-x;
+}
+
+.ui-menu-category {
+  a {
+
+  }
+  &:hover {
+	background: $brand-primary;
+	color: #fff;
+
+  }
+  & + .ui-menu-category-apps a {
+	color: $sidemenu-active-cat-link-color;
+	padding-left: 2.75rem;
+	padding-top: $spacer-y/2;
+	padding-bottom: $spacer-y/2;
+	&.active {
+	  font-weight: 600;
+	}
+  }
+}
+
+
+#ui-header {
+  a {
+	&:hover {
+	  color: $dropdown-link-hover-color;
+	}
+  }
+}
+
+#ui-menu {
+  .ui-menu-category {
+	&, &:before, &:after {
+		transition: all 150ms ease-in-out;
+	}
+	& + .ui-menu-category-apps {
+	  .active:after {
+		border-top: 0.5em solid transparent;
+	  }
+
+	}
+  }
+  > .dropdown {
+	// marker indicator
+	.dropdown-toggle:hover::after {
+	  color: #fff;
+	}
+	.dropdown-toggle:focus::after {
+	  //color: $brand-primary;
+	}
+  }
+  .ui-menu-active:hover {
+	color: #fff;
+	&, .ui-menu-active:focus {
+
+	}
+  }
+   > .dropdown {
+	.ui-menu-category-apps {
+	  margin-left: 0;
+	  margin-right: 0;
+	  a {
+	  	opacity: 0;
+		transition:opacity 0.5s;
+		transition-timing-function: ease-in-out;
+
+	  }
+	}
+	.ui-menu-category-apps[aria-expanded="true"] a {
+	 opacity: 1;
+	}
+	 .dropdown-toggle[aria-expanded="true"] {
+	   &::after {
+		 top: 0.25rem;
+	   }
+	   &:hover::after {
+		 color: #fff;
+	   }
+	 }
+	.dropdown-toggle::after {
+	  @extend .fa;
+	  @extend .fa-angle-down:before;
+	  border: 0 none;
+	  transform-origin: 50% 50%;
+	  top: 0.25rem;
+	  right: 1rem !important;
+	  height: 1em;
+	  width: 1em;
+	  transition-property: transform;
+	  transition: transform .15s;
+	  transition-timing-function: ease-in-out;
+	}
+  }
+}
+
+.ui-menu-category {
+  &[aria-expanded="true"]:focus:before {
+	color: $brand-primary;
+  }
+  &:hover:before, &[aria-expanded="true"]:hover:before {
+	color: #fff;
+  }
+}
+
+#ui-menu > .dropdown-toggle[aria-expanded="true"]:focus::after {
+  color: #fff;
+}
+
+#ui-menu > .dropdown .dropdown-toggle:hover::after, #ui-menu > .dropdown .dropdown-toggle:focus::after {
+  color: inherit;
+}
+
+#ui-header {
+  box-shadow: $large-dropshadow;
+}
+
+.btn {
+  box-shadow: $small-dropshadow;
+}
+
+.align-middle {
+  vertical-align: -webkit-baseline-middle !important;
+}
+
+.table {
+  th, .head1, tr:first-of-type td {
+	border: 0 none;
+  }
+  thead {
+	.head1, th {
+	  border: 0 none;
+	}
+	box-shadow: $large-dropshadow;
+  }
+  .th, .head1 {
+	border-top: 0 none;
+  }
+}

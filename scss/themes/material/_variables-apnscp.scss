@@ -21,17 +21,6 @@ $black: #111111;
 $gray: #aaaaaa;
 $silver: #dddddd;
 
-// Brands
-$brand-primary: #33a02c;//#324d5b;//#3097D1;
-$brand-secondary: $orange;
-$brand-info: #8eb4cb;
-$brand-success: $green;
-$brand-warning: #d69400; //$yellow;
-$brand-danger:  $red;
-$brand-info: #3aa3e3;
-$text-highlight-bg: $yellow;
-$text-highlight: #000;
-
 // Create grayscale
 $gray-dark:                 #292b2c !default;
 $gray:                      #464a4c !default;
@@ -40,32 +29,38 @@ $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
 $enable-flex:               true !default;
-$enable-rounded:            false !default;
+$enable-rounded:            true !default;
 $enable-shadows:            true !default;
 $enable-gradients:          true !default;
 $enable-transitions:        true !default;
 $enable-hover-media-query:  false !default;
 $enable-grid-classes:       true !default;
 $enable-print-styles:       true !default;
-$input-color: $gray-dark;
-$custom-file-color: $input-color;
+
+$spacer: 1rem;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+
 /**
  * Heading styles
  */
-$header-bg: #efefef; //#4D545D;
+$header-bg: #2A3F54; //#4D545D;
 $header-bg-light: lighten($header-bg, 15%);
-$header-links: #343434; //invert($header-bg);
-$header-links-hover: #000;//darken($header-links, 10%);
+$header-links: #E7E7E7; //invert($header-bg);
+$header-links-hover: #fff;//darken($header-links, 10%);
 $header-icons: $header-bg-light;
 $header-icons-hover: $header-links-hover;
 
+$input-color: $gray-dark;
+$custom-file-color: $gray-dark;
+
 $sidemenu-max-width: 230px;
-$sidemenu-icon: $gray-light;//$header-bg-light;
-$sidemenu-icon-hover: $brand-primary;
-$sidemenu-icon-active: #000;
-$sidemenu-active-app-bg: #fff;//lighten($brand-primary, 55%);
-$sidemenu-app-hover-bg: lighten($brand-primary, 55%);;
-$sidemenu-app-hover-color: inherit;
+$sidemenu-icon: $header-bg-light;
+$sidemenu-icon-hover: #fff;
+$sidemenu-icon-active: #fff;
+$sidemenu-active-app-bg: none;
+$sidemenu-app-hover-bg: lighten($header-bg, 5%);;
+$sidemenu-app-hover-color: $header-links;
 
 $menu-border: 1px solid $header-bg;
 $menu-hover-bg: lighten($header-bg, 5%);
@@ -74,28 +69,28 @@ $menu-breadcrumb-bg: $header-bg;
 $menu-breadcrumb-border: 1px solid darken($header-bg, 20%);
 $menu-breadcrumb-color: $header-links;
 $menu-breadcrumb-color-hover: $header-links-hover;
-
-$dropdown-link-hover-color:      darken($gray-dark, 5%);
-$dropdown-link-hover-bg:         lighten($brand-primary, 55%);
+$alert-info-bg: #fff;
 
 $footer-bg: $header-bg;
 $speed: 200ms;
 $easing: cubic-bezier(0.7, 0, 0, 0.7);
 
 $rocket-gray: #ebebeb;
-$accent: $brand-primary; //#cf5349;
+$accent: #cf5349;
 
 $spectrum-height: 2px;
 $navbar-dark-color: #bfbfbf;
-$font-family-sans-serif: "Open Sans", "Arial", sans-serif;
-// Borders
-$hostineer-border-color: darken($body-bg, 10%);
-$list-group-border: $hostineer-border-color;
-$navbar-default-border: $hostineer-border-color;
-$panel-default-border: $hostineer-border-color;
-$panel-inner-border: $hostineer-border-color;
 
-
+// Brands
+$brand-primary: #993950;//#324d5b;//#3097D1;
+$brand-secondary: $orange;
+$brand-info: #8eb4cb;
+$brand-success: $green;
+$brand-warning: #d69400; //$yellow;
+$brand-danger:  $red;
+$brand-info: #3aa3e3;
+$text-highlight-bg: $yellow;
+$text-highlight: #000;
 $js-colors: (
         primary: $brand-primary,
         secondary: darken($brand-primary, 15%),
@@ -108,9 +103,23 @@ $js-colors: (
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px;
 
-$font-size-base: 0.9rem;
+$font-size-base: 12px;
 $line-height-base: 1.6;
 $text-color: #636b6f;
+
+
+// Borders
+$hostineer-border-color: darken($body-bg, 10%);
+$navbar-default-border: $hostineer-border-color;
+$panel-default-border: $hostineer-border-color;
+$panel-inner-border: $hostineer-border-color;
+
+// List Groups
+$list-group-border: $hostineer-border-color;
+$list-group-active-color: $brand-primary;
+$list-group-active-bg: #fff;
+$list-group-active-border: $brand-primary;
+$list-group-active-text-color: $text-color;
 
 // Navbar
 $navbar-default-bg: #fff;

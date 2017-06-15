@@ -119,7 +119,7 @@ $js-colors: (
 // Typography
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px !default;
-
+$font-family-sans-serif: "Open Sans", "Arial", sans-serif;
 $font-size-base: 1rem !default;
 $line-height-base: 1.6;
 $text-color: #636b6f;

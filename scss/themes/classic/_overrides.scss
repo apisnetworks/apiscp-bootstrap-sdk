@@ -1,5 +1,8 @@
 #app-dashboard {
   background: #fff;
+  .usage-gauges .gauge .graph-label {
+	top: calc(1.33em * 1.33);
+  }
 }
 
 .btn {
