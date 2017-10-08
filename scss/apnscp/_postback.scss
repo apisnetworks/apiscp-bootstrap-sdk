@@ -21,11 +21,11 @@ $debug-text: #454545 !default;
   }
 }
 
-@mixin status-pulse($name, $colorstart, $colorend, $times: 3) {
-  animation: pulse-#{$name} 1s #{$times};
+@mixin status-pulse($name, $colorstart, $colorend, $times: 3, $duration: 1s) {
+  animation: pulse-#{$name} #{$duration} #{$times};
   animation-delay: 500ms;
-  animation-timing: ease-out;
-  animation-timing: cubic-bezier(.28,.79,.8,.1);
+  animation-timing-function: ease-in;
+  //animation-timing-function: cubic-bezier(.28,.79,.8,.1);
   @include status-pulse-background($name, $colorstart, $colorend);
 }
 
@@ -71,7 +71,11 @@ $debug-text: #454545 !default;
 .ui-postback-msg-failed {
   color: $alert-danger-text;
 }
-
+#ui-postback .close {
+  position: absolute;
+  right: 0.25em;
+  top: -0.25em;
+}
 #ui-postback-response {
   .ui-pb-msg-success-parent & .ui-status-icon {
     @extend .fa-check;

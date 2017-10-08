@@ -7,8 +7,7 @@
 
 var APNSCP_PATH = process.env['APNSCP_PATH'] || "/usr/local/apnscp",
 	THEME_PATH = process.env['APNSCP_THEME_PATH'] || (APNSCP_PATH + "/public/css/themes"),
-	THEME = process.env['THEME'] || "apnscp",
-	BUILD_JS = process.env['JS'] || false;
+	THEME = process.env['THEME'] || "apnscp";
 
 module.exports = function (grunt) {
     'use strict'

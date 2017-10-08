@@ -210,6 +210,26 @@
   @extend .fa-times;
   color: $brand-danger;
 }
+
+.ui-action-vacation, .ui-action-vacation-enable {
+  @extend .fa-plane;
+}
+
+.ui-action-vacation-disable {
+	@extend .fa-plane;
+  &:before {
+  	@extend .fa-rotate-180;
+  }
+}
+
+.ui-action-user {
+  @extend .fa-user;
+}
+
+.ui-action-expand {
+  @extend .fa-expand;
+}
+
 /** show label inside action link */
 .ui-app-container .ui-action-label, .ui-ajax-indicator.ui-action-label {
   text-indent: 0;

@@ -2,6 +2,7 @@
   box-shadow: 3px 3px 5px rgba(0,0,0,0.25);
   z-index: 2;
   position: relative;
+
   #ui-account-gauges {
 	margin-top: -0.25rem;
   }
@@ -89,8 +90,11 @@
   }
    > .dropdown {
 	.ui-menu-category-apps {
-	  margin-left: 0;
-	  margin-right: 0;
+	  &, .ui-swap-buttons & {
+	  	margin-left: 0 !important;
+	  	margin-right: 0 !important;
+
+	  }
 	  a {
 	  	opacity: 0;
 		transition:opacity 0.5s;
@@ -146,12 +150,12 @@
   box-shadow: $large-dropshadow;
 }
 
-.btn {
-  box-shadow: $small-dropshadow;
+.btn, .nav-link.active {
+  box-shadow: $small-dropshadow !important;
 }
 
-.align-middle {
-  vertical-align: -webkit-baseline-middle !important;
+.dropdown-item.btn {
+  box-shadow: none !important;
 }
 
 .table {
@@ -167,4 +171,37 @@
   .th, .head1 {
 	border-top: 0 none;
   }
+}
+
+
+.form-group:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0;
+  	background-color: $brand-primary;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+.form-group:after:focus {
+  width: 100%;
+}
+
+
+thead + tbody:before {
+  content: "-";
+  display: block;
+  line-height:5px;
+  color: transparent;
+}
+
+#ui-side-menu-toggle, #ui-menu-button {
+  box-shadow: 0 0 !important;
+  overflow: visible;
+  border-color: #6a6a6a;
+}
+
+.ui-pb-msg-failed-parent {
+  @include status-pulse('failed', #ffffff, #ebcccc, 4, 0.5s);
 }
