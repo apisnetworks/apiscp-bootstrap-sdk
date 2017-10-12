@@ -35,13 +35,31 @@ a#ui-fa-kb {
   padding-right: 0;
 }
 
+
+@include media-breakpoint-up(md) {
+  .ui-app-row {
+	  display: flex !important;
+	  flex: 1;
+	  body.ie & {
+		min-height:100vh;
+		/**
+		  * IE 11
+		  * https://stackoverflow.com/questions/21600345/flexbox-and-internet-explorer-11-displayflex-in-html
+		  */
+		flex: auto;
+	  }
+  }
+}
+
 body.ui-swap-buttons {
-  #ui-header > div, #ui-heading + .nav-app {
+  #ui-header > div, #ui-heading + .ui-app-row {
     @extend .flex-row-reverse;
+  }
+  #ui-nav-container {
+	padding-left: 0;
   }
   @include media-breakpoint-down(sm) {
     // ensure hamburger sits flush right
-
     #ui-menu-button {
       margin-right: 0 !important;
       margin-left: auto;
@@ -53,14 +71,15 @@ body.ui-swap-buttons {
     }
   }
   #ui-account-ctrl {
-    margin-right: 0;
+	margin-right: 0;
+    padding-left: 0;
     .dropdown-menu {
       left: 0;
       right: initial;
     }
   }
   #ui-menu > .dropdown .ui-menu-category-apps {
-    margin-left: -#{$grid-gutter-width-base/2};
+    margin-left: 0;//-#{$grid-gutter-width-base/2};
     margin-right: -#{$grid-gutter-width-base/2};
   }
   .ui-menu-category + .ui-menu-category-apps {
@@ -138,11 +157,16 @@ body.ui-swap-buttons {
     max-height: 36px;
     margin: 0 #{$grid-gutter-width-base/2} 0 0;
   }
+
+
   a {
     color: $header-links;
     &:focus {
       text-decoration: none;
     }
+	&.dropdown-toggle::after {
+	  margin-left: #{$grid-gutter-width-base/2};
+	}
   }
   .dropdown-menu {
     right: 0;

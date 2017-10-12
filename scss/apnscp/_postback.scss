@@ -34,6 +34,7 @@ $debug-text: #454545 !default;
   @include status-pulse('success', #fff, amplify($alert-success-bg), 1);
   border-left-color: $brand-success;
   background: #fff;
+  position: relative;
 }
 
 .ui-pb-msg-debug-parent {
@@ -71,10 +72,24 @@ $debug-text: #454545 !default;
 .ui-postback-msg-failed {
   color: $alert-danger-text;
 }
-#ui-postback .close {
-  position: absolute;
-  right: 0.25em;
-  top: -0.25em;
+#ui-postback {
+  .close {
+	position: absolute;
+	right: 0.25em;
+	top: -0.25em;
+  }
+  #ui-postback-more.collapsed {
+	+ #ui-expand-all-postback {
+		display: none;
+	}
+  }
+  #ui-expand-all-postback {
+	position: absolute;
+	right: 0.5em;
+	opacity: 0.5;
+  }
+
+
 }
 #ui-postback-response {
   .ui-pb-msg-success-parent & .ui-status-icon {
@@ -84,4 +99,66 @@ $debug-text: #454545 !default;
     @extend .fa;
     @extend .fa-exclamation;
   }
+}
+
+#ui-postback-response {
+  &.ui-pb-msg-info .ui-status-icon {
+	margin-right: 0;
+  }
+  .ui-status-icon {
+	margin-right: $spacer-y/4;
+  }
+  overflow: hidden;
+  margin-bottom: 0;
+  font-weight: 600;
+  .ui-postback-response, .ui-toggle-details p {
+	font-weight: bold;
+  }
+
+  .ui-postback-toggle-details {
+	right: 0;
+	border: 0 none;
+	font-size: 0.85em;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	text-align: right;
+  }
+
+}
+
+.ui-pb-msg-success-parent #ui-postback-response {
+  border-left-color: $brand-success;
+}
+
+.ui-pb-msg-failed-parent #ui-postback-response {
+  border-left-color: $brand-danger;
+}
+
+.ui-postback-msg {
+  font-size: 0.95em;
+}
+
+.ui-postback-msg li {
+  white-space: pre-wrap;
+  max-height: 75px;
+  overflow-y: auto;
+  +.expanded, li.ui-postback-msg /* nested pb */ {
+	max-height: 100%;
+  }
+
+  &:before {
+	margin-right: $spacer-y/4;
+  }
+}
+#ui-postback-extended {
+}
+
+.ui-postback-msg li:before {
+  @extend .fa;
+  @extend .fa-flag;
+}
+
+.ui-postback-msg .ui-postback-nonstatus:before {
+  content: '';
 }

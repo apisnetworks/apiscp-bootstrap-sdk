@@ -6,12 +6,18 @@ nav {
   border: 0 none;
   margin-left: -0.75rem;
   cursor: pointer;
+  margin-right: $spacer-y*3;
+  body.ui-swap-buttons & {
+	margin-left: $spacer-y*3;
+	margin-right: 0;
+  }
 }
 
 .navbar-toggler {
   cursor: hand;
 }
 #ui-nav-container {
+  padding: 0;
   transition: transform 0.3s;
   &.collapse {
     width: 0;
@@ -52,6 +58,7 @@ nav {
       height: 1em;
       top: 0.5em;
       position: relative;
+	  right: 1rem;
     }
 
     // navigation indicator highlight
@@ -62,14 +69,17 @@ nav {
     .dropdown-toggle[aria-expanded="true"]::after {
       transform: rotate(0);
       position: relative;
-      top: 0.75em;
-      right: -0.25em;
+      top: 0.75rem;
+      right: 0.75rem;
     }
     .ui-menu-category-apps {
       margin-top: 0;
-      margin-left: -$grid-gutter-width-base;
       margin-right: -$grid-gutter-width-base/2;
       float: none;
+	  &, .ui-swap-buttons & {
+		margin-right: 0 !important;
+
+	  }
     }
   }
   .ui-menu-active {
@@ -147,6 +157,7 @@ nav {
 .ui-menu-category {
   color: $header-links;
   padding: $spacer/2 0;
+  padding-left: $spacer-x;
   display: block;
   &:hover,&:focus {
     color: $header-links-hover;
@@ -210,7 +221,9 @@ nav {
     a {
       text-decoration: none;
       color: $header-links;
-      padding-left: 3.75rem;
+      padding-left: 2.75rem;
+	  padding-top: 0.25rem;
+	  padding-bottom: 0.25rem;
 	  // mobile touch
 	  @include media-breakpoint-down(sm) {
 		padding-top: 0.5rem;

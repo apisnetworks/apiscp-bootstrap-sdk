@@ -9,7 +9,6 @@
 }
 // note, need to update references in classic/launchpad themes
 #ui-nav-container {
-  padding: 0;
   margin-top: 1rem;
   z-index: 1;
   background: $body-bg;
@@ -27,9 +26,7 @@
 	color: $brand-primary;
   }
   color: $sidemenu-link-color;
-  padding: $spacer-y/2 0;
   display: block;
-  padding-left: $spacer-x;
 }
 
 .ui-menu-category {
@@ -88,13 +85,9 @@
 
 	}
   }
-   > .dropdown {
-	.ui-menu-category-apps {
-	  &, .ui-swap-buttons & {
-	  	margin-left: 0 !important;
-	  	margin-right: 0 !important;
 
-	  }
+  > .dropdown {
+	.ui-menu-category-apps {
 	  a {
 	  	opacity: 0;
 		transition:opacity 0.5s;

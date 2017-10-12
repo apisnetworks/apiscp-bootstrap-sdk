@@ -9,6 +9,10 @@ html {
   }
 }
 
+#ui-full-flex-wrap {
+  min-height: 100%;
+}
+
 @include media-breakpoint-only(xl) {
   .container-fluid-bound {
     max-width: map-get($grid-breakpoints, "lg");
@@ -180,64 +184,6 @@ and (max-width: 675px) {
   border-left-color: $brand-info;
 }
 
-#ui-postback-response {
-  &.ui-pb-msg-info  .ui-status-icon {
-    margin-right: 0;
-  }
-  .ui-status-icon {
-    margin-right: $spacer-y/4;
-  }
-  overflow: hidden;
-  margin-bottom: 0;
-  font-weight: 600;
-  .ui-postback-response, .ui-toggle-details p {
-    font-weight: bold;
-  }
-
-  .ui-postback-toggle-details {
-    right: 0;
-    border: 0 none;
-    font-size: 0.85em;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    text-align: right;
-  }
-
-}
-
-.ui-pb-msg-success-parent #ui-postback-response {
-  border-left-color: $brand-success;
-}
-
-.ui-pb-msg-failed-parent #ui-postback-response {
-  border-left-color: $brand-danger;
-}
-
-
-.ui-postback-msg {
-  font-size: 0.95em;
-}
-
-.ui-postback-msg li {
-  white-space: pre-wrap;
-  max-height: 75px;
-  overflow-y: auto;
-  &:before {
-    margin-right: $spacer-y/4;
-  }
-}
-
-.ui-postback-msg li:before {
-  @extend .fa;
-  @extend .fa-flag;
-}
-
-.ui-postback-msg .ui-postback-nonstatus:before {
-  content: '';
-}
-
-
 .nav-app {
   margin: auto 0;
   width: 100%;
@@ -262,6 +208,7 @@ and (max-width: 675px) {
 
 #ui-help-container {
   margin-top: -#{$spacer-y};
+  margin-bottom: $spacer-y;
 }
 
 .ui-help-blurb-more {
