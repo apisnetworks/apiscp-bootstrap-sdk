@@ -37,12 +37,14 @@ nav {
   }
   @include media-breakpoint-up(md) {
     max-width: $sidemenu-max-width;
-    #ui-nav.collapse {
-    }
-  }
-  @include media-breakpoint-up(md) {
+	// avoid UI collision with URL indicator in Chrome while hovering "Logout"
     #ui-nav.collapse {
       display: block;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    #ui-nav {
+      padding-bottom: $spacer-y;
     }
   }
 }

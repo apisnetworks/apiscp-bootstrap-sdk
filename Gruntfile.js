@@ -20,7 +20,6 @@ module.exports = function (grunt) {
     }
 
     var path = require('path')
-    var isTravis = require('is-travis')
 
     // Project configuration.
     grunt.initConfig({
