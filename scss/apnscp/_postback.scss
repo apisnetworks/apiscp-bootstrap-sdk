@@ -75,8 +75,8 @@ $debug-text: #454545 !default;
 #ui-postback {
   .close {
 	position: absolute;
-	right: 0.25em;
-	top: -0.25em;
+	right: 0;
+	top: 0;
   }
   #ui-postback-more.collapsed {
 	+ #ui-expand-all-postback {
