@@ -181,7 +181,6 @@ nav {
   &:before {
     color: $sidemenu-icon;
     display: inline-block;
-    content: '';
     margin-right: $spacer-x/1.25;
     @extend .fa;
     &:before {
@@ -244,63 +243,63 @@ nav {
   }
 }
 
-#ui-menu-category-account:before {
+.ui-menu-category-account:before {
   @extend .fa-cog;
 }
 
-#ui-menu-category-databases:before {
+.ui-menu-category-databases:before {
   @extend .fa-database;
 }
 
-#ui-menu-category-dns:before {
+.ui-menu-category-dns:before {
   @extend .fa-cloud;
 }
 
-#ui-menu-category-files:before {
+.ui-menu-category-files:before {
   @extend .fa-hdd-o;
 }
 
-#ui-menu-category-dev:before {
+.ui-menu-category-dev:before {
   @extend .fa-terminal;
 }
 
-#ui-menu-category-help:before {
+.ui-menu-category-help:before {
   @extend .fa-life-ring;
 }
 
-#ui-menu-category-mail:before {
+.ui-menu-category-mail:before {
   @extend .fa-envelope;
 }
 
-#ui-menu-category-reports:before {
+.ui-menu-category-reports:before {
   @extend .fa-pie-chart
 }
 
-#ui-menu-category-services:before {
+.ui-menu-category-services:before {
   background-position: 0 -256px;
 }
 
-#ui-menu-category-tools:before {
+.ui-menu-category-tools:before {
   @extend .fa-wrench;
 }
 
-#ui-menu-category-users:before {
+.ui-menu-category-users:before {
   @extend .fa-user;
 }
 
-#ui-menu-category-web:before {
+.ui-menu-category-web:before {
   @extend .fa-desktop;
 }
 
 
-#ui-menu-category-logout:before {
+.ui-menu-category-logout:before {
   @extend .fa-sign-out;
 }
 
-#ui-menu-category-feedback:before {
+.ui-menu-category-feedback:before {
   @extend .fa-check-circle-o;
 }
 
-#ui-menu-category-dashboard:before {
+.ui-menu-category-dashboard:before {
   @extend .fa-tachometer;
 }
