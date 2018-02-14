@@ -32,7 +32,7 @@ $debug-text: #454545 !default;
 .ui-pb-msg-success-parent {
   @extend .alert-success;
   @include status-pulse('success', #fff, amplify($alert-success-bg), 1);
-  border-left-color: $brand-success;
+  border-left-color: $alert-success-border;
   background: #fff;
   position: relative;
 }

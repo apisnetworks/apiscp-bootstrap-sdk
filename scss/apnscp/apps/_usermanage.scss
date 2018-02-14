@@ -138,13 +138,12 @@
   #reset_filter { margin-left:10px; display: none; }
 
   .ui-active-filters li {
-    text-indent: 20px;
     background-repeat: no-repeat;
     line-height: 16px;
     display: inline-block;
     margin: 0.5em 1em 0.5em 0;
     cursor: pointer;
-    color: #666;
+    color: $gray-dark;
   }
 
   .ui-active-filters li:hover {

@@ -67,9 +67,9 @@
     }
   }
 
-  .usage-gauges > div.col-md-2, .google-analytics-container, #processes {
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 3px transparentize($gray-light, 0.85);
+  .usage-gauges .gauge-display, .google-analytics-container, #processes {
+    border: 1px solid $gray-lighter;
+    box-shadow: 1px 1px 5px transparentize($gray-light, 0.85);
   }
 
   .usage-gauges .gauge-display, #google-analytics {
@@ -110,6 +110,7 @@
 
   .usage-gauges div {
     text-align: center;
+    max-width: 250px;
   }
 
   .usage-gauges .gauge-display {

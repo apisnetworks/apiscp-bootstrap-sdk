@@ -173,15 +173,10 @@ and (max-width: 675px) {
 .note {
   background: #fff;
   @include border-radius($border-radius);
-  border: 1px solid $rocket-gray;
-  border-left-color: $gray-light;
+  border: 1px solid $gray-lighter;
+  border-left-color: $gray-lighter;
   padding: $spacer-y $spacer-x $spacer-y $spacer-x;
-  border-left-width: 5px;
   display: inline-block;
-}
-
-.note  {
-  border-left-color: $brand-info;
 }
 
 .nav-app {

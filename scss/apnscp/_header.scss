@@ -95,7 +95,7 @@ body.ui-swap-buttons {
 #ui-header {
   a {
     &:hover {
-      color: $header-links-hover;
+      color: $header-links-hover !important;
     }
     text-decoration: none;
   }

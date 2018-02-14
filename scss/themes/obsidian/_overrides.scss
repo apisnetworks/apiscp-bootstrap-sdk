@@ -1,0 +1,64 @@
+/*!
+ * Copyright (C) Apis Networks, Inc - All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium, is
+ * strictly prohibited without consent. Any dissemination of
+ * material herein is prohibited.
+ *
+ * For licensing inquiries email <licensing@apisnetworks.com>
+ *
+ * Written by Matt Saladna <matt@apisnetworks.com>, February 2018
+ */
+
+#app-dashboard {
+	.btn-outline-primary {
+	  border: 0 none;
+	}
+}
+
+a {
+  font-weight: 400;
+}
+
+.ui-help-blurb {
+  color: #000;
+  font-weight: 300;
+  font-size: 1.25em;
+  ~ .ui-help {
+	font-weight: 300;
+	font-size: 1.2em;
+	margin-top: $spacer-y;
+  }
+}
+
+#app-login {
+  .footer {
+	display: none;
+  }
+}
+
+.alert {
+  h3 {
+	font-weight: 300;
+  }
+}
+
+.popover .popover-title {
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+.dropdown-menu > .dropdown-item {
+  border-radius: 0;
+}
+
+@include media-breakpoint-down(sm) {
+  body {
+	font-size: 16px !important;
+  }
+}
+
+h2.title {
+  font-weight: $headings-font-weight;
+}
