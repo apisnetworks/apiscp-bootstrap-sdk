@@ -17,6 +17,7 @@ nav {
   cursor: hand;
 }
 #ui-nav-container {
+  z-index: 1;
   padding: 0;
   transition: transform 0.3s;
   &.collapse {

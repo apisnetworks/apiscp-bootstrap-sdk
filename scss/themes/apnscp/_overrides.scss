@@ -3,3 +3,66 @@
 	top: calc(1.33em * 1.33);
   }
 }
+
+.form-control {
+  &:focus {
+	box-shadow: $input-focus-box-shadow;
+  }
+}
+
+h2.title, h2.title:before {
+  font-weight: 300;
+  color: $text-color;
+  text-transform: lowercase;
+}
+
+@include media-breakpoint-down(sm) {
+  body {
+	font-size: 16px !important;
+  }
+}
+
+#ui-heading {
+  background: $sidemenu-icon !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  border-bottom: 1px solid #e1e1e1;
+  padding-top: $spacer-y/2;
+  padding-bottom: $spacer-y/2;
+}
+
+.ui-menu-category {
+  color: $sidemenu-link-color;
+  &:hover, &:focus {
+	color: $sidemenu-link-hover-color;
+  }
+  & + .ui-menu-category-apps a {
+	color: $sidemenu-link-color;
+  }
+}
+
+.table {
+  thead th, .head1, tfoot .head1 {
+	background: #fff;
+	border-bottom: 2px solid $sidemenu-app-hover-bg;
+	color: $gray-dark;
+  }
+}
+
+#app-dashboard {
+  #processes {
+	border: 0 none;
+	box-shadow: none;
+	.process-header > div {
+	  border-right: 0 none;
+	  border-bottom: 2px solid $sidemenu-app-hover-bg;
+	  background: $header-bg-light;
+	  color: $gray-dark;
+	  padding-bottom: $spacer-y/2;
+	  margin-bottom: $spacer-y/2;
+	}
+  }
+  .usage-gauges .gauge-display, .google-analytics-container, #processes {
+	border: 0 none;
+	box-shadow: none;
+  }
+}
