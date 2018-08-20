@@ -28,6 +28,10 @@ h2.title, h2.title:before {
   border-bottom: 1px solid #e1e1e1;
   padding-top: $spacer-y/2;
   padding-bottom: $spacer-y/2;
+  .ui-gauge {
+	border-color: transparent;
+	background: transparent;
+  }
 }
 
 .ui-menu-category {
@@ -35,9 +39,16 @@ h2.title, h2.title:before {
   &:hover, &:focus {
 	color: $sidemenu-link-hover-color;
   }
-  & + .ui-menu-category-apps a {
-	color: $sidemenu-link-color;
+  & + .ui-menu-category-apps {
+	background: transparent;
+	a {
+	  color: $sidemenu-link-color;
+	}
   }
+}
+
+#ui-nav-container {
+  background: linear-gradient(to right, #fcfcfc, #fff);
 }
 
 .table {

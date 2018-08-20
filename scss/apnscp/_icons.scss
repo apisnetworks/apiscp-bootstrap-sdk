@@ -1,211 +1,3 @@
-@font-face {
-  font-family: "apnscp";
-  src:url("/fonts/apnscp.eot");
-  src:url("/fonts/apnscp.eot?#iefix") format("embedded-opentype"),
-  url("/fonts/apnscp.woff") format("woff"),
-  url("/fonts/apnscp.ttf") format("truetype"),
-  url("/fonts/apnscp.svg#apnscp") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-[data-icon]:before {
-  font-family: "apnscp" !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 apnscp;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-[class^="ui-action-"]:before,[class*=" ui-action-"]:before, .fa {
-  vertical-align: -0.133333333em;
-}
-[class^="ui-action-"]:before,[class*=" ui-action-"]:before {
-  font-family: "apnscp" !important;
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: map-deep-get($spacers, 1, 'y');
-  text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-.fa-lg {
-  font-size: 1.33333333em;
-  line-height: 0.75em;
-  vertical-align: -15%;
-}
-.fa-2x {
-  font-size: 2em;
-}
-.fa-3x {
-  font-size: 3em;
-}
-.fa-4x {
-  font-size: 4em;
-}
-.fa-5x {
-  font-size: 5em;
-}
-.fa-fw {
-  width: 1.28571429em;
-  text-align: center;
-}
-.fa-ul {
-  padding-left: 0;
-  margin-left: 2.14285714em;
-  list-style-type: none;
-}
-.fa-ul > li {
-  position: relative;
-}
-.fa-li {
-  position: absolute;
-  left: -2.14285714em;
-  width: 2.14285714em;
-  top: 0.14285714em;
-  text-align: center;
-}
-.fa-li.fa-lg {
-  left: -1.85714286em;
-}
-.fa-border {
-  padding: .2em .25em .15em;
-  border: solid 0.08em #eeeeee;
-  border-radius: .1em;
-}
-.fa-pull-left {
-  float: left;
-}
-.fa-pull-right {
-  float: right;
-}
-.fa.fa-pull-left {
-  margin-right: .3em;
-}
-.fa.fa-pull-right {
-  margin-left: .3em;
-}
-
-.fa-spin {
-  display: inline-block;
-  animation: fa-spin 2s infinite linear;
-}
-.fa-pulse {
-  display: inline-block;
-  animation: fa-spin 1s infinite steps(8);
-}
-
-.fa-spin, .fa-pulse {
-    height: 1em !important;
-    width: 1em !important;
-    margin-right: 0.25em;
-}
-
-.btn .fa-spin:before, .btn .fa-pulse:before {
-  top: 0;
-}
-
-@keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-.fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-.fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-.fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg);
-}
-.fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
-  -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1);
-}
-.fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
-  -webkit-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
-  transform: scale(1, -1);
-}
-:root .fa-rotate-90,
-:root .fa-rotate-180,
-:root .fa-rotate-270,
-:root .fa-flip-horizontal,
-:root .fa-flip-vertical {
-  filter: none;
-}
-.fa-stack {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  vertical-align: middle;
-}
-
-.fa-stack-1x:before, .fa-stack-2x:before {
-  margin: 0;
-  bottom: 0;
-}
-.fa-stack-1x,
-.fa-stack-2x {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-.fa-stack-1x {
-  line-height: inherit;
-}
-.fa-stack-2x {
-  font-size: 2em;
-}
-.fa-inverse {
-  color: #ffffff;
-}
 
 .fa-zend-framework:before {
   content: "\61";
@@ -218,9 +10,6 @@
 }
 .fa-adjust:before {
   content: "\65";
-}
-.fa-adn:before {
-  content: "\66";
 }
 .fa-align-center:before {
   content: "\67";
@@ -693,9 +482,6 @@
 .fa-diamond:before {
   content: "\e04d";
 }
-.fa-digg:before {
-  content: "\e04e";
-}
 .fa-dot-circle-o:before {
   content: "\e04f";
 }
@@ -767,15 +553,6 @@
 }
 .fa-eyedropper:before {
   content: "\e067";
-}
-.fa-facebook:before {
-  content: "\e068";
-}
-.fa-facebook-official:before {
-  content: "\e069";
-}
-.fa-facebook-square:before {
-  content: "\e06a";
 }
 .fa-fast-backward:before {
   content: "\e06b";
@@ -912,17 +689,8 @@
 .fa-gift:before {
   content: "\e09b";
 }
-.fa-git:before {
-  content: "\e09c";
-}
-.fa-git-square:before {
-  content: "\e09d";
-}
 .fa-github:before {
   content: "\e09e";
-}
-.fa-github-alt:before {
-  content: "\e09f";
 }
 .fa-github-square:before {
   content: "\e0a0";
@@ -1107,12 +875,6 @@
 .fa-link:before {
   content: "\e0e4";
 }
-.fa-linkedin:before {
-  content: "\e0e5";
-}
-.fa-linkedin-square:before {
-  content: "\e0e6";
-}
 .fa-linux:before {
   content: "\e0e7";
 }
@@ -1232,9 +994,6 @@
 }
 .fa-opera:before {
   content: "\e119";
-}
-.fa-optin-monster:before {
-  content: "\e11a";
 }
 .fa-outdent:before {
   content: "\e11b";
@@ -1644,12 +1403,6 @@
 .fa-tty:before {
   content: "\e1bd";
 }
-.fa-twitter:before {
-  content: "\e1c1";
-}
-.fa-twitter-square:before {
-  content: "\e1c2";
-}
 .fa-umbrella:before {
   content: "\e1c3";
 }
@@ -1713,9 +1466,6 @@
 .fa-nodekit-w:before {
   content: "\6e";
 }
-.fa-go-w:before {
-  content: "\78";
-}
 .fa-nodekit:before {
   content: "\35";
 }
@@ -1733,9 +1483,6 @@
 }
 .fa-angular:before {
   content: "\e1e4";
-}
-.fa-docker:before {
-  content: "\e1e5";
 }
 .fa-apache-w:before {
   content: "\e1e6";
@@ -1803,7 +1550,7 @@
 .fa-less:before {
   content: "\e1fc";
 }
-.fa-laravel:before {
+.fa-laravel-zoom:before {
   content: "\e1fd";
 }
 .fa-mongo:before {
@@ -1827,6 +1574,9 @@
 .fa-sass:before {
   content: "\e206";
 }
+.fa-apache:before {
+  content: "\e207";
+}
 .fa-database-w:before {
   content: "\e208";
 }
@@ -1848,7 +1598,7 @@
 .fa-terminal-alt:before {
   content: "\e210";
 }
-.fa-laravel-zoom:before {
+.fa-laravel:before {
   content: "\e211";
 }
 .fa-redis-w:before {
@@ -1887,9 +1637,6 @@
 .fa-star:before {
   content: "\25";
 }
-.fa-opencart:before {
-  content: "\26";
-}
 .fa-scissors:before {
   content: "\e03e";
 }
@@ -1900,14 +1647,29 @@
   content: "\e082";
 }
 .fa-apache-2:before {
-  content: "\e207";
-}
-.fa-apache:before {
   content: "\e051";
 }
 .fa-magento:before {
   content: "\e08e";
 }
-.fa-modx:before {
+.fa-discourse:before {
   content: "\e099";
+}
+.fa-pagespeed:before {
+  content: "\e09a";
+}
+.fa-docker:before {
+  content: "\e0a8";
+}
+.fa-git-square:before {
+  content: "\e0aa";
+}
+.fa-git-o:before {
+  content: "\e0ab";
+}
+.fa-opencart:before {
+  content: "\e0ce";
+}
+.fa-go-w:before {
+  content: "\78";
 }

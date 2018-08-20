@@ -74,7 +74,7 @@ $spacer: 1rem;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
 
-$sidemenu-icon: #3bb46c;
+$sidemenu-icon: darken(#3bb46c, 0);
 
 /**
  * Heading styles
@@ -147,6 +147,7 @@ $btn-secondary-border: mix($brand-primary, lighten($gray-light, 35%), 10%);
 $btn-secondary-color: $gray-light;
 $btn-primary-bg: $brand-primary;
 $btn-primary-border: #63af45;
+$btn-secondary-border: #aaa;
 
 $input-box-shadow: inset 0 1px 1px rgba($black, .075);
 
@@ -157,12 +158,14 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 $input-focus-box-shadow: inset 0 1px 1px rgba(55, 67, 60, 0.075), 0 0 0 0.2rem rgba(59, 180, 108, 0.25);
 $input-focus-border-color: lighten($brand-primary, 25%);
-
+$custom-control-checked-indicator-bg: $brand-primary;
 // Panels
 $panel-default-heading-bg: #fff;
 
 // Dropdown
-$dropdown-link-hover-color: $brand-primary;
+$dropdown-link-hover-color: #000;
+$dropdown-link-active-bg: $brand-primary;
+$dropdown-link-active-color: #fff;
 
 // Footer
 $footer-margin: 6rem;

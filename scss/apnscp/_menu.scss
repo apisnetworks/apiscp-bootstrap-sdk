@@ -268,6 +268,19 @@ nav {
   @extend .fa-life-ring;
 }
 
+.ui-menu-category-job-runner:before {
+  @extend .fa-wrench;
+}
+
+.ui-menu-category-horizon:before {
+  @extend .fa-wrench;
+}
+
+.ui-menu-category-nexus:before {
+  @extend .fa-train;
+}
+
+
 .ui-menu-category-mail:before {
   @extend .fa-envelope;
 }
