@@ -77,12 +77,13 @@
 
 .dropdown-menu {
   .dropdown-item {
+	padding: $spacer/2 $dropdown-item-padding-x;
     &.btn {
       margin-left: 0;
     }
     &.btn.warn {
-      background: none;
-    }
+	  background: none;
+	}
 
   }
 }

@@ -12,7 +12,7 @@
 
 
 // Body
-$body-bg: #fff;
+$body-bg: #fcfcfc;
 
 // Colors
 $navy: #001f3f;
@@ -44,10 +44,10 @@ $accent: #cf5349;
 
 
 // Brands
-$brand-primary: #52b56c;
+$brand-primary: #3bb46c;
 $brand-secondary: #F2E394;
 $brand-info: #8eb4cb;
-$brand-success: $green;
+$brand-success: #3bb46c;
 $brand-warning: #F2AE72;
 $brand-danger: #8C4646;
 $brand-info: #3aa3e3;
@@ -74,16 +74,17 @@ $spacer: 1rem;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
 
-$sidemenu-icon: darken(#3bb46c, 0);
+$sidemenu-icon: #3c3c3c;
 
 /**
  * Heading styles
  */
-$header-bg: #fff;
+$header-bg: #3c3c3c;
 $header-bg-light: $body-bg;
 $header-links: $gray-lightest; //invert($header-bg);
 $header-links-hover: darken($header-links, 15%);//darken($header-links, 10%);
 $header-icons: $header-bg-light;
+$headings-font-weight: 300 !default;
 $header-icons-hover: $header-links-hover;
 
 $table-border-width: 0;
@@ -108,6 +109,10 @@ $menu-breadcrumb-color: $gray-dark;
 $menu-breadcrumb-color-hover: darken($sidemenu-icon, 15%);
 $alert-info-bg: #fff;
 
+$alert-warning-bg: #fff;
+$alert-warning-text: #8a6d3b;
+$alert-warning-border: #d5a955;
+
 $footer-bg: $header-bg;
 $speed: 200ms;
 $easing: cubic-bezier(0.7, 0, 0, 0.7);
@@ -116,7 +121,8 @@ $spectrum-height: 2px;
 $navbar-dark-color: #bfbfbf;
 $nav-pills-active-link-bg: #eef2ef;
 $nav-pills-active-link-color: #000;
-$link-color: darken($brand-primary, 25%);
+$link-color: $brand-primary;
+$link-decoration: underline;
 $link-hover-color: darken($brand-primary, 50%);
 
 // Borders
@@ -132,7 +138,7 @@ $font-size-root: 14px;
 $font-size-base: 14px;
 $font-family-base: "Roboto", sans-serif;
 $line-height-base: 1.6;
-$text-color: #222;
+$text-color: #292b2c;
 
 $list-group-active-color: $text-color;
 $list-group-active-bg: #e6ece8;
@@ -167,7 +173,7 @@ $dropdown-link-hover-color: #000;
 $dropdown-link-active-bg: $brand-primary;
 $dropdown-link-active-color: #fff;
 
-// Footer
+  // Footer
 $footer-margin: 6rem;
 
 // Misc
@@ -178,6 +184,9 @@ $small-dropshadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.
 
 $large-dropshadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
 	0 2px 4px -1px rgba(0, 0, 0, 0.4);
+
+$nav-border-color: #e3e3e3;
+$badge-success-bg: $brand-primary;
 
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
