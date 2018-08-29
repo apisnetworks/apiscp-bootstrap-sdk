@@ -1,5 +1,9 @@
+body.e404 {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 #app-error {
-  background: linear-gradient(#363636, #000);
+  background: linear-gradient(#363636, #000) no-repeat fixed;
 
   .msg-grab {
     color: #fff;

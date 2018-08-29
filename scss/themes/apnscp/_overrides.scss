@@ -179,6 +179,10 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
   padding-bottom: 0;
 }
 
-ul, li {
-  margin-bottom: $spacer;
+.e404
+{
+  #ui-app {
+	background: transparent;
+	border: 0 none;
+  }
 }
