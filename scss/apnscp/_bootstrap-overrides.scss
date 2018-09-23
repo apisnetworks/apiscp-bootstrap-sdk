@@ -57,6 +57,11 @@
   }
 }
 
+.custom-control-indicator {
+  border: 1px solid $btn-secondary-border;
+  box-shadow: none;
+}
+
 .input-group-addon + .btn-secondary-outline {
   border-color: $input-group-addon-border-color;
   &.active {

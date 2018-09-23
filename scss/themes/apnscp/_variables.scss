@@ -135,9 +135,9 @@ $panel-inner-border: $hostineer-border-color;
 // Typography
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px;
-$font-size-base: 14px;
+$font-size-base: 0.875rem;
 $font-family-base: "Roboto", sans-serif;
-$line-height-base: 1.6;
+$line-height-base: 1.5;
 $text-color: #292b2c;
 
 $list-group-active-color: $text-color;
@@ -165,6 +165,9 @@ $input-color-placeholder: lighten($text-color, 30%);
 $input-focus-box-shadow: inset 0 1px 1px rgba(55, 67, 60, 0.075), 0 0 0 0.2rem rgba(59, 180, 108, 0.25);
 $input-focus-border-color: lighten($brand-primary, 25%);
 $custom-control-checked-indicator-bg: $brand-primary;
+$custom-control-checked-indicator-color: #fff;
+$custom-control-indicator-bg: #eaeaea;
+$custom-control-focus-indicator-box-shadow: 0 0 0 1px $body-bg, 0 0 0 3px opacify($brand-primary, 0.33);
 // Panels
 $panel-default-heading-bg: #fff;
 
