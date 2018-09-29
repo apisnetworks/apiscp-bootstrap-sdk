@@ -164,6 +164,10 @@ form label, .b {
   }
 }
 
+.btn-group > .btn + .dropdown-toggle {
+  margin-left: -1px;
+}
+
 .note.text-muted {
   background: transparent;
   border: 0 none;

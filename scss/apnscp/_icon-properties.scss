@@ -24,14 +24,15 @@
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px/1 apnscp;
+  // via _reboot.scss
+  font: normal normal normal 1em/1.15 apnscp;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 [class^="ui-action-"]:before,[class*=" ui-action-"]:before, .fa {
-  vertical-align: -0.133333333em;
+  vertical-align: middle;
 }
 [class^="ui-action-"]:before,[class*=" ui-action-"]:before {
   font-family: "apnscp" !important;
