@@ -280,6 +280,9 @@ nav {
   @extend .fa-train;
 }
 
+.ui-menu-category-license:before {
+  @extend .fa-key;
+}
 
 .ui-menu-category-mail:before {
   @extend .fa-envelope;
