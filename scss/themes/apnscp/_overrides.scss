@@ -146,8 +146,13 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
 }
 
 #ui-account-ctrl {
-  .dropdown-item .fa {
-	top: 1em !important;
+  .dropdown-menu {
+    .dropdown-item .fa {
+      top: 0.75em !important;
+    }
+    a:hover {
+      color: #000 !important;
+    }
   }
 }
 
