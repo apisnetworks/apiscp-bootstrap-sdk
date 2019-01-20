@@ -47,7 +47,7 @@
     "grunt-exec": "^1.0.1",
     "grunt-stamp": "^0.3.0",
     "grunt-webpack": "^1.0.18",
-    "htmlhint": "^0.9.13",
+    "htmlhint": "^0.10.1",
     "is-travis": "^1.0.0",
     "jit-grunt": "^0.10.0",
     "load-grunt-tasks": "^3.5.2",
@@ -58,7 +58,7 @@
     "shelljs": "^0.7.5",
     "shx": "^0.2.1",
     "time-grunt": "^1.4.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": ">=3.1.11"
   },
   "engines": {
     "node": ">=4"
