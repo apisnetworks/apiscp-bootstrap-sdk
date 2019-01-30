@@ -51,7 +51,7 @@
     &[readonly] {
       background-color: transparent;
       // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-      opacity: 1; 
+      opacity: 1;
 
     }
   }
@@ -129,7 +129,7 @@ body::before {
 }
 
 .btn + .btn.dropdown-toggle::after, .btn.dropdown-toggle:first-child:after {
-  margin-left: 0; 
+  margin-left: 0;
 }
 
 .modal.no-close .close {
@@ -165,10 +165,6 @@ form label, .b {
 }
 
 .btn-group > .btn + .dropdown-toggle {
-  margin-left: -1px;
-  .chrome & {
-    border-left: 0 none;
-  }
 }
 
 .note.text-muted {
