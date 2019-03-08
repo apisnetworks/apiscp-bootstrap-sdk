@@ -170,10 +170,10 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
   background: #fff;
   @include border-radius($border-radius);
   border: 1px solid $nav-border-color;
-  padding: $spacer;
+  padding: $grid-gutter-width-base/2;
   margin: 0;
   > .container-fluid {
-	padding: 0.25rem;
+	padding: 0;
   }
 }
 
