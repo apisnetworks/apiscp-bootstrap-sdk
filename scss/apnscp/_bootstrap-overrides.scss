@@ -203,3 +203,16 @@ input, button, .dropdown-item {
 .bg-light {
   background: $gray-lighter;
 }
+
+.custom-checkbox {
+	// different styling of active/disabled
+	.custom-control-input:checked ~ .custom-control-indicator {
+		@include custom-checkbox($custom-control-checked-indicator-color);
+	}
+
+	.custom-control-input:checked:disabled ~ .custom-control-indicator {
+		@include custom-checkbox($gray-light);
+		border: 0 none;
+	}
+
+}

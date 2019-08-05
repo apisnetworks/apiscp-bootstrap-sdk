@@ -168,6 +168,8 @@ $custom-control-checked-indicator-bg: $brand-primary;
 $custom-control-checked-indicator-color: #fff;
 $custom-control-indicator-bg: #eaeaea;
 $custom-control-focus-indicator-box-shadow: 0 0 0 1px $body-bg, 0 0 0 3px opacify($brand-primary, 0.33);
+$custom-control-disabled-indicator-bg: transparent;
+
 // Panels
 $panel-default-heading-bg: #fff;
 
