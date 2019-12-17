@@ -173,6 +173,10 @@ body.ui-swap-buttons {
     right: 0;
     left: initial;
     border-radius: 0;
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+    }
     a {
       color: $dropdown-link-color;
       position: relative;
@@ -180,9 +184,9 @@ body.ui-swap-buttons {
         color: $dropdown-link-active-color;
       }
       .fa {
-        position: absolute;
-        right: 0.5em;
-        top: 0.5em;
+        display: flex;
+        padding-left: 1rem;
+        margin-left: auto;
       }
     }
 
