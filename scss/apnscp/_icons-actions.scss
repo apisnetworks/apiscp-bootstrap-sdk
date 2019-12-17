@@ -14,7 +14,11 @@
 }
 
 .ui-action-delete {
-  @extend .fa-times;
+  @extend .fa-trash-o;
+}
+
+.ui-action-remove {
+  @extend .fa-minus;
 }
 
 .ui-action-advanced {
@@ -43,6 +47,18 @@
 
 .ui-action-open-archive {
   @extend .fa-archive;
+}
+
+.ui-action-detect {
+  @extend .fa-eye;
+}
+
+.ui-action-refresh {
+  @extend .fa-refresh;
+}
+
+.ui-action-search {
+  @extend .fa-search;
 }
 
 .ui-action-open-archive:after {
@@ -163,6 +179,14 @@
   @extend .fa-link;
 }
 
+.ui-action-lock {
+  @extend .fa-lock;
+}
+
+.ui-action-unlock {
+  @extend .fa-unlock;
+}
+
 .ui-action-toolbox {
   @extend .fa-briefcase;
 }
@@ -199,7 +223,7 @@
   //@extend .fa-dot-circle-o;
   //@extend .fa-magic;
   @extend .fa-cube;
-} 
+}
 
 .ui-action-is-enabled {
   @extend .fa-check;
