@@ -36,6 +36,68 @@ a#ui-fa-kb {
   z-index: 100;
 }
 
+#ui-job-indicator {
+  position: relative;
+  #ui-job-queue:empty + span {
+    display: block !important;
+  }
+  .job-counter {
+    position: absolute;
+    right: 0;
+    top: -0.5em;
+  }
+  .indicator {
+    height: 100%;
+    &::after {
+      opacity: 0;
+    }
+  }
+  .machine {
+    width: 3rem;
+    fill: lighten($header-bg, 5%);
+  }
+
+  &.active {
+    .indicator::after {
+      opacity: 1;
+    }
+    .machine {
+      fill: lighten($header-bg, 35%);
+      .small {
+        animation: gear-counter-rotation 2.5s infinite linear;
+        transform-origin: 100.136px 225.345px;
+      }
+
+      .medium {
+        animation: gear-rotation 3.75s infinite linear;
+        transform-origin: 254.675px 379.447px;
+      }
+
+      .large {
+        animation: gear-counter-rotation 5s infinite linear;
+        transform-origin: 461.37px 173.694px;
+      }
+    }
+  }
+}
+
+@keyframes gear-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes gear-counter-rotation {
+  from {
+    -webkit-transform: rotate(359deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
 
 @include media-breakpoint-up(md) {
   .ui-app-row {
@@ -71,14 +133,7 @@ body.ui-swap-buttons {
       width: 100%;
     }
   }
-  #ui-account-ctrl {
-	margin-right: 0;
-    padding-left: 0;
-    .dropdown-menu {
-      left: 0;
-      right: initial;
-    }
-  }
+
   #ui-menu > .dropdown .ui-menu-category-apps {
     margin-left: 0;//-#{$grid-gutter-width-base/2};
     margin-right: -#{$grid-gutter-width-base/2};
@@ -94,8 +149,7 @@ body.ui-swap-buttons {
   }
 }
 #ui-header {
-  a {
-    &:hover {
+  a { &:hover {
       color: $header-links-hover !important;
     }
     text-decoration: none;
@@ -149,6 +203,7 @@ body.ui-swap-buttons {
 #ui-account-ctrl {
   padding: $spacer/2;
   padding-right: $spacer;
+  padding-left: 0;
   margin-right: -$grid-gutter-width-base/2;
   margin-top: -#{map-deep-get($spacers, 1, y)};
   margin-bottom: -#{map-deep-get($spacers, 1, y)};
