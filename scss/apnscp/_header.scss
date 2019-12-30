@@ -46,40 +46,47 @@ a#ui-fa-kb {
     right: 0;
     top: -0.5em;
   }
+
+
   .indicator {
     height: 100%;
     &::after {
       opacity: 0;
     }
   }
+
+  &.active {
+    .machine {
+      fill: lighten($header-bg, 35%);
+    }
+    .indicator::after {
+      opacity: 1;
+    }
+  }
   .machine {
     width: 3rem;
     fill: lighten($header-bg, 5%);
   }
+}
 
-  &.active {
-    .indicator::after {
-      opacity: 1;
-    }
+.ui-job-indicator.active {
     .machine {
-      fill: lighten($header-bg, 35%);
-      .small {
+      .gear-small {
         animation: gear-counter-rotation 2.5s infinite linear;
         transform-origin: 100.136px 225.345px;
       }
 
-      .medium {
+      .gear-medium {
         animation: gear-rotation 3.75s infinite linear;
         transform-origin: 254.675px 379.447px;
       }
 
-      .large {
+      .gear-large {
         animation: gear-counter-rotation 5s infinite linear;
         transform-origin: 461.37px 173.694px;
       }
     }
   }
-}
 
 @keyframes gear-rotation {
   from {
