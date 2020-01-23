@@ -1,17 +1,32 @@
 #remote-pb-container {
+  @include box-shadow($dropdown-box-shadow);
+  @include border-radius($border-radius);
   max-width: 300px;
   width: 100%;
   position: fixed;
   right: 0;
   top: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   z-index: 10000;
+  h6 {
+    font-size: 0.8rem;
+  }
+
+  hr {
+    margin: #{$spacer/2} -#{$spacer} #{$spacer/2} -#{$spacer};
+    border-top-color: $hr-border-color;
+  }
 
   .template {
     display: none;
   }
 
   .alert {
+    h6 {
+      font-weight: bold;
+    }
+    overflow: hidden;
+    padding: #{$spacer/2};
     z-index: 10001;
     top: 10px;
     position: relative;
