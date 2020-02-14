@@ -36,7 +36,11 @@ Compiled CSS will be spit out to `dist/css/mytheme.css`.
 
 SDK makes use of [grunt-contrib-watch](https://www.npmjs.com/package/grunt-contrib-watch) to rebuild whenever a watched file is changed. Simply run `grunt watch` from the command-line.
 
+## Building with GitLab CI
 
+SDK contains a definition of a pipeline that performs the build of the theme and publishes the artifacts that can be then copied in `THEME_PATH` (manually unless otherwise implemented). Theme name can be passed via [GItLab CI Variables](https://docs.gitlab.com/ee/ci/variables/#via-the-ui), as well as the other environment variables which are currently optional. In the default configuration, your `THEME` defaults to `apnscp` and `THEME_PATH` to `dist/`, which matches the published artifacts path.
+
+Compiled theme will be spit out to `dist/css/apnscp.css` and you'll find it right in your [artifacts download area](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html#downloading-artifacts).
 
 ## Enabling in apnscp
 
