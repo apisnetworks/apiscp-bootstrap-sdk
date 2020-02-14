@@ -104,3 +104,26 @@
 .ui-selected {
   background: $rocket-gray !important;
 }
+
+// autocompletion
+
+.ui-autocomplete {
+  max-height: 500px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
+
+ul.ui-autocomplete {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.ui-autocomplete li div {
+  padding: 0.25rem 1rem;
+}
+
+ul.ui-autocomplete .ui-state-active {
+  background: Highlight;
+  color: HighlightText;
+}

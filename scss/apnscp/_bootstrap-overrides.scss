@@ -224,3 +224,23 @@ input, button, .dropdown-item {
 		border: 0 none;
 	}
 }
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-sticky {
+  position: sticky !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-static {
+  position: static !important;
+}
