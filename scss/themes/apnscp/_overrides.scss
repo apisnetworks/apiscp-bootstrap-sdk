@@ -4,11 +4,22 @@
 	border: 0 none;
   }
 }
+
+#ui-header #ui-account-gauges {
+  margin-top: -0.25rem;
+}
+
 #app-dashboard {
   .usage-gauges .gauge .graph-label {
 	top: calc(1.33em * 1.33);
   }
-  background: $body-bg;
+  #ui-app-container {
+	padding-top: 1rem;
+  }
+}
+
+#ui-help-container {
+  margin-top: 0;
 }
 
 .form-control {
@@ -27,8 +38,6 @@ h2.title, h2.title:before {
   background: $header-bg !important;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
   border-bottom: 1px solid #e1e1e1;
-  padding-top: $spacer-y/2;
-  padding-bottom: $spacer-y/2;
   .ui-gauge {
 	border-color: transparent;
 	background: transparent;
@@ -55,8 +64,8 @@ h2.title, h2.title:before {
   }
   & + .ui-menu-category-apps {
 	background: transparent;
-	box-shadow: 0px 10px 15px -10px rgba(175, 175, 175, 0.85) inset;
 	a {
+	  padding-left: 3rem;
 	  color: $sidemenu-link-color;
 	  padding-top: $spacer/2;
 	  padding-bottom: $spacer/2;
@@ -70,7 +79,11 @@ h2.title, h2.title:before {
 
 
 #ui-nav-container {
-  background: linear-gradient(to right, #fcfcfc, #fff);
+  background: #fafafa;
+  .dropdown {
+	border-bottom: 0 none !important;
+  }
+
 }
 
 .table {
@@ -164,10 +177,7 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
 
 #ui-app {
   margin-top: $spacer;
-  background: #fff;
   @include border-radius($border-radius);
-  border: 1px solid $nav-border-color;
-  padding: $grid-gutter-width-base/2;
   margin: 0;
   > .container-fluid {
 	padding: 0;
@@ -175,10 +185,8 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
 }
 
 #ui-app-container {
-  padding: $spacer;
-
+  border: 0 none;
   margin-top: 0 !important;
-  padding-bottom: 0;
 }
 
 .e404

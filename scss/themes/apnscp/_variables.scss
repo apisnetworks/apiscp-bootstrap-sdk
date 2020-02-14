@@ -12,7 +12,8 @@
 
 
 // Body
-$body-bg: #fcfcfc;
+$body-bg: #fff;
+$body-alternative: #fcfcfc;
 
 // Colors
 $navy: #001f3f;
@@ -80,7 +81,7 @@ $sidemenu-icon: #3c3c3c;
  * Heading styles
  */
 $header-bg: #3c3c3c;
-$header-bg-light: $body-bg;
+$header-bg-light: $body-alternative;
 $header-links: $gray-lightest; //invert($header-bg);
 $header-links-hover: darken($header-links, 15%);//darken($header-links, 10%);
 $header-icons: $header-bg-light;
@@ -126,7 +127,7 @@ $link-decoration: underline;
 $link-hover-color: darken($brand-primary, 50%);
 
 // Borders
-$hostineer-border-color: darken($body-bg, 10%);
+$hostineer-border-color: darken($body-alternative, 10%);
 $list-group-border: $hostineer-border-color;
 $navbar-default-border: $hostineer-border-color;
 $panel-default-border: $hostineer-border-color;
@@ -167,7 +168,7 @@ $input-focus-border-color: lighten($brand-primary, 25%);
 $custom-control-checked-indicator-bg: $brand-primary;
 $custom-control-checked-indicator-color: #fff;
 $custom-control-indicator-bg: #eaeaea;
-$custom-control-focus-indicator-box-shadow: 0 0 0 1px $body-bg, 0 0 0 3px opacify($brand-primary, 0.33);
+$custom-control-focus-indicator-box-shadow: 0 0 0 1px $body-alternative, 0 0 0 3px opacify($brand-primary, 0.33);
 $custom-control-disabled-indicator-bg: transparent;
 
 // Panels
