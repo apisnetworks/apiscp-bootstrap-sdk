@@ -14,7 +14,11 @@
 
 
 .alert {
+  border-radius: 0;
   border-left-width: 5px;
+  border-right: 0 none;
+  border-top: 0 none;
+  border-bottom: 0 none;
 }
 
 .input-group-btn .btn, .input-group .btn {
@@ -217,6 +221,7 @@ input, button, .dropdown-item {
 	// different styling of active/disabled
 	.custom-control-input:checked ~ .custom-control-indicator {
 		@include custom-checkbox($custom-control-checked-indicator-color);
+        border-color: darken($btn-primary-border, 12%);
 	}
 
 	.custom-control-input:checked:disabled ~ .custom-control-indicator {

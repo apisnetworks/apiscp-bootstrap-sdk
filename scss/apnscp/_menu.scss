@@ -19,7 +19,7 @@ nav {
 #ui-nav-container {
   z-index: 1;
   padding: 0;
-  transition: transform 0.3s;
+  transition: all ease-in-out 0.05s;
   &.collapse {
     width: 0;
   }

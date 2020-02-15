@@ -231,7 +231,8 @@ body.ui-swap-buttons {
   .dropdown-menu {
     right: 0;
     left: initial;
-    border-radius: 0;
+    @include border-radius($border-radius);
+
     .dropdown-item {
       display: flex;
       align-items: center;

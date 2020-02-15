@@ -34,9 +34,9 @@ $gray: #aaaaaa;
 $silver: #dddddd;
 
 // Create grayscale
-$gray-dark:                 #292b2c;
-$gray:                      #464a4c;
-$gray-light:                #636c72;
+$gray-dark: #20252c;
+$gray: #383c4c;
+$gray-light: #768793;
 $gray-lighter:              #eceeef;
 $gray-lightest:             #f7f7f9;
 
@@ -45,13 +45,13 @@ $accent: #cf5349;
 
 
 // Brands
-$brand-primary: #3bb46c;
-$brand-secondary: #F2E394;
+$brand-primary: #169a84;
+$brand-secondary: #faffd3;
 $brand-info: #8eb4cb;
 $brand-success: #3bb46c;
 $brand-warning: #F2AE72;
 $brand-danger: #8C4646;
-$brand-info: #3aa3e3;
+$brand-info: #31708f;
 $text-highlight-bg: $yellow;
 $text-highlight: #000;
 $js-colors: (
@@ -61,6 +61,14 @@ $js-colors: (
 		inactive: $rocket-gray,
 		background: #fff
 );
+
+$alert-info-bg: #f4f8fa;
+$alert-danger-bg: #ffe5e5;
+$alert-danger-text: #a94442;
+$alert-danger-border: #934848;
+$alert-warning-border: #c0b375;
+$alert-success-bg: #f4fff4;
+$alert-padding-y: 1rem;
 
 $enable-flex:               true;
 $enable-rounded:            true;
@@ -80,7 +88,7 @@ $sidemenu-icon: #3c3c3c;
 /**
  * Heading styles
  */
-$header-bg: #3c3c3c;
+$header-bg: #292a29;
 $header-bg-light: $body-alternative;
 $header-links: $gray-lightest; //invert($header-bg);
 $header-links-hover: darken($header-links, 15%);//darken($header-links, 10%);
@@ -108,11 +116,6 @@ $menu-breadcrumb-bg: $header-bg;
 $menu-breadcrumb-border: 1px solid darken($header-bg, 20%);
 $menu-breadcrumb-color: $gray-dark;
 $menu-breadcrumb-color-hover: darken($sidemenu-icon, 15%);
-$alert-info-bg: #fff;
-
-$alert-warning-bg: #fff;
-$alert-warning-text: #8a6d3b;
-$alert-warning-border: #d5a955;
 
 $footer-bg: $header-bg;
 $speed: 200ms;
@@ -137,9 +140,9 @@ $panel-inner-border: $hostineer-border-color;
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px;
 $font-size-base: 0.875rem;
-$font-family-base: "Roboto", sans-serif;
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 $line-height-base: 1.5;
-$text-color: #292b2c;
+$text-color: #2c3e50;
 
 $list-group-active-color: $text-color;
 $list-group-active-bg: #e6ece8;
@@ -150,24 +153,25 @@ $navbar-default-bg: #fff;
 
 // Buttons
 $btn-default-color: $text-color;
-$btn-secondary-border: mix($brand-primary, lighten($gray-light, 35%), 10%);
-$btn-secondary-color: $gray-light;
+$btn-secondary-color: #4e6b6e;
+$btn-secondary-border: mix($btn-secondary-color, lighten($brand-primary, 35%), 10%);
 $btn-primary-bg: $brand-primary;
-$btn-primary-border: #63af45;
-$btn-secondary-border: #aaa;
+$btn-primary-border: darken($brand-primary, 7.5%);
+$btn-secondary-border: #a2a2a2;
 
 $input-box-shadow: inset 0 1px 1px rgba($black, .075);
 
 // Inputs
 $input-border: lighten($text-color, 40%);
-$input-border-focus: lighten($brand-primary, 25%);
+$input-border-focus: $input-border-color;
 $input-color-placeholder: lighten($text-color, 30%);
 
-$input-focus-box-shadow: inset 0 1px 1px rgba(55, 67, 60, 0.075), 0 0 0 0.2rem rgba(59, 180, 108, 0.25);
-$input-focus-border-color: lighten($brand-primary, 25%);
+$input-focus-box-shadow: 0 0 0.5rem rgba(105, 105, 105, 0.33);//inset 0 0 0 0.2rem rgba(59, 180, 108, 0.25);
+$input-group-addon-bg: #fafafa;
+
 $custom-control-checked-indicator-bg: $brand-primary;
 $custom-control-checked-indicator-color: #fff;
-$custom-control-indicator-bg: #eaeaea;
+$custom-control-indicator-bg: #fafafa;
 $custom-control-focus-indicator-box-shadow: 0 0 0 1px $body-alternative, 0 0 0 3px opacify($brand-primary, 0.33);
 $custom-control-disabled-indicator-bg: transparent;
 
@@ -200,3 +204,8 @@ $badge-success-bg: $brand-primary;
   }
   @return $map;
 }
+
+$code-padding-y: 0.1rem;
+$code-padding-x: 0.25rem;
+$code-color: #476582;
+$code-bg: rgba(27,31,35,.05);

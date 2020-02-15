@@ -14,7 +14,7 @@ input.multiSelect.hover {
 
 .multiSelect.active,
 .multiSelect.focus {
-	border: inset 1px #000;
+	border: inset 1px $input-border-focus;
 }
 
 input.multiSelect.active {
@@ -22,14 +22,11 @@ input.multiSelect.active {
 }
 
 .multiSelectOptions {
-	min-width: 250px;
-	width: auto;
-	max-height: 150px;
-	margin-top: -1px;
-	overflow: auto;
-	border: solid 1px #B2B2B2;
-	background: #FFF;
-	line-height: 1.5em;
+  @extend .dropdown-menu;
+  min-width: 250px;
+  width: auto;
+  max-height: 150px;
+  overflow: auto;
 }
 
 .multiSelectOptions LABEL {
@@ -43,13 +40,13 @@ input.multiSelect.active {
 }
 
 .multiSelectOptions LABEL.selectAll {
-	border-bottom: 1px solid #CACACA;
-	color:#999;
-	background: white;
+  font-weight: bold;
+  font-style:italic;
 }
 
 .multiSelectOptions LABEL.hover {
-	background: lightyellow;
+  background: Highlight;
+  color: HighlightText;
 }
 
 .multiSelectOptions label {

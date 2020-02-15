@@ -196,10 +196,10 @@ and (max-width: 675px) {
   max-width: 100%;
   margin-bottom: 3rem;
   position: relative;
+  margin-top: #{$spacer-y/2};
 }
 
 #ui-help-container {
-  margin-top: -#{$spacer-y};
   margin-bottom: $spacer-y;
 }
 
