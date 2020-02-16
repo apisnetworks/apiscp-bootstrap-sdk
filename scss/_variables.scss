@@ -469,6 +469,17 @@ $input-group-addon-border-color: $input-border-color !default;
 
 $cursor-disabled:                not-allowed !default;
 
+$custom-switch-width: 1rem !default;
+$custom-switch-indicator-border-radius: $border-radius !default;
+$custom-switch-indicator-border-width: $input-btn-border-width !default;
+$custom-control-indicator-border-width: $input-btn-border-width !default;
+$custom-switch-indicator-size: 1rem !default;
+$custom-control-indicator-border-color: $brand-primary !default;
+$custom-forms-transition: $transition-base !default;
+// to check...
+$custom-control-disabled-indicator-bg: $gray-lighter !default;
+$custom-control-indicator-checked-disabled-bg: darken($gray-lighter, 35%) !default;
+
 $custom-control-gutter:   1.5rem !default;
 $custom-control-spacer-x: 1rem !default;
 $custom-control-spacer-y: .25rem !default;
