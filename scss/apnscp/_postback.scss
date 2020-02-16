@@ -73,11 +73,6 @@ $debug-text: #454545 !default;
   color: $alert-danger-text;
 }
 #ui-postback {
-  .close {
-	position: absolute;
-	right: 0;
-	top: 0;
-  }
   #ui-postback-more.collapsed {
 	+ #ui-expand-all-postback {
 		display: none;
@@ -88,9 +83,8 @@ $debug-text: #454545 !default;
 	right: 0.5em;
 	opacity: 0.5;
   }
-
-
 }
+
 #ui-postback-response {
   .ui-pb-msg-success-parent & .ui-status-icon {
     @extend .fa-check;

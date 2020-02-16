@@ -230,6 +230,13 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
   width: 100%;
   display: inline-block;
 }
+
+.alert {
+  border-radius: 0;
+  border-right: 0 none;
+  border-top: 0 none;
+  border-bottom: 0 none;
+}
 .e404
 {
   #ui-app {
