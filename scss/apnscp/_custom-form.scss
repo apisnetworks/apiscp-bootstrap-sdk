@@ -4,7 +4,9 @@
   .custom-control-indicator {
 	display: inline-block;
 	position: relative;
-	margin: 0 10px;
+	box-shadow: none;
+	margin-right: $custom-control-spacer-x;
+	padding-left: $custom-control-gutter;
 	top: 4px;
 	width: $custom-control-indicator-size*2;
 	min-width: $custom-control-indicator-size*2;
@@ -12,7 +14,6 @@
 	background: $custom-control-indicator-bg;
 	border-radius: $custom-control-indicator-size;
 	transition: $custom-forms-transition;
-
 	&::after {
 	  content: '';
 	  display: block;
