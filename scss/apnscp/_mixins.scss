@@ -1,3 +1,37 @@
 @mixin custom-checkbox($color) {
 	background-image: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), "#", "%23");
 }
+
+@function svg-encode($svg) {
+  // Add missing namespace
+  @if not str-index($svg, ' xmlns="http://www.w3.org/2000/svg"') {
+	$svg: str-insert($svg, ' xmlns="http://www.w3.org/2000/svg"', 5);
+  }
+
+  // Encode characters
+  $encode: (
+		  '"': "%22",
+		  "#": "%23",
+		  "%": "%25",
+		  "<": "%3C",
+		  ">": "%3E",
+		  "{": "%7B",
+		  "}": "%7D",
+  );
+
+  $string: "";
+  $character: "";
+
+  @for $i from 1 through str-length($svg) {
+	$character: str-slice($svg, $i, $i);
+
+	@if index(map-keys($encode), $character) {
+	  $character: map-get($encode, $character);
+	}
+
+	$string: $string + $character;
+  }
+
+  // Return data URI
+  @return url("data:image/svg+xml,#{$string}");
+}
