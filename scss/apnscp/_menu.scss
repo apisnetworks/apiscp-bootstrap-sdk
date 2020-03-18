@@ -163,11 +163,11 @@ nav {
     display: none;
   }
 
-  background: transparent svg-encode('<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" xml:space="preserve"><path fill="#{$sidemenu-icon}" d="M14.7,20.1c0-3.6,1.2-6.6,3.7-9.1s5.5-3.7,9.1-3.7c3.5,0,6.5,1.2,9,3.7s3.8,5.5,3.8,9.1c0,3.5-1.3,6.5-3.8,9s-5.5,3.8-9,3.8c-3.6,0-6.6-1.3-9.1-3.8S14.7,23.6,14.7,20.1z M0,43.8c0,1,0.4,1.9,1.1,2.6s1.6,1.1,2.6,1.1s1.9-0.4,2.6-1.1l9.8-9.8c3.4,2.4,7.2,3.6,11.4,3.6c2.7,0,5.3-0.5,7.8-1.6c2.5-1.1,4.6-2.5,6.4-4.3c1.8-1.8,3.2-3.9,4.3-6.4c1-2.5,1.6-5.1,1.6-7.8c0-2.8-0.6-5.4-1.6-7.8c-1.1-2.5-2.5-4.7-4.3-6.5s-3.9-3.2-6.4-4.3c-2.5-1-5.1-1.5-7.8-1.5c-2.8,0-5.4,0.5-7.9,1.5C17.2,2.6,15,4,13.2,5.8s-3.2,4-4.3,6.5c-1,2.4-1.6,5-1.6,7.8c0,4.2,1.2,8,3.6,11.4l-9.8,9.8C0.4,42,0,42.8,0,43.8z"/></svg> ') no-repeat $spacer-x center;
+  background: transparent svg-encode('<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" xml:space="preserve"><path fill="#{$sidemenu-icon}" d="M14.7,20.1c0-3.6,1.2-6.6,3.7-9.1s5.5-3.7,9.1-3.7c3.5,0,6.5,1.2,9,3.7s3.8,5.5,3.8,9.1c0,3.5-1.3,6.5-3.8,9s-5.5,3.8-9,3.8c-3.6,0-6.6-1.3-9.1-3.8S14.7,23.6,14.7,20.1z M0,43.8c0,1,0.4,1.9,1.1,2.6s1.6,1.1,2.6,1.1s1.9-0.4,2.6-1.1l9.8-9.8c3.4,2.4,7.2,3.6,11.4,3.6c2.7,0,5.3-0.5,7.8-1.6c2.5-1.1,4.6-2.5,6.4-4.3c1.8-1.8,3.2-3.9,4.3-6.4c1-2.5,1.6-5.1,1.6-7.8c0-2.8-0.6-5.4-1.6-7.8c-1.1-2.5-2.5-4.7-4.3-6.5s-3.9-3.2-6.4-4.3c-2.5-1-5.1-1.5-7.8-1.5c-2.8,0-5.4,0.5-7.9,1.5C17.2,2.6,15,4,13.2,5.8s-3.2,4-4.3,6.5c-1,2.4-1.6,5-1.6,7.8c0,4.2,1.2,8,3.6,11.4l-9.8,9.8C0.4,42,0,42.8,0,43.8z"/></svg> ') no-repeat #{$spacer-x/4 + $font-size-base} center;
   background-size: 1em;
   border: solid 1px transparent;
   border-right: 0 none;
-  padding-left: calc(2.75em + #{$spacer/2}) !important;
+  border-left: 0 none;
   transition: $transition-base;
   box-shadow: none;
   margin-left: 0 !important;
@@ -175,6 +175,8 @@ nav {
   margin-top: -1px !important;
   border-radius: 0;
   line-height: 1;
+  color: $sidemenu-icon;
+  text-align: center;
 
   &:focus {
     width: 100%;

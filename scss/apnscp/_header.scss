@@ -47,6 +47,13 @@ a#ui-fa-kb {
     top: -0.5em;
   }
 
+  .job {
+    font-size: smaller;
+    .badge {
+      text-transform: uppercase;
+    }
+  }
+
 
   .indicator {
     height: 100%;
