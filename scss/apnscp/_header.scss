@@ -64,10 +64,15 @@ a#ui-fa-kb {
 
   &.active {
     .machine {
-      fill: lighten($header-bg, 35%);
+      fill: lighten($header-bg, 15%);
     }
     .indicator::after {
       opacity: 1;
+    }
+  }
+  &.running {
+    .machine {
+      fill: lighten($header-bg, 35%);
     }
   }
   .machine {
@@ -76,7 +81,7 @@ a#ui-fa-kb {
   }
 }
 
-.ui-job-indicator.active {
+.ui-job-indicator.running {
     .machine {
       .gear-small {
         animation: gear-counter-rotation 2.5s infinite linear;
