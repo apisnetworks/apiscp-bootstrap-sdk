@@ -654,3 +654,67 @@ td.actions {
   color: #999;
   text-decoration: line-through;
 }
+
+.ui-webapp-panel {
+    .screenshot {
+      max-height: 384px;
+
+      .outer, .inner {
+        min-height: 256px;
+      }
+    }
+
+    &.small .screenshot {
+      max-height: 196px;
+
+      .outer, .inner {
+        min-height: 130px;
+      }
+
+      .title {
+        font-size: 0.90rem;
+      }
+    }
+
+    .screenshot {
+      .inner {
+        z-index: 1;
+        height: 100%;
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+
+        .banner {
+          font-size: 1em;
+          background: rgba(0, 0, 0, 0.33);
+          padding: 0.5em 0;
+          color: rgba(255, 255, 255, 0.85);
+
+        }
+      }
+
+      .inner:hover > div {
+        display: flex !important;
+      }
+
+      .title {
+        font-size: 1rem;
+      }
+
+      &.item .card > div {
+        z-index: 2;
+      }
+
+      &.item .card > .banner, &.item .card .app-meta {
+        z-index: 3;
+      }
+
+      .outer {
+        z-index: 1 !important;
+        filter: blur(5px);
+        opacity: 0.20;
+        background-size: cover;
+        background-position: top left;
+      }
+    }
+}
