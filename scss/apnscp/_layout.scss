@@ -695,6 +695,9 @@ td.actions {
 
       .inner:hover > div {
         display: flex !important;
+        .btn {
+          box-shadow: none;
+        }
       }
 
       .title {
