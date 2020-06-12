@@ -683,7 +683,11 @@ td.actions {
         background-size: contain;
         background-position: center top;
         background-repeat: no-repeat;
-
+        a .ui-action-label {
+          text-shadow: 1px 1px rgba(0, 0, 0, 0.55);
+          font-weight: bold;
+          text-transform: uppercase;
+        }
         .banner {
           font-size: 1em;
           background: rgba(0, 0, 0, 0.33);
