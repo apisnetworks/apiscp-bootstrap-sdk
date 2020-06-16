@@ -51,6 +51,10 @@
       cursor: $custom-control-disabled-cursor;
     }
   }
+
+  &:disabled:checked ~ .custom-control-indicator {
+    background-color: transparent;
+  }
 }
 
 // Custom indicator
@@ -71,6 +75,7 @@
   background-position: center center;
   background-size: $custom-control-indicator-bg-size;
   @include box-shadow($custom-control-indicator-box-shadow);
+  background-origin: border-box;
 }
 
 // Checkboxes
