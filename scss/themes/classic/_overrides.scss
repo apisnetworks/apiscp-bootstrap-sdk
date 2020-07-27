@@ -23,7 +23,7 @@ h2.title {
   border-color: $brand-danger;
 }
 
-.ui-menu-category + .ui-menu-category-apps .active {
+#ui-nav .ui-menu-category + .ui-menu-category-apps .active {
   font-weight: 600;
 }
 

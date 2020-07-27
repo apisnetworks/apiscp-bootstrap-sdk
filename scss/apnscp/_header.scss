@@ -33,7 +33,7 @@ a#ui-fa-kb {
   color: $header-links;
   padding-left: 0;
   padding-right: 0;
-  z-index: 100;
+  z-index: 990;
 }
 
 #ui-job-indicator {
@@ -221,6 +221,12 @@ body.ui-swap-buttons {
   padding-right: $spacer;
   padding-left: 0;
   margin-right: -$grid-gutter-width-base/2;
+  .ui-swap-buttons & {
+    padding-right: 0;
+    padding-left: $spacer;
+    margin-left: -$grid-gutter-width-base/2;
+    margin-right: $spacer;
+  }
   margin-top: -#{map-deep-get($spacers, 1, y)};
   margin-bottom: -#{map-deep-get($spacers, 1, y)};
   .avatar {

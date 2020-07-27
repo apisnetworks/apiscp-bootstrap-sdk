@@ -19,16 +19,20 @@ nav {
 #ui-nav-container {
   z-index: 1;
   padding: 0;
-  transition: all ease-in-out 0.05s;
-  &.collapse {
-    width: 0;
-  }
+  transition: all ease-in-out 0.15s;
+  left: 0;
+
   &.show {
     width: 100%;
-  }
-  @include media-breakpoint-down(md) {
-    &.show {
+    @include media-breakpoint-down(sm) {
+      height: 100%;
     }
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    position: fixed;
+    height: 0;
+    z-index: 100;
   }
   background: $header-bg;
   > div.col-12 {
@@ -50,6 +54,7 @@ nav {
   }
 }
 #ui-menu {
+
   @extend .flex-column;
 
   > .dropdown {
@@ -194,13 +199,16 @@ nav {
 /**
  * Menu icons
  */
-.ui-menu-category {
+.ui-menu-category:before {
+  @extend .fa;
+}
+#ui-nav .ui-menu-category {
   color: $header-links;
   padding: $spacer/2 0;
   padding-left: $spacer-x;
   display: block;
   &:hover,&:focus {
-    color: $header-links-hover;
+
     text-decoration: none;
     transition: 250ms ease-in-out;
     &:before, &[aria-expanded="true"]:before {
@@ -220,12 +228,13 @@ nav {
     color: $sidemenu-icon;
     display: inline-block;
     margin-right: $spacer-x/1.25;
-    @extend .fa;
+
     &:before {
       text-underline: none !important;
       border-bottom: 0 none;
     }
   }
+
   & + .ui-menu-category-apps {
     margin-top: -$spacer/4;
     border-radius: 0;

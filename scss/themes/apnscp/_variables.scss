@@ -46,7 +46,7 @@ $accent: #cf5349;
 
 // Brands
 $brand-primary: #169a84;
-$brand-secondary: #faffd3;
+$brand-secondary: #c4c6ac;
 $brand-info: #8eb4cb;
 $brand-success: #3bb46c;
 $brand-warning: #F2AE72;
@@ -97,8 +97,9 @@ $headings-font-weight: 300 !default;
 $header-icons-hover: $header-links-hover;
 
 $table-border-width: 0;
+$body-color: #1a2b1d;
 
-$input-color: $gray-dark;
+$input-color: $body-color;
 
 $sidemenu-max-width: 230px;
 $sidemenu-link-color: $gray-dark;
@@ -142,9 +143,8 @@ $font-size-root: 14px;
 $font-size-base: 0.875rem;
 $font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 $line-height-base: 1.5;
-$text-color: #2c3e50;
 
-$list-group-active-color: $text-color;
+$list-group-active-color: $body-color;
 $list-group-active-bg: #e6ece8;
 $list-group-active-border: #bfd4b8;
 
@@ -152,8 +152,8 @@ $list-group-active-border: #bfd4b8;
 $navbar-default-bg: #fff;
 
 // Buttons
-$btn-default-color: $text-color;
-$btn-secondary-color: #4e6b6e;
+$btn-default-color: $body-color;
+$btn-secondary-color: #324736;
 $btn-secondary-border: mix($btn-secondary-color, lighten($brand-primary, 35%), 10%);
 $btn-primary-bg: $brand-primary;
 $btn-primary-border: darken($brand-primary, 7.5%);
@@ -162,9 +162,9 @@ $btn-secondary-border: #a2a2a2;
 $input-box-shadow: inset 0 1px 1px rgba($black, .075);
 
 // Inputs
-$input-border: lighten($text-color, 40%);
+$input-border: lighten($body-color, 40%);
 $input-border-focus: $input-border-color;
-$input-color-placeholder: lighten($text-color, 30%);
+$input-color-placeholder: lighten($body-color, 30%);
 
 $input-focus-box-shadow: 0 0 0.5rem rgba(105, 105, 105, 0.33);//inset 0 0 0 0.2rem rgba(59, 180, 108, 0.25);
 $input-group-addon-bg: #fafafa;

@@ -62,7 +62,7 @@ h2.title, h2.title:before {
   }
 }
 
-.ui-menu-category {
+#ui-nav .ui-menu-category {
   color: $sidemenu-link-color;
   &::before {
 	vertical-align: middle;
@@ -104,7 +104,7 @@ h2.title, h2.title:before {
 
 .table {
   thead th, .head1, tfoot .head1 {
-	background: #fff;
+
 	border-bottom: 2px solid $sidemenu-app-hover-bg;
 	color: $gray-dark;
   }
@@ -141,6 +141,9 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
   .ui-menu-active {
     font-weight: 600;
 	border-right-color: $brand-primary !important;
+	.ui-swap-buttons & {
+	  border-left-color: $brand-primary;
+	}
 	color: $brand-primary;
 	&::before, &::after {
 	  color: $brand-primary;
@@ -161,8 +164,17 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
 	border-radius: 0;
 	@include media-breakpoint-up(md) {
 	  margin-right: -1px;
+	  .ui-swap-buttons & {
+		margin-left: -1px;
+		margin-right: 0;
+	  }
 	}
 	border-right: 2px solid transparent;
+
+	.ui-swap-buttons & {
+	  border-right-width: 0;
+	  border-left: 2px solid transparent;
+	}
   }
 
   .dropdown .dropdown-toggle::after {
@@ -195,6 +207,10 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
 #ui-nav-container  {
   @include media-breakpoint-up(md) {
 	border-right: 1px solid $nav-border-color;
+	.ui-swap-buttons & {
+	  border-left: 1px solid $nav-border-color;
+	  border-right: 0 none;
+	}
 	.dropdown {
 	  border-bottom: 1px solid $nav-border-color;
 	}

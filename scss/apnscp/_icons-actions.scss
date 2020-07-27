@@ -8,6 +8,14 @@
   display: inline-block;
   //vertical-align: middle;
 }
+.ui-action-d-compact {
+  margin-right: 0;
+}
+
+.ui-action-toolbox.dropdown-toggle:after
+{
+  margin-left: map-deep-get($spacers, 1, 'y') !important;
+}
 
 .ui-action:before {
   text-decoration: none;
@@ -252,6 +260,30 @@
 
 .ui-action-expand {
   @extend .fa-expand;
+}
+
+.ui-action-transfer {
+   @extend .fa-angle-double-right;
+}
+
+.ui-action-update {
+  @extend .fa-arrow-circle-o-up;
+}
+
+.ui-action-return {
+  @extend .fa-arrow-left;
+}
+
+.ui-action-kill {
+  @extend .fa-bolt;
+}
+
+.ui-action-danger {
+  @extend .fa-bomb;
+}
+
+.ui-action-doclink {
+  @extend .fa-book;
 }
 
 /** show label inside action link */
