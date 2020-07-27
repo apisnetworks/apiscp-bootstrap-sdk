@@ -16,6 +16,10 @@
 }
 
 #ui-help-blurb {
+  .ui-expandable {
+	margin-left: -#{$grid-gutter-width-base / 2};
+	margin-right: -#{$grid-gutter-width-base / 2};
+  }
   margin-left: 0;
   margin-right: 0;
   .ui-help-blurb, .ui-help-blurb-more {

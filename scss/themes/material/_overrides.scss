@@ -17,33 +17,31 @@
   margin-top: 0;
 }
 
-.ui-menu-category {
+#ui-nav .ui-menu-category {
   &:focus {
 	color: $brand-primary;
   }
   color: $sidemenu-link-color;
   display: block;
-}
 
-.ui-menu-category {
-  a {
-
-  }
   &:hover {
 	background: $brand-primary;
 	color: #fff;
 
   }
+
   & + .ui-menu-category-apps a {
 	color: $sidemenu-active-cat-link-color;
 	padding-left: 2.75rem;
 	padding-top: $spacer-y/2;
 	padding-bottom: $spacer-y/2;
+
 	&.active {
 	  font-weight: 600;
 	}
   }
 }
+
 
 
 #ui-header {
@@ -69,13 +67,11 @@
   > .dropdown {
 	// marker indicator
 	.dropdown-toggle:hover::after {
-	  color: #fff;
+	  color: #fff !important;
 	}
-	.dropdown-toggle:focus::after {
-	  //color: $brand-primary;
-	}
+
   }
-  .ui-menu-active:hover {
+  #ui-nav .ui-menu-active:hover {
 	color: #fff;
 	&, .ui-menu-active:focus {
 
@@ -118,7 +114,7 @@
   }
 }
 
-.ui-menu-category {
+#ui-nav .ui-menu-category {
   &[aria-expanded="true"]:focus:before {
 	color: $brand-primary;
   }
@@ -128,7 +124,7 @@
 }
 
 #ui-menu > .dropdown-toggle[aria-expanded="true"]:focus::after {
-  color: #fff;
+  color: #fff !important;
 }
 
 #ui-menu > .dropdown .dropdown-toggle:hover::after, #ui-menu > .dropdown .dropdown-toggle:focus::after {

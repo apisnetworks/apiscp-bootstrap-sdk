@@ -234,10 +234,12 @@ nav {
       border-bottom: 0 none;
     }
   }
-
+  z-index: 2;
+  position: relative;
   & + .ui-menu-category-apps {
     margin-top: -$spacer/4;
     border-radius: 0;
+    z-index: 1;
     .active {
       position: relative;
       background: $sidemenu-active-app-bg;
