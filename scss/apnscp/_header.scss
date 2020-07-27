@@ -122,6 +122,7 @@ a#ui-fa-kb {
   .ui-app-row {
 	  display: flex !important;
 	  flex: 1;
+      flex-grow: 1;
 	  body.ie & {
 		min-height:100vh;
 		/**

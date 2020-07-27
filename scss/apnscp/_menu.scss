@@ -2,6 +2,7 @@ nav {
   z-index: 3;
   width: 100%;
 }
+
 #ui-side-menu-toggle {
   border: 0 none;
   margin-left: -0.75rem;
@@ -13,26 +14,70 @@ nav {
   }
 }
 
+#ui-full-flex-wrap > .ui-app-row {
+  flex-grow: 1;
+}
+
+body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
+  /** prevent scroll on hide */
+  overflow-x: hidden;
+
+  #ui-nav-container {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+
+    &[aria-expanded="true"] {
+      transform: translateX(0);
+    }
+
+    @include media-breakpoint-up(md) {
+      height: auto;
+      transform: translateX(0);
+      &[aria-expanded="false"] {
+        transform: translateX(100%);
+      }
+    }
+  }
+}
+
+#ui-nav-container {
+  will-change: transform;
+}
+
 .navbar-toggler {
   cursor: hand;
 }
+
 #ui-nav-container {
   z-index: 1;
   padding: 0;
-  transition: all ease-in-out 0.15s;
+  transition: $transition-base;
   left: 0;
-
+  transform: translateX(0%);
+  display: block !important;
   &.show {
     width: 100%;
-    @include media-breakpoint-down(sm) {
-      height: 100%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    @if variable-exists(large-dropshadow) {
+      box-shadow: $large-dropshadow;
+    }
+
+    &[aria-expanded="true"] {
+      height: 100% !important;
+      transform: translateX(0);
     }
   }
+
   @include media-breakpoint-down(sm) {
-    overflow: hidden;
-    position: fixed;
-    height: 0;
-    z-index: 100;
+      overflow: hidden;
+      position: absolute;
+      height: 100%;
+      z-index: 100;
+      max-width: $sidemenu-max-width;
+      transform: translateX(-100%);
   }
   background: $header-bg;
   > div.col-12 {
@@ -41,11 +86,15 @@ nav {
     padding-left: 0;
   }
   @include media-breakpoint-up(md) {
-    max-width: $sidemenu-max-width;
-	// avoid UI collision with URL indicator in Chrome while hovering "Logout"
-    #ui-nav.collapse {
-      display: block;
+    overflow: hidden;
+    &[aria-expanded="false"] {
+      flex: 0;
+      width: 0;
+      transform: translateX(-100%);
     }
+    transform: translateX(0);
+    flex: 0 0 100%;
+	// avoid UI collision with URL indicator in Chrome while hovering "Logout"
   }
   @include media-breakpoint-down(sm) {
     #ui-nav {
@@ -355,7 +404,6 @@ nav {
 .ui-menu-category-web:before {
   @extend .fa-desktop;
 }
-
 
 .ui-menu-category-logout:before {
   @extend .fa-sign-out;

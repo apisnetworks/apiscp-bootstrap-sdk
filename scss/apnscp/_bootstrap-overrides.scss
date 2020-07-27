@@ -249,3 +249,7 @@ input, button, .dropdown-item {
 .text-monospace {
   font-family: $font-family-monospace !important;
 }
+
+.btn-group-addon.dropdown-toggle:empty:after, .input-group-addon.dropdown-toggle:empty:after {
+  margin-left: 0;
+}
