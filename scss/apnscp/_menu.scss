@@ -76,9 +76,10 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
       position: absolute;
       height: 100%;
       z-index: 100;
-      max-width: $sidemenu-max-width;
       transform: translateX(-100%);
   }
+
+  max-width: $sidemenu-max-width;
   background: $header-bg;
   > div.col-12 {
     // col-12
@@ -305,6 +306,9 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
         border-top: 0.5em solid #f5f8fa;
         border-right: 0.5em solid transparent;
         border-left: 0.5em solid transparent;
+        body.ui-swap-buttons & {
+          transform:rotate(270deg);
+        }
         position: absolute;
         transform: rotate(90deg);
         margin-right: 0;
