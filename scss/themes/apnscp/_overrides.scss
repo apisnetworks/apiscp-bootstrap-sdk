@@ -228,11 +228,7 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
 
 #ui-app {
   margin-top: $spacer;
-  @include border-radius($border-radius);
-  margin: 0;
-  > .container-fluid {
-	padding: 0;
-  }
+  padding-top: $spacer;
 }
 
 #ui-app-container {
@@ -263,4 +259,27 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
 	background: transparent;
 	border: 0 none;
   }
+}
+
+#ui-app-container {
+  margin-bottom: #{$footer-margin - $spacer-y/2};
+  @include media-breakpoint-down(sm) {
+	margin-bottom: #{$footer-margin / 2};
+  }
+}
+#ui-app {
+  background: #fff;
+  border-top: 1px solid $nav-border-color;
+  flex-grow: 1;
+  height: 100%;
+
+}
+
+#app-dashboard {
+  	background: $body-alternative;
+	#ui-app {
+	  border: 0 none;
+	  margin-top: 0;
+	  padding-top: 0;
+	}
 }

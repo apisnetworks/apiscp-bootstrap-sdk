@@ -12,8 +12,8 @@
 
 
 // Body
-$body-bg: #fff;
-$body-alternative: #fcfcfc;
+$body-bg: #fafafa;
+$body-alternative: #fff;
 
 // Colors
 $navy: #001f3f;
@@ -195,7 +195,7 @@ $small-dropshadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.
 $large-dropshadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
 	0 2px 4px -1px rgba(0, 0, 0, 0.4);
 
-$nav-border-color: #e3e3e3;
+$nav-border-color: #efefef;
 $badge-success-bg: $brand-primary;
 
 @function map-deep-get($map, $keys...) {
