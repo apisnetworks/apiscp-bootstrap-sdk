@@ -140,23 +140,25 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
   text-decoration: none;
 }
 
+#ui-nav .ui-menu-category + .ui-menu-category-apps .active:after {
+  top: 1rem;
+}
 #ui-menu {
   .ui-menu-active {
     font-weight: 600;
-	border-right-color: $brand-primary !important;
+	border-right-color: mix(#fafafa, $brand-primary) !important;
 	.ui-swap-buttons & {
-	  border-left-color: $brand-primary;
+	  border-left-color: mix(#fafafa, $brand-primary);
 	}
-	color: $brand-primary;
 	&::before, &::after {
-	  color: $brand-primary;
+	  color: $brand-primary !important;
 	}
 	+ .ui-menu-category-apps {
 	  a.active {
-		text-decoration: underline;
-		text-decoration-color: $brand-primary;
+		text-decoration: none;
+		font-weight: 600;
 		&::after {
-		  border: 0 none;
+		  border-top-color: mix(#fafafa, $brand-primary);
 		}
 	  }
 	}
@@ -172,7 +174,6 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
 		margin-right: 0;
 	  }
 	}
-	border-right: 2px solid transparent;
 
 	.ui-swap-buttons & {
 	  border-right-width: 0;

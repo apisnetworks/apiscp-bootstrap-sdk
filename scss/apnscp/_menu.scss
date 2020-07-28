@@ -161,7 +161,7 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
 }
 
 .navbar-toggler {
-  border: 1px solid $header-links;
+  border: 1px solid lighten($header-bg, 7.5%);
   // crappy approximation
   margin-top: $spacer-y/2;
 
@@ -318,7 +318,7 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
         transform: rotate(90deg);
         margin-right: 0;
         right: -0.25em;
-        top: 0.75em;
+        top: 0.75rem;
         @include media-breakpoint-down(sm) {
           left: 0.5em;
           transform: rotate(-90deg);
