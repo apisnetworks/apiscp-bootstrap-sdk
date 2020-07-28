@@ -108,8 +108,7 @@ h2.title, h2.title:before {
 
 .table {
   thead th, .head1, tfoot .head1 {
-
-	border-bottom: 2px solid $sidemenu-app-hover-bg;
+	border-bottom: 2px solid darken($header-bg-light, 15%);
 	color: $gray-dark;
   }
 }

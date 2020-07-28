@@ -358,7 +358,8 @@
   }
 
   #processes .process-header > div, #processes .process-header > div .process .col-2 {
-    padding: $spacer-y/2 $spacer-x/4;
+    padding-top: $spacer-y/2;
+    padding-bottom: $spacer-y/2;
   }
 
   #processes .process-header {

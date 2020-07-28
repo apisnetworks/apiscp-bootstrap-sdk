@@ -39,16 +39,21 @@ $rocket-body: #ebebeb;
     padding-left: 50px;
   }
 
-  form .form-group label {
-    text-align: left;
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
+  form .form-group label.placeholder {
     border: 0;
+    top: 0.75rem;
+    left: 48px;
+    font-size: 1em;
+    position: absolute;
+    transition: 0.2s;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    pointer-events: none;
+    color: $gray;
+    z-index: 100;
+  }
+
+  .form-group input[data-empty="false"] ~ label.placeholder, .form-group input:focus ~ label.placeholder {
+    transform: scale(0.75) translateY(-2.5rem) translateX(-48px);
   }
 
   form .input-icon {
@@ -60,13 +65,14 @@ $rocket-body: #ebebeb;
     height: 18px;
     text-align: center;
     color: $brand-primary;
+    z-index: 100;
   }
 
   form .input-icon::after {
     content: '';
     position: absolute;
-    right: -11px;
-    top: -10px;
+    right: -10px;
+    top: -13px;
     bottom: -10px;
     width: 1px;
     opacity: .5;
@@ -225,7 +231,7 @@ $rocket-body: #ebebeb;
   }
 
   .content-container, .problem-container {
-    background: $rocket-body;
+    background: $gray-lighter;
   }
 
   .content-container:only-child {
@@ -242,8 +248,10 @@ $rocket-body: #ebebeb;
   .content-container {
 	overflow: hidden;
   }
-  .login-container:after {
-
+  .login-container {
+    @if variable-exists(large-dropshadow) {
+      box-shadow: $large-dropshadow;
+    }
   }
 
   .new-password {
