@@ -28,7 +28,7 @@
   }
 }
 
-#ui-help {
+.ui-help {
 	border-left: 5px solid $gray-light;
   	background: $gray-lightest;
   	padding-top: $spacer-y;
@@ -261,18 +261,12 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
   }
 }
 
-#ui-app-container {
-  margin-bottom: #{$footer-margin - $spacer-y/2};
-  @include media-breakpoint-down(sm) {
-	margin-bottom: #{$footer-margin / 2};
-  }
-}
 #ui-app {
+  margin-bottom: 0;
+  padding-bottom: #{$footer-margin / 2};
   background: #fff;
   border-top: 1px solid $nav-border-color;
   flex-grow: 1;
-  height: 100%;
-
 }
 
 #app-dashboard {
