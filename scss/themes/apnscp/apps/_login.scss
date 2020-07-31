@@ -1,5 +1,6 @@
 #app-login {
-  background: radial-gradient(#eef2ef 0%, #fff 100%) #eef2ef;
+  @include scrim-gradient($brand-primary, to bottom right);
+  background-color: $header-bg;
   .logo {
 	background: url(/images/apps/login/logo.svg) center center no-repeat;
 	background-size: 100%;
