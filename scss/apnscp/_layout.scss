@@ -662,11 +662,14 @@ td.actions {
 }
 
 .ui-webapp-panel {
+    &:hover, &:focus {
+      z-index: 10;
+    }
     .screenshot {
       max-height: 384px;
 
       .outer, .inner {
-        min-height: 256px;
+        min-height: 184px;
       }
     }
 
