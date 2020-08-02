@@ -11,6 +11,7 @@ html {
 
 #ui-full-flex-wrap {
   min-height: 100%;
+  overflow: hidden;
 }
 
 @include media-breakpoint-only(xl) {
@@ -82,9 +83,9 @@ and (max-width: 675px) {
 .ui-gauge .ui-gauge-used {
   /*float: left;*/
   top: 0;
-  background: #fbfbf1;
-  background: linear-gradient(to bottom,  #fbfbf1 0%,#f5f9f0 100%);
-  border-right: 1px solid #cbcbcb;
+  @include scrim-gradient(#fbfbf1);
+  background-color: #f5f9f0;
+  border: 1px solid transparentize(#cbcbcb, 0.8);
   z-index: 2;
 }
 
@@ -95,8 +96,8 @@ and (max-width: 675px) {
     width: 100%;
     position: relative;
     float: right;
-    background: rgb(244, 243, 239);
-    background: linear-gradient(to bottom, rgba(244, 243, 239, 1) 0%, rgba(255, 255, 255, 1) 53%);
+    @include scrim-gradient(rgba(244, 243, 239, 1));
+    background-color: rgb(244, 243, 239);
   }
 
   .ui-gauge-cluster .ui-label-cluster {
@@ -106,14 +107,13 @@ and (max-width: 675px) {
 }
 
 .ui-gauge-warn .ui-gauge-used {
-  background: rgb(242, 235, 53);
-  background: linear-gradient(to bottom, lighten($brand-warning, 10%) 0%, $brand-warning 100%);
-  border-right-color: darken($brand-warning, 25%) !important;
+  @include scrim-gradient(rgb(242, 235, 53), 'to bottom', $brand-warning);
+  border-color: transparentize(darken($brand-warning, 25%), 0.75) !important;
 }
 
 .ui-gauge-crit {
   .ui-gauge {
-    border-color: darken($brand-danger, 50%) !important;
+    border-color: transparentize(darken($brand-danger, 50%), 0.8) !important;
   }
   .ui-gauge-heading {
     color: $brand-danger;
@@ -121,13 +121,12 @@ and (max-width: 675px) {
   }
 
   .ui-gauge-used {
-    background: $brand-danger;
-    background: linear-gradient(to bottom, lighten($brand-danger, 10%) 0%, $brand-danger 100%);
-    border-right: 1px solid darken($brand-danger, 20%);
+    @include scrim-gradient(lighten($brand-danger, 10%), 'to bottom', $brand-danger);
+    border-color: opacify($brand-danger, 0.55);
   }
 
   .ui-gauge-free {
-    background: lighten($brand-danger, 25%) !important;
+    background: opacify(lighten($brand-danger, 45%), 0.95) !important;
   }
 }
 
@@ -680,6 +679,7 @@ td.actions {
 
       .title {
         font-size: 0.90rem;
+        font-weight: 400;
       }
     }
 
@@ -697,7 +697,7 @@ td.actions {
         }
         .banner {
           font-size: 1em;
-          background: rgba(0, 0, 0, 0.33);
+          background: rgba(0, 0, 0, 0.5);
           padding: 0.5em 0;
           color: rgba(255, 255, 255, 0.85);
 
@@ -723,12 +723,50 @@ td.actions {
         z-index: 3;
       }
 
+      &.item .card > .banner:hover, &.item .card > .banner:focus {
+        z-index: 4;
+      }
+
       .outer {
         z-index: 1 !important;
         filter: blur(5px);
         opacity: 0.20;
         background-size: cover;
         background-position: top left;
+        overflow: hidden;
+        &.pending {
+          opacity: 0.15;
+          filter: blur(0);
+          color: $gray-light;
+          @include media-breakpoint-up(xl) {
+            font-size: 1.25em;
+          }
+          word-break: break-word;
+
+          text-align: justify;
+          .pending-label {
+            padding: 2px;
+          }
+        }
       }
     }
+}
+
+#ui-notifications {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: auto;
+  height: 100%;
+  z-index: 101;
+  background: $header-bg;
+  color: #fff;
+  width: 50vw;
+  border-right: 0 none;
+  border-left: 2px solid mix(#fafafa, $header-bg);
+  padding: $spacer;
+  body.ui-swap-buttons & {
+    border-right: 2px solid mix(#fafafa, $header-bg);
+    border-left: 0 none;
+  }
 }

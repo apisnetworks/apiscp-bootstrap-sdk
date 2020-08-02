@@ -217,6 +217,43 @@ body.ui-swap-buttons {
   right: 0;
 }
 
+#ui-notification-indicator-container {
+  padding: #{$spacer/3};
+  margin-right: $spacer;
+  .ui-swap-buttons & {
+    margin-right: $spacer;
+    margin-left: 0;
+  }
+  &.read {
+    opacity: 0.35;
+    &.read:hover {
+      opacity: 1;
+    }
+  }
+  #ui-notification-indicator {
+    cursor: pointer;
+    margin: #{$spacer - $spacer/3*2};
+    border-radius: 1em;
+    background-color: $header-bg;
+    position: relative;
+    .ui-action-notification {
+      &.inactive {
+        opacity: 0.35;
+        &:hover, &:focus {
+          opacity: 1;
+        }
+      }
+    }
+
+    .ui-action-notification + .badge {
+      position: absolute;
+      right: -1em;
+      top: -1em;
+    }
+
+  }
+}
+
 #ui-account-ctrl {
   padding: $spacer/2;
   padding-right: $spacer;
@@ -269,4 +306,61 @@ body.ui-swap-buttons {
     }
 
   }
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(-15deg)
+  }
+
+  2% {
+    transform: rotate(15deg)
+  }
+
+  4% {
+    transform: rotate(-18deg)
+  }
+
+  6% {
+    transform: rotate(18deg)
+  }
+
+  8% {
+    transform: rotate(-22deg)
+  }
+
+  10% {
+    transform: rotate(22deg)
+  }
+
+  12% {
+    transform: rotate(-18deg)
+  }
+
+  14% {
+    transform: rotate(18deg)
+  }
+
+  16% {
+    transform: rotate(-12deg)
+  }
+
+  18% {
+    transform: rotate(12deg)
+  }
+
+  20% {
+    transform: rotate(0deg)
+  }
+}
+
+#ui-header .ui-action-notification {
+  text-indent: 0;
+  top: 0.5em;
+}
+.ui-action-notification.animated,
+.ui-action-notification.animated-hover:hover {
+  display: inline-block;
+  animation: ring 3s ease-in-out;
+  animation-delay: 1.5s;
 }

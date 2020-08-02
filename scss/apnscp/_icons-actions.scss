@@ -9,7 +9,9 @@
   //vertical-align: middle;
 }
 .ui-action-d-compact {
-  margin-right: 0;
+  &, &:before {
+    margin-right: 0;
+  }
 }
 
 .ui-action-toolbox.dropdown-toggle:after
@@ -227,6 +229,10 @@
   @extend .fa-clipboard;
 }
 
+.ui-action-clone {
+  @extend .fa-clone;
+}
+
 .ui-action-select {
   //@extend .fa-dot-circle-o;
   //@extend .fa-magic;
@@ -312,4 +318,15 @@
   .ui-action-label {
     vertical-align: middle;
   }
+}
+.ui-action-notification {
+  @extend .fa-bell;
+}
+
+.ui-action-notification-mute {
+  @extend .fa-bell-slash;
+}
+
+.ui-action-notification.inactive {
+  @extend .fa-bell-o;
 }

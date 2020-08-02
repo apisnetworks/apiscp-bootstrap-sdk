@@ -22,12 +22,65 @@ nav {
 body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
   /** prevent scroll on hide */
   overflow-x: hidden;
+}
 
-  #ui-nav-container {
-    right: 0;
-    left: auto;
+.ui-flyout {
+  will-change: transform;
+  transition: $transition-base;
+  left: 0;
+  transform: translateX(0%);
+  display: block !important;
+
+  &.show {
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    overflow: hidden;
+    &[aria-expanded="false"] {
+      flex: 0;
+      width: 0;
+      transform: translateX(-100%);
+    }
+    transform: translateX(0);
+    flex: 0 0 100%;
+    // avoid UI collision with URL indicator in Chrome while hovering "Logout"
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    &[aria-expanded="true"] {
+      overflow: auto;
+    }
+    #ui-nav {
+      padding-bottom: $spacer-y;
+    }
+    &[aria-expanded="false"] {
+      flex: 0 1 0;
+      width: 0;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 50vw;
+    @if variable-exists(large-dropshadow) {
+      box-shadow: $large-dropshadow;
+    }
+
+    &[aria-expanded="true"] {
+      transform: translateX(0);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    z-index: 100;
+    transform: translateX(-100%);
+  }
+
+  &.ui-flyout-right {
     transform: translateX(100%);
-
+    left: initial !important;
+    right: 0;
     &[aria-expanded="true"] {
       transform: translateX(0);
     }
@@ -42,73 +95,29 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
   }
 }
 
-#ui-nav-container {
-  will-change: transform;
-}
-
 .navbar-toggler {
   cursor: hand;
 }
 
 #ui-nav-container {
-  z-index: 1;
+  min-height: auto;
+  height: auto;
+  z-index: 100;
   padding: 0;
-  transition: $transition-base;
-  left: 0;
-  transform: translateX(0%);
-  display: block !important;
-  &.show {
-    width: 100%;
-  }
-
-  @include media-breakpoint-down(sm) {
-    max-width: 50vw;
-    @if variable-exists(large-dropshadow) {
-      box-shadow: $large-dropshadow;
-    }
-
-    &[aria-expanded="true"] {
-      min-height: 100%;
-      height: auto !important;
-      transform: translateX(0);
-    }
-  }
-
-  @include media-breakpoint-down(sm) {
-      position: absolute;
-      height: 100%;
-      z-index: 100;
-      transform: translateX(-100%);
-  }
-
   max-width: $sidemenu-max-width;
+  @include media-breakpoint-down(sm) {
+    height: 100% !important;
+    max-width: 50vw;
+  }
   background: $header-bg;
   > div.col-12 {
     // col-12
     padding-right: 0;
     padding-left: 0;
   }
-  @include media-breakpoint-up(md) {
-    overflow: hidden;
-    &[aria-expanded="false"] {
-      flex: 0;
-      width: 0;
-      transform: translateX(-100%);
-    }
-    transform: translateX(0);
-    flex: 0 0 100%;
-	// avoid UI collision with URL indicator in Chrome while hovering "Logout"
-  }
-  @include media-breakpoint-down(sm) {
-    overflow: hidden;
-    &[aria-expanded="true"] {
-      overflow: auto;
-    }
-    #ui-nav {
-      padding-bottom: $spacer-y;
-    }
-  }
+
 }
+
 #ui-menu {
 
   @extend .flex-column;

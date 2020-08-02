@@ -36,7 +36,7 @@
   @return url("data:image/svg+xml,#{$string}");
 }
 
-@mixin scrim-gradient($startColor, $direction: 'to bottom') {
+@mixin scrim-gradient($startColor, $direction: 'to bottom', $end: transparent) {
 
   $scrimCoordinates: (
 		  0: 1,
@@ -64,6 +64,6 @@
 	$stops: append($stops, $stop, comma);
   }
 
-  background: linear-gradient(unquote($direction), $stops);
+  background: linear-gradient(unquote($direction), $stops) $end;
 
 }
