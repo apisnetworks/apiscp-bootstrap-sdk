@@ -208,13 +208,19 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
   }
 }
 
+#ui-app {
+  border-right: 1px solid $nav-border-color;
+  border-left: 1px solid $nav-border-color;
+}
+
 #ui-nav-container  {
+  &[aria-expanded=false] ~ #ui-app-container > #ui-app {
+	border-left: 0 none;
+	border-right: 0 none;
+  }
+  border: 0 none;
   @include media-breakpoint-up(md) {
-	border-right: 1px solid $nav-border-color;
-	.ui-swap-buttons & {
-	  border-left: 1px solid $nav-border-color;
-	  border-right: 0 none;
-	}
+
 	.dropdown {
 	  border-bottom: 1px solid $nav-border-color;
 	}
@@ -227,7 +233,7 @@ a.ui-menu-category, a.btn, a.dropdown-item, .nav-item a {
 }
 
 #ui-app {
-  margin-top: $spacer;
+  margin-top: 0;
   padding-top: $spacer;
 }
 

@@ -1,3 +1,11 @@
+#app-useradd, #app-useredit, #app-userdefaults {
+  @include media-breakpoint-down(sm) {
+    .custom-control-indicator {
+      position: static;
+      margin-right: $form-check-input-margin-x; // Flexbox alignment means we lose our HTML space here, so we compensate.
+    }
+  }
+}
 #app-useradd {
   .suboptions {
     display:none;

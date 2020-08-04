@@ -1,7 +1,22 @@
 #app-summary {
+  #ui-app {
+    border: 0 none;
+    background: transparent;
+  }
   #ui-app h3 {
-    background: #fff;
     text-align: center;
+    margin-bottom: 0;
+  }
+
+  #ui-app h3 + .row {
+    @if variable-exists(small-dropshadow) {
+      @include box-shadow($small-dropshadow);
+    }
+    background: $white;
+    margin: $spacer;
+    padding-top: $spacer-y;
+    padding: $spacer-y;
+    border-top: 5px solid $brand-primary;
   }
 
   .ui-app h4 {

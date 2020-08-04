@@ -178,10 +178,12 @@ body.ui-swap-buttons {
   margin-right: 0;
 
   .ui-gauge-cluster {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     position: relative;
     margin: 0 $spacer-y 0 0;
-    position: relative;
     cursor: pointer;
+    align-items: center;
   }
 
   #logo {
@@ -194,6 +196,7 @@ body.ui-swap-buttons {
     border-color: darken($header-bg-light, 10%);
     @include border-radius($border-radius);
     overflow: hidden;
+    height: 8px;
     .ui-gauge-free {
       background: lighten($header-bg, 5%);
     }

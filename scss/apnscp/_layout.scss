@@ -682,7 +682,6 @@ td.actions {
 
       .title {
         font-size: 0.90rem;
-        font-weight: 400;
       }
     }
 
@@ -715,7 +714,11 @@ td.actions {
       }
 
       .title {
-        font-size: 1rem;
+        font-size: 1em;
+        font-weight: 400;
+        &.domain {
+          font-weight: 500;
+        }
       }
 
       &.item .card > div {
@@ -768,6 +771,7 @@ td.actions {
   border-right: 0 none;
   border-left: 2px solid mix(#fafafa, $header-bg);
   padding: $spacer;
+  min-width: 400px;
   body.ui-swap-buttons & {
     border-right: 2px solid mix(#fafafa, $header-bg);
     border-left: 0 none;

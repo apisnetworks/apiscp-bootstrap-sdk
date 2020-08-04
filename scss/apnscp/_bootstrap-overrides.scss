@@ -119,10 +119,15 @@
 }
 
 body::before {
-  content: ('{' + (call(enumerate-colors, ($js-colors))) + '}');
+  content: ('{' + (call(get-function("enumerate-colors"), $js-colors)) + '}');
   display: none;
 }
 
+:root {
+  @each $name, $color in $js-colors {
+    --#{$name}: #{$color};
+  }
+}
 
 .container-fluid {
   width: 100%;

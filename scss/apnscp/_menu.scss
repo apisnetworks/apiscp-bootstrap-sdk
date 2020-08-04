@@ -273,7 +273,7 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
   padding-left: $spacer-x;
   display: block;
   &:hover,&:focus {
-
+    background: transparentize($sidemenu-icon-active, 0.95);
     text-decoration: none;
     transition: 250ms ease-in-out;
     &:before, &[aria-expanded="true"]:before {
@@ -302,7 +302,6 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
   z-index: 2;
   position: relative;
   & + .ui-menu-category-apps {
-    margin-top: -$spacer/4;
     border-radius: 0;
     z-index: 1;
     .active {
@@ -433,7 +432,7 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
 }
 
 .ui-menu-category-dashboard:before {
-  @extend .fa-tachometer;
+  @extend .fa-home;
 }
 
 .ui-menu-category-scopes:before {

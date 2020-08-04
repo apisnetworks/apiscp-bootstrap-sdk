@@ -64,6 +64,6 @@
 	$stops: append($stops, $stop, comma);
   }
 
-  background: linear-gradient(unquote($direction), $stops) $end;
+  background: linear-gradient(unquote(inspect($direction)), $stops) $end;
 
 }
