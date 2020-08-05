@@ -291,14 +291,17 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
 
   &:before {
     color: $sidemenu-icon;
+
+    @include experimental(background, linear-gradient($sidemenu-icon, darken($sidemenu-icon, 10%)), webkit moz o, true);
+    @include experimental(text-fill-color, transparent, webkit moz o);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
     display: inline-block;
     margin-right: $spacer-x/1.25;
 
-    &:before {
-      text-underline: none !important;
-      border-bottom: 0 none;
-    }
   }
+
   z-index: 2;
   position: relative;
   & + .ui-menu-category-apps {

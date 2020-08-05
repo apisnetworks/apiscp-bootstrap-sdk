@@ -65,5 +65,14 @@
   }
 
   background: linear-gradient(unquote(inspect($direction)), $stops) $end;
+}
 
+@mixin experimental($property, $value, $prefixes: (), $infix: false) {
+  @each $prefix in $prefixes {
+	@if $infix {
+	  #{$property}: #{'-' + $prefix + '-' + $value};
+	} @else {
+	  #{'-' + $prefix + '-' + $property}: $value;
+	}
+  }
 }
