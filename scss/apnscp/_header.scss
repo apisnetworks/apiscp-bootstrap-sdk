@@ -257,6 +257,13 @@ body.ui-swap-buttons {
   }
 }
 
+#ui-header .ui-debug-indicator {
+  opacity: 0.35;
+  @extend  .fa;
+  margin-top: 3px;
+  @extend .fa-bug;
+}
+
 #ui-account-ctrl {
   padding: $spacer/2;
   padding-right: $spacer;
