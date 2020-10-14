@@ -1,5 +1,8 @@
 #app-dashboard {
   background: $dashboard-bg;
+  #ui-nav-container {
+    border-right: 1px solid $rocket-gray;
+  }
   h2.title {
     margin-left: 0;
   }
