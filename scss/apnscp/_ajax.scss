@@ -45,37 +45,157 @@
   }
 }
 
-.ui-ajax-loading, .has-loading:after {
-  @extend .fa-spinner;
-  @extend .fa-spin;
-  display: inline-block !important;
-  color: $brand-success;
-  content: '';
+.ui-ajax-indicator {
+  height: 1em;
+  width: auto;
+}
+
+.ui-ajax-indicator-large, .ui-ajax-loading-large {
+  height: 4em;
+}
+
+#ui-loading > .ui-ajax-loading-large {
+  height: 12em;
+  content: svg('page-loading-icon.svg', ('circle.even': ('stroke': $brand-primary), 'circle.odd': ('stroke': $brand-secondary)));
+}
+
+.ui-ajax-loading {
+  content: svg('ajax-loading-icon.svg', ('circle.even': ('stroke': $brand-primary), 'circle.odd': ('stroke': $brand-secondary)));
+  background-repeat: no-repeat;
 }
 
 .ui-ajax-success {
-  @extend .fa-check;
-  color: $brand-success;
+  content: svg('ajax-check.svg', ('path': ('fill': $brand-success)));
+  //animation: 1s linear 0s 1 alternate forwards running ajax-success;
 }
 
 body .ui-ajax-error {
-  @extend .fa-exclamation;
-  color: $brand-danger !important;
+  content: svg('ajax-error.svg', ('path': ('fill': $brand-danger)));
+  //animation: 0.5s linear -0.5s 3 normal forwards running ajax-error;
 }
 
-.ui-ajax-loading:before {
-  bottom: 0 !important;
+@keyframes ajax-error {
+  0% {
+    animation-timing-function: cubic-bezier(0.3333, 0.3333, 0.3124, 0.6668);
+    transform: scale(0.85);
+  }
+  0.5% {
+    animation-timing-function: cubic-bezier(0.0233, -0.3865, 0.6667, 0.6667);
+    transform: scale(1.141);
+  }
+  1.5% {
+    animation-timing-function: cubic-bezier(0.2893, 0.354, 0.6158, 0.6958);
+    transform: scale(1.124);
+  }
+  11% {
+    animation-timing-function: cubic-bezier(0.2861, 0.4196, 0.6215, 0.7476);
+    transform: scale(0.992);
+  }
+  25% {
+    animation-timing-function: cubic-bezier(0.0793, 0.2627, 0.9972, 1.5511);
+    transform: scale(0.887);
+  }
+  49.5% {
+    animation-timing-function: cubic-bezier(0.6664, 0.3332, 0.6667, 0.6667);
+    transform: scale(0.85);
+  }
+  50% {
+    animation-timing-function: cubic-bezier(0, 0.3522, 1, 0.6686);
+    transform: scale(1.1500000000000001);
+  }
+  51% {
+    animation-timing-function: cubic-bezier(0.2668, 0.4036, 0.554, 0.7657);
+    transform: scale(1.1320000000000001);
+  }
+  73.5% {
+    animation-timing-function: cubic-bezier(0.2997, 1.0028, 0.6671, 1);
+    transform: scale(0.894);
+  }
+  100% {
+    transform: scale(0.85);
+  }
 }
 
-.has-loading:after {
-  font-size: 1.5em !important;
-  top: 0.25em;
-  right: 0.25em;
-  content: '';
-  height: 1em;
-  width: 1em;
-  position: absolute;
-  z-index: 999;
+@keyframes ajax-success {
+  0% {
+    animation-timing-function: cubic-bezier(0.0383, 0.3388, 0.0421, 0.6652);
+    transform: matrix(0.01, 0, 0, 0.01, 0, 0);
+    opacity: 1;
+  }
+  4.7% {
+    animation-timing-function: cubic-bezier(0.3296, 0.3336, 0.5772, 0.6672);
+    transform: matrix(0.556, 0, 0, 0.556, 0, 0);
+    opacity: 1;
+  }
+  8.4% {
+    animation-timing-function: cubic-bezier(0.0781, 0.1617, 0.0874, 0.9301);
+    transform: matrix(0.979, 0, 0, 0.979, 0, 0);
+    opacity: 1;
+  }
+  12.4% {
+    animation-timing-function: cubic-bezier(0.8341, 0.1496, 0.8634, 0.7673);
+    transform: matrix(1.153, 0, 0, 1.153, 0, 0);
+    opacity: 1;
+  }
+  16.3% {
+    animation-timing-function: cubic-bezier(0.3264, 0.3332, 0.5758, 0.6695);
+    transform: matrix(1.008, 0, 0, 1.008, 0, 0);
+    opacity: 1;
+  }
+  21.2% {
+    animation-timing-function: cubic-bezier(0.0921, 0.1883, 0.3277, 1);
+    transform: matrix(0.704, 0, 0, 0.704, 0, 0);
+    opacity: 1;
+  }
+  24.5% {
+    animation-timing-function: cubic-bezier(0.6905, 0.0944, 0.8759, 0.7624);
+    transform: matrix(0.626, 0, 0, 0.626, 0, 0);
+    opacity: 1;
+  }
+  27.7% {
+    animation-timing-function: cubic-bezier(0.3688, 0.332, 0.624, 0.6684);
+    transform: matrix(0.704, 0, 0, 0.704, 0, 0);
+    opacity: 1;
+  }
+  32.6% {
+    animation-timing-function: cubic-bezier(0.1368, 0.2364, 0.2451, 0.9049);
+    transform: matrix(0.958, 0, 0, 0.958, 0, 0);
+    opacity: 1;
+  }
+  37.4% {
+    animation-timing-function: cubic-bezier(0.5936, 0.0846, 0.3495, 1);
+    transform: matrix(1.085, 0, 0, 1.085, 0, 0);
+    opacity: 1;
+  }
+  49.5% {
+    animation-timing-function: cubic-bezier(0.5522, 0.0981, 0.3807, 1);
+    transform: matrix(0.802, 0, 0, 0.802, 0, 0);
+    opacity: 1;
+  }
+  62.4% {
+    animation-timing-function: cubic-bezier(0.4497, 0.1349, 0.4911, 1);
+    transform: matrix(1.044, 0, 0, 1.044, 0, 0);
+    opacity: 1;
+  }
+  74.1% {
+    animation-timing-function: cubic-bezier(0.429, 0, 0.5239, 1);
+    transform: matrix(0.914, 0, 0, 0.914, 0, 0);
+    opacity: 1;
+  }
+  87% {
+    animation-timing-function: cubic-bezier(0.3501, 0, 0.6422, 1);
+    transform: matrix(1.013, 0, 0, 1.013, 0, 0);
+    opacity: 1;
+  }
+  95.8% {
+    animation-timing-function: cubic-bezier(0.3653, 0, 0.6776, 1);
+    transform: matrix(0.992, 0, 0, 0.992, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    opacity: 1;
+  }
 }
 
 .ui-ajax-error-msg, .ui-ajax-success-msg {
@@ -99,30 +219,4 @@ body .ui-ajax-error {
   margin: 0 auto;
   display: block;
   color: $brand-success;
-}
-
-.ui-ajax-indicator {
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center center;
-  overflow: visible;
-  color: $brand-success;
-  vertical-align: middle;
-  position: relative;
-  margin: 0 $spacer-x/2;
-  @extend .fa;
-  .ui-ajax-status {
-    display: block;
-    margin-left: 26px;
-    text-indent: 0;
-    position: relative;
-  }
-}
-
-.ui-ajax-loading-large {
-  @extend .fa-4x;
-}
-
-.ui-ajax-loading-md {
-  @extend .fa-2x;
 }

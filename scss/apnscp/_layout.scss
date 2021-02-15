@@ -765,7 +765,6 @@ td.actions {
   height: 100%;
   z-index: 101;
   background: $header-bg;
-  color: #fff;
   width: 50vw;
   border-right: 0 none;
   border-left: 2px solid mix(#fafafa, $header-bg);
@@ -774,5 +773,13 @@ td.actions {
   body.ui-swap-buttons & {
     border-right: 2px solid mix(#fafafa, $header-bg);
     border-left: 0 none;
+  }
+
+  .ui-empty-notification {
+    color: $header-links;
+    display: none;
+  }
+  .ui-empty-notification:only-child {
+    display: block;
   }
 }

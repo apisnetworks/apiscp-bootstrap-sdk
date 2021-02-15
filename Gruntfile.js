@@ -19,17 +19,20 @@ module.exports = function (grunt) {
         return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&')
     }
 
-    var path = require('path')
+    const path = require('path')
+    const inliner = require('sass-inline-svg');
+    const sass = require('node-sass');
+    const Fiber = require('fibers');
 
     // Project configuration.
-    grunt.initConfig({
+    var config = {
         // Metadata.
         pkg: grunt.file.readJSON('package.json'),
         banner: '/*!\n' +
-        ' * Bootstrap v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-        ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-        ' * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n' +
-        ' */\n',
+            ' * Bootstrap v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n' +
+            ' */\n',
 
         // Task configuration.
         clean: {
@@ -50,7 +53,7 @@ module.exports = function (grunt) {
 
         watch: {
             sass: {
-                files: 'scss/**/*.scss',
+                files: ['scss/**/*.scss', 'scss/**/*.svg'],
                 tasks: ['sass-compile', 'copy:css']
             },
         },
@@ -62,13 +65,9 @@ module.exports = function (grunt) {
             postcss: {
                 command: 'npm run postcss'
             },
-            "sass": {
-                command: "node-sass --sass-output-style expanded --source-map true --precision 6 scss/themes/" + THEME + ".scss " +
-                    "dist/css/" + THEME + ".css"
-            },
-			'scss-clean': {
+            'scss-clean': {
                 command: "cleancss --skip-advanced --source-map --output dist/css/" + THEME + ".min.css dist/css/" + THEME + ".css"
-			},
+            },
             'scss-lint': {
                 command: 'npm run scss-lint'
             },
@@ -94,15 +93,32 @@ module.exports = function (grunt) {
                     }
                 ]
             }
-        }
+        },
 
-    })
+        sass: {
+            dist: {
+                options: {
+                    functions: {
+                        "svg": inliner('scss/apnscp/media', {optimize: true, encodingFormat: "uri"})
+                    },
+                    implementation: sass,
+                    sourceMap: true,
+                    fiber: Fiber,
+                    precision: 6,
+                    outputStyle: "expanded"
+                },
+                files: {}
+            },
+        }
+    };
+    config.sass.dist.files["dist/css/" + THEME + ".css"] = "scss/themes/" + THEME + ".scss";
+    grunt.initConfig(config)
 
     require('jit-grunt')(grunt)
     require('time-grunt')(grunt)
 
     grunt.registerTask('test-scss', ['exec:scss-lint'])
-    grunt.registerTask('sass-compile', ['exec:sass', 'copy:css'])
+    grunt.registerTask('sass-compile', ['sass', 'copy:css'])
     grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'exec:clean-css', 'copy:css'])
 
     // Full distribution task.
