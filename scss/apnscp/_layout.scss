@@ -783,3 +783,11 @@ td.actions {
     display: block;
   }
 }
+
+a[rel=external]:after {
+  @extend .ui-action:before;
+  @extend .ui-action-visit-site:before;
+  vertical-align: middle;
+  font-size: 0.75em;
+  margin-left: 0.35em;
+}
