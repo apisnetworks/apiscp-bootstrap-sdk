@@ -330,3 +330,16 @@
 .ui-action-notification.inactive {
   @extend .fa-bell-o;
 }
+
+.ui-action-login {
+
+  @extend .fa-sign-in;
+}
+
+.ui-action-logout {
+  @extend .fa-sign-out;
+}
+
+.ui-action-revert-login {
+  @extend .fa-users;
+}

@@ -308,10 +308,13 @@ body.ui-swap-buttons {
       &:active {
         color: $dropdown-link-active-color;
       }
-      .fa {
+      .ui-action {
         display: flex;
         padding-left: 1rem;
         margin-left: auto;
+        &:before {
+          margin-right: 0;
+        }
       }
     }
 

@@ -427,7 +427,7 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
 }
 
 .ui-menu-category-logout:before {
-  @extend .fa-sign-out;
+  @extend .ui-action-logout;
 }
 
 .ui-menu-category-feedback:before {
