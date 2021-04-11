@@ -347,3 +347,11 @@
 .ui-action-revert-login {
   @extend .fa-users;
 }
+
+.ui-action-sort-desc, .ui-action-sort {
+  @extend .fa-sort-amount-desc;
+}
+
+.ui-action-sort-asc {
+  @extend .fa-sort-amount-asc;
+}

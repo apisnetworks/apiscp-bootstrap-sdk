@@ -791,3 +791,8 @@ a[rel=external]:after {
   font-size: 0.75em;
   margin-left: 0.35em;
 }
+
+[role=button] {
+  cursor: pointer;
+  user-select: none;
+}
