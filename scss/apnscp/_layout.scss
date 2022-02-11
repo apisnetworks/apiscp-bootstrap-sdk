@@ -784,7 +784,7 @@ td.actions {
   }
 }
 
-a[rel=external]:after {
+[rel=external]:after {
   @extend .ui-action:before;
   @extend .ui-action-visit-site-tab:before;
   vertical-align: middle;
