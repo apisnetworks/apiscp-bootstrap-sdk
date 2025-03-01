@@ -66,11 +66,16 @@ h2.title, h2.title:before {
   }
 }
 
+
 #ui-nav .ui-menu-category {
   color: $sidemenu-link-color;
   &::before {
 	vertical-align: middle;
 	font-size: 1.25em;
+  }
+  .ui-menu-inline-icon {
+	height: 1.25em;
+	vertical-align: middle;
   }
   &:hover, &:focus {
 	&::before, & {

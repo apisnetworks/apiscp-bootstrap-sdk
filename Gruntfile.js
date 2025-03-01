@@ -99,7 +99,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     functions: {
-                        "svg": inliner('scss/apnscp/media', {optimize: true, encodingFormat: "uri"})
+                        "inline-svg": inliner('scss/apnscp/media', {optimize: true, encodingFormat: "uri"})
                     },
                     implementation: sass,
                     sourceMap: true,

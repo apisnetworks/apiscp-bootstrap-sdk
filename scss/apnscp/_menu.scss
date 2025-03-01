@@ -274,6 +274,9 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
   display: block;
   &:hover,&:focus {
     background: transparentize($sidemenu-icon-active, 0.95);
+    .ui-menu-inline-icon {
+      fill: transparentize($sidemenu-icon-active, 0.95);
+    }
     text-decoration: none;
     transition: 250ms ease-in-out;
     &:before, &[aria-expanded="true"]:before {
@@ -281,7 +284,11 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
       text-decoration: none !important;
       border-bottom: 0 none;
     }
+    .ui-menu-inline-icon {
+      fill: $sidemenu-icon-hover;
+    }
   }
+
 
   &.ui-menu-active {
     &:before {
@@ -289,7 +296,7 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
     }
   }
 
-  &:before {
+  &:before, .ui-menu-inline-icon {
     color: $sidemenu-icon;
 
     @include experimental(background, linear-gradient($sidemenu-icon, darken($sidemenu-icon, 10%)), webkit moz o, true);
@@ -300,6 +307,12 @@ body.ui-swap-buttons #ui-full-flex-wrap > .ui-app-row {
     display: inline-block;
     margin-right: $spacer-x/1.25;
 
+  }
+  .ui-menu-inline-icon {
+    height: 1em;
+    width: auto;
+    vertical-align: text-bottom !important;
+    display: inline-block;
   }
 
   z-index: 2;
